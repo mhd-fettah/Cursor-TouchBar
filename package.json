@@ -1,9 +1,13 @@
 {
   "name": "shipbar",
   "displayName": "ShipBar",
-  "description": "Cursor AI actions on your MacBook Touch Bar — generate, accept, reject, branch, chat, and voice dictation.",
-  "version": "0.0.1",
+  "description": "Cursor AI actions on your MacBook Touch Bar — generate, accept, reject, branch, chat, and voice dictation. Fully configurable.",
+  "version": "0.1.0",
   "publisher": "max-blackwell",
+  "author": {
+    "name": "Max Blackwell",
+    "url": "https://x.com/_Max_Blackwell"
+  },
   "license": "MIT",
   "repository": {
     "type": "git",
@@ -38,63 +42,110 @@
   "contributes": {
     "commands": [
       {
-        "command": "shipbar.zap",
-        "title": "ShipBar: Zap",
+        "command": "shipbar.configure",
+        "title": "Configure Buttons",
+        "category": "ShipBar",
+        "icon": "icons/settings.png"
+      },
+      {
+        "command": "shipbar.slot1",
+        "title": "ShipBar: Slot 1 (default: Zap)",
         "icon": "icons/zap.png"
       },
       {
-        "command": "shipbar.check",
-        "title": "ShipBar: Check",
+        "command": "shipbar.slot2",
+        "title": "ShipBar: Slot 2 (default: Check)",
         "icon": "icons/circle-check.png"
       },
       {
-        "command": "shipbar.close",
-        "title": "ShipBar: Close",
+        "command": "shipbar.slot3",
+        "title": "ShipBar: Slot 3 (default: Close)",
         "icon": "icons/circle-x.png"
       },
       {
-        "command": "shipbar.branch",
-        "title": "ShipBar: Branch",
+        "command": "shipbar.slot4",
+        "title": "ShipBar: Slot 4 (default: Branch)",
         "icon": "icons/split.png"
       },
       {
-        "command": "shipbar.mic",
-        "title": "ShipBar: Mic",
+        "command": "shipbar.slot5",
+        "title": "ShipBar: Slot 5 (default: Mic)",
         "icon": "icons/mic.png"
       },
       {
-        "command": "shipbar.chat",
-        "title": "ShipBar: Chat",
+        "command": "shipbar.slot6",
+        "title": "ShipBar: Slot 6 (default: Chat)",
         "icon": "icons/sparkles.png"
       }
     ],
     "menus": {
       "touchBar": [
         {
-          "command": "shipbar.zap",
-          "group": "1_actions@1"
+          "command": "shipbar.slot1",
+          "group": "1_actions@1",
+          "when": "config.shipbar.buttons.slot1.enabled"
         },
         {
-          "command": "shipbar.check",
-          "group": "1_actions@2"
+          "command": "shipbar.slot2",
+          "group": "1_actions@2",
+          "when": "config.shipbar.buttons.slot2.enabled"
         },
         {
-          "command": "shipbar.close",
-          "group": "1_actions@3"
+          "command": "shipbar.slot3",
+          "group": "1_actions@3",
+          "when": "config.shipbar.buttons.slot3.enabled"
         },
         {
-          "command": "shipbar.branch",
-          "group": "1_actions@4"
+          "command": "shipbar.slot4",
+          "group": "1_actions@4",
+          "when": "config.shipbar.buttons.slot4.enabled"
         },
         {
-          "command": "shipbar.mic",
-          "group": "2_input@1"
+          "command": "shipbar.slot5",
+          "group": "2_input@1",
+          "when": "config.shipbar.buttons.slot5.enabled"
         },
         {
-          "command": "shipbar.chat",
-          "group": "2_input@2"
+          "command": "shipbar.slot6",
+          "group": "2_input@2",
+          "when": "config.shipbar.buttons.slot6.enabled"
+        },
+        {
+          "command": "shipbar.configure",
+          "group": "3_settings@1",
+          "when": "config.shipbar.showConfigButton"
         }
       ]
+    },
+    "configuration": {
+      "title": "ShipBar",
+      "properties": {
+        "shipbar.showConfigButton": {
+          "type": "boolean",
+          "default": true,
+          "description": "Show a 7th Touch Bar button (⚙) that opens the ShipBar configuration panel."
+        },
+        "shipbar.buttons": {
+          "type": "object",
+          "description": "Configure each Touch Bar slot: which command it runs and whether it's shown. Icons stay fixed per slot (Touch Bar icons can't be swapped live), but the command each slot fires — and whether it appears at all — is fully user-defined.",
+          "default": {
+            "slot1": { "enabled": true, "command": "aipopup.action.modal.generate" },
+            "slot2": { "enabled": true, "command": "editor.action.inlineDiffs.acceptAll" },
+            "slot3": { "enabled": true, "command": "editor.action.inlineDiffs.rejectAll" },
+            "slot4": { "enabled": true, "command": "composer.duplicateChat" },
+            "slot5": { "enabled": true, "command": "composer.toggleVoiceDictation" },
+            "slot6": { "enabled": true, "command": "aichat.newchataction" }
+          },
+          "properties": {
+            "slot1": { "type": "object", "properties": { "enabled": { "type": "boolean" }, "command": { "type": "string" } } },
+            "slot2": { "type": "object", "properties": { "enabled": { "type": "boolean" }, "command": { "type": "string" } } },
+            "slot3": { "type": "object", "properties": { "enabled": { "type": "boolean" }, "command": { "type": "string" } } },
+            "slot4": { "type": "object", "properties": { "enabled": { "type": "boolean" }, "command": { "type": "string" } } },
+            "slot5": { "type": "object", "properties": { "enabled": { "type": "boolean" }, "command": { "type": "string" } } },
+            "slot6": { "type": "object", "properties": { "enabled": { "type": "boolean" }, "command": { "type": "string" } } }
+          }
+        }
+      }
     }
   }
 }

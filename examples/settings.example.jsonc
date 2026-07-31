@@ -1,0 +1,53 @@
+// ShipBar example configuration
+//
+// Copy the "shipbar.buttons" block below into your user or workspace
+// settings.json (Cmd+Shift+P → "Preferences: Open User Settings (JSON)").
+// Changes take effect immediately — no reload needed for command
+// remapping. Toggling "enabled" hides/shows the button on the Touch Bar.
+//
+// Note: icons are fixed per slot position (slot1 = Zap icon, slot2 =
+// Check icon, etc.) — only the command each slot runs, and whether it's
+// shown, can be changed live from settings.
+
+{
+    "shipbar.buttons": {
+      // slot1: default = inline AI generate popup (Cmd+K-style)
+      "slot1": {
+        "enabled": true,
+        "command": "aipopup.action.modal.generate"
+      },
+  
+      // slot2: default = accept all pending agent edits
+      "slot2": {
+        "enabled": true,
+        "command": "editor.action.inlineDiffs.acceptAll"
+      },
+  
+      // slot3: default = reject all pending agent edits
+      "slot3": {
+        "enabled": true,
+        "command": "editor.action.inlineDiffs.rejectAll"
+      },
+  
+      // slot4: remapped example — open integrated terminal instead of
+      // duplicating the chat thread
+      "slot4": {
+        "enabled": true,
+        "command": "workbench.action.terminal.toggleTerminal"
+      },
+  
+      // slot5: disabled example — hides the Mic button entirely from the
+      // Touch Bar (e.g. if you never use voice dictation)
+      "slot5": {
+        "enabled": false,
+        "command": "composer.toggleVoiceDictation"
+      },
+  
+      // slot6: default = start a brand new chat
+      "slot6": {
+        "enabled": true,
+        "command": "aichat.newchataction"
+      }
+    }
+  }
+  

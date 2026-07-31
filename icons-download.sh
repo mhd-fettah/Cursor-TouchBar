@@ -1,4 +1,4 @@
-ICONS=(circle-check circle-x mic zap split sparkles)
+ICONS=(circle-check circle-x mic zap split sparkles settings)
 mkdir -p icons
 for n in "${ICONS[@]}"; do
   curl -sSL "https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/${n}.svg" | \
