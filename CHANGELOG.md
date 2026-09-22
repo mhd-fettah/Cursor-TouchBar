@@ -1,27 +1,20 @@
 # Changelog
 
-All notable changes to Cursor Touch Bar are documented here.
-
-This extension is a fork of ShipBar by Max Blackwell. Entries before 0.2.1 describe that project.
-
-## [0.2.1] - 2026-09-22
-
-### Changed
-- **Name** — the extension is Cursor Touch Bar, published as `fettah.cursor-touch-bar`.
-- Settings and commands use the `cursorTouchBar` prefix.
-
 ## [0.2.0] - 2026-09-22
 
+Fork of ShipBar, rebuilt as **Cursor Touch Bar** (`fettah.cursor-touch-bar`). The bar is fully configurable—not a fixed six buttons. Up to ten slots on the main row, add or remove buttons and spaces, drag to reorder, and split the row into groups. Settings use the `cursorTouchBar` prefix.
+
 ### Added
-- **Default bar** — Left, Bottom, Right, New chat, Modes, and Skills are ready on install.
-- **Icons** — each slot can use any bundled icon. The choice shows up on the bar immediately.
-- **Modes row** — Ask, Plan, and Agent, with Back to return.
-- **Skills** — a name, an icon, and text that opens in a new chat. Optional groups. Five per page.
-- **Config panel** — each button shows its name and what it does. Search actions, pick an icon, add skills.
+- **Groups** — up to ten main-row buttons; spaces define groups; reorder in the config panel.
+- **Actions** — built-in actions or any Cursor/VS Code command per slot, each with its own icon.
+- **Layers** — a button can open a sub-row (Modes, Skills, Layout, Chat, Review, General) instead of running a command; Back returns to the main row.
+- **Skills** — named prompt shortcuts in optional folders; tap opens a new chat with the text filled in.
+- **Library** — searchable Lucide icons and common commands when editing a button.
+- **Presets** — a ready-to-use bar on first install, plus Cursor built-in skills as `/skill-name` shortcuts in Review, Workflow, Customize, and Build.
+- **Config panel** — Touch Bar preview; click a slot to change icon, action, or layer; **+** adds a button or a space.
 
 ### Changed
-- Generate, Accept, Reject, Duplicate chat, and Voice stay in the action list.
-- A slot saved before this version keeps its command. Its icon falls back to the new default until you save once.
+- Legacy ShipBar slot commands still work until you save; icons fall back to new defaults until then.
 
 ## [0.1.0] - 2026-07-24
 

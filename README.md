@@ -1,61 +1,25 @@
 # Cursor Touch Bar
 
-![Settings panel — Touch Bar preview, skills, and options](docs/settings-panel.png)
+![Settings panel: Touch Bar preview, skills, and options](docs/settings-panel.png)
 
-Cursor Touch Bar puts a row of buttons above the keyboard. Each one has a name, a short description, an icon, and an action. The gear button opens the page where you change them.
+Full control of the Mac Touch Bar in [Cursor](https://cursor.com) and VS Code: your buttons, your actions, ready to use out of the box.
 
-The default row has seven icons, grouped with spaces: layout (three panels), chat + voice, modes, then skills. You can add up to ten icons (spaces do not count), drag them into order, and put a space between them. Buttons with no space stay grouped.
+## Features
 
-The N3XTTECH logo at the end of the main row is on by default (`cursorTouchBar.showNextStackLogo`).
+- **Groups.** Up to ten buttons on the main row; spaces split them into groups; drag to reorder in settings.
+- **Actions.** Each slot gets a built-in action or any Cursor or VS Code command, plus its own icon.
+- **Layers.** A button can open another row (Modes, Skills, Layout, Chat, Review, or General) instead of running a command; Back returns to the main row.
+- **Skills.** Named text shortcuts in folders; tap to open a new chat with the prompt filled in.
+- **Library.** A large searchable set of Lucide icons and common commands when you configure a button.
+- **Presets.** A ready-to-use bar on first install and [Cursor built-in skills](https://cursor.com/docs/skills) as `/skill-name` shortcuts in Review, Workflow, Customize, and Build.
 
-## Default buttons
-
-| Icon | Button | What it does |
-|------|--------|----------------|
-| <img src="icons/panel-left.png" width="20" height="20" alt="Left" /> | **Left** | Show or hide the left sidebar |
-| <img src="icons/panel-bottom.png" width="20" height="20" alt="Bottom" /> | **Bottom** | Show or hide the bottom panel |
-| <img src="icons/panel-right.png" width="20" height="20" alt="Right" /> | **Right** | Show or hide the right sidebar |
-| *(gap)* | | |
-| <img src="icons/message-square-plus.png" width="20" height="20" alt="New chat" /> | **New chat** | Start a new chat |
-| <img src="icons/mic.png" width="20" height="20" alt="Voice" /> | **Voice** | Toggle voice dictation |
-| *(gap)* | | |
-| <img src="icons/layers.png" width="20" height="20" alt="Modes" /> | **Modes** | Open Ask, Plan, and Agent |
-| *(gap)* | | |
-| <img src="icons/folder.png" width="20" height="20" alt="Skills" /> | **Skills** | Open skill groups and shortcuts |
-
-The gear stays at the end of the main row.
-
-## Modes
-
-Modes replaces the row with Back, Ask, Plan, and Agent. Those three switch the current chat. Back returns to the main row. You can also put Ask, Plan, or Agent directly on the main row.
-
-## Skills
-
-A skill is a name, the text to put in a chat, and an optional group. The button shows the name.
-
-Tap it and a new chat opens with that text filled in. Press Enter to send.
-
-Fresh installs include presets for [Cursor built-in skills](https://cursor.com/docs/skills), grouped as **Review**, **Workflow**, **Customize**, and **Build**. Each preset uses a `/skill-name` prompt so Agent runs the matching skill.
-
-- **No skills yet.** The row shows Add, which opens settings.
-- **One group.** The names are one row. Use Next when the bar is full.
-- **More than one group.** The row shows the group names. Open a group to see its skills.
-
-## Changing a button
-
-Tap the gear, or run **Cursor Touch Bar: Configure Buttons**.
-
-- Click a button on the bar preview. The panel under it shows what it does, with **Icon**, **Action**, **Delete**, and move controls.
-- **+** adds an icon or a space.
-- **Pages** in the action list open a second row on the Touch Bar: Modes, Skills, Layout, Chat, Review, or General.
-
-Generate, Accept all, Reject all, Duplicate chat, and Voice are still in the list.
-
-Right panel is the right sidebar. If your chat lives in the unified sidebar, pick **Unified sidebar** instead.
-
-You can hide the gear with `"cursorTouchBar.showConfigButton": false`.
+![Touch Bar layouts: main row, sub-rows, and skills](docs/touchbar-showcase.png)
 
 ## Settings
+
+Tap the gear, or run **Cursor Touch Bar: Configure Buttons**. Click a button on the preview to change its icon, action, or place. **+** adds a button or a space.
+
+If chat lives in the unified sidebar, use **Unified sidebar** instead of Right panel. Hide the gear with `"cursorTouchBar.showConfigButton": false`.
 
 The same options live in settings.json (`Cmd+Shift+P` → **Preferences: Open User Settings (JSON)**). A slot you leave out keeps its default. See [`examples/settings.example.jsonc`](examples/settings.example.jsonc).
 
@@ -83,9 +47,9 @@ The same options live in settings.json (`Cmd+Shift+P` → **Preferences: Open Us
 ## Requirements
 
 - macOS with a physical Touch Bar
-- [Cursor](https://cursor.com)
+- Cursor or VS Code
 
-Layout actions also work in VS Code. Ask, Plan, Agent, and New chat are Cursor commands.
+Layout, save, palette, and terminal work in both. Ask, Plan, Agent, and New chat are Cursor commands.
 
 ## Installation
 
@@ -96,9 +60,9 @@ npm install -g @vscode/vsce
 vsce package --no-dependencies
 ```
 
-*(`--no-dependencies` is required — Cursor Touch Bar has no runtime dependencies, and `vsce`'s dependency-resolution step fails on projects without one.)*
+`--no-dependencies` is required. This extension has no runtime dependencies, and `vsce` fails its dependency step without one.
 
-Then in Cursor: `Extensions` → `...` menu → **Install from VSIX...** and pick the generated `cursor-touch-bar-0.2.1.vsix`.
+Then in Cursor: `Extensions` → `...` menu → **Install from VSIX...** and pick `cursor-touch-bar-0.2.0.vsix`.
 
 ### From source
 
@@ -118,6 +82,7 @@ brew install librsvg   # provides rsvg-convert
 ./icons-download.sh
 node scripts/build-char-icons.js   # Touch Bar label letters (macOS; committed PNGs)
 node scripts/build-manifest.js
+node scripts/render-touchbar-showcase.js   # docs/touchbar-showcase.png
 ```
 
 `build-manifest.js` writes the Touch Bar commands into `package.json`. Cursor can only show an icon that is registered there.

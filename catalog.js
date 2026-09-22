@@ -114,191 +114,36 @@ const ICONS = {
   'grip-vertical': { label: 'Grip', file: 'icons/grip-vertical.png' }
 };
 
+function action(group, label, description, icon, kind, target) {
+  return kind === 'page'
+    ? { group, label, description, icon, type: 'page', page: target }
+    : { group, label, description, icon, type: 'command', command: target };
+}
+
 const ACTIONS = [
-  {
-    group: 'Layout',
-    label: 'Layout',
-    description: 'Open panel and terminal shortcuts on the bar.',
-    icon: 'panel-left',
-    type: 'page',
-    page: 'layout'
-  },
-  {
-    group: 'Layout',
-    label: 'Left panel',
-    description: 'Show or hide the left sidebar.',
-    icon: 'panel-left',
-    type: 'command',
-    command: 'workbench.action.toggleSidebarVisibility'
-  },
-  {
-    group: 'Layout',
-    label: 'Bottom panel',
-    description: 'Show or hide the bottom panel.',
-    icon: 'panel-bottom',
-    type: 'command',
-    command: 'workbench.action.togglePanel'
-  },
-  {
-    group: 'Layout',
-    label: 'Right panel',
-    description: 'Show or hide the right sidebar.',
-    icon: 'panel-right',
-    type: 'command',
-    command: 'workbench.action.toggleAuxiliaryBar'
-  },
-  {
-    group: 'Layout',
-    label: 'Unified sidebar',
-    description: 'Show or hide the unified sidebar, if that is where your chat sits.',
-    icon: 'panel-right',
-    type: 'command',
-    command: 'workbench.action.toggleUnifiedSidebar'
-  },
-  {
-    group: 'Layout',
-    label: 'Terminal',
-    description: 'Show or hide the terminal.',
-    icon: 'terminal',
-    type: 'command',
-    command: 'workbench.action.terminal.toggleTerminal'
-  },
-  {
-    group: 'Chat',
-    label: 'Chat',
-    description: 'Open chat shortcuts on the bar.',
-    icon: 'message-square-plus',
-    type: 'page',
-    page: 'chat'
-  },
-  {
-    group: 'Chat',
-    label: 'New chat',
-    description: 'Start a new chat.',
-    icon: 'message-square-plus',
-    type: 'command',
-    command: 'aichat.newchataction'
-  },
-  {
-    group: 'Chat',
-    label: 'Duplicate chat',
-    description: 'Duplicate the current chat into a new thread.',
-    icon: 'split',
-    type: 'command',
-    command: 'composer.duplicateChat'
-  },
-  {
-    group: 'Chat',
-    label: 'Voice',
-    description: 'Turn voice dictation on or off.',
-    icon: 'mic',
-    type: 'command',
-    command: 'composer.toggleVoiceDictation'
-  },
-  {
-    group: 'Modes',
-    label: 'Modes',
-    description: 'Open Ask, Plan, and Agent on the bar.',
-    icon: 'layers',
-    type: 'page',
-    page: 'modes'
-  },
-  {
-    group: 'Modes',
-    label: 'Ask',
-    description: 'Switch the current chat to Ask.',
-    icon: 'message-circle',
-    type: 'command',
-    command: 'composerMode.chat'
-  },
-  {
-    group: 'Modes',
-    label: 'Plan',
-    description: 'Switch the current chat to Plan.',
-    icon: 'list-checks',
-    type: 'command',
-    command: 'composerMode.plan'
-  },
-  {
-    group: 'Modes',
-    label: 'Agent',
-    description: 'Switch the current chat to Agent.',
-    icon: 'bot',
-    type: 'command',
-    command: 'composerMode.agent'
-  },
-  {
-    group: 'Modes',
-    label: 'Cycle modes',
-    description: 'Cycle the current chat through its modes.',
-    icon: 'layers',
-    type: 'command',
-    command: 'composer.cycleMode'
-  },
-  {
-    group: 'Skills',
-    label: 'Skills',
-    description: 'Open your skills on the bar.',
-    icon: 'folder',
-    type: 'page',
-    page: 'skills'
-  },
-  {
-    group: 'Review',
-    label: 'Review',
-    description: 'Open generate and accept or reject on the bar.',
-    icon: 'circle-check',
-    type: 'page',
-    page: 'review'
-  },
-  {
-    group: 'Review',
-    label: 'Generate',
-    description: 'Open inline generate at the cursor.',
-    icon: 'zap',
-    type: 'command',
-    command: 'aipopup.action.modal.generate'
-  },
-  {
-    group: 'Review',
-    label: 'Accept all',
-    description: 'Accept all pending edits.',
-    icon: 'circle-check',
-    type: 'command',
-    command: 'editor.action.inlineDiffs.acceptAll'
-  },
-  {
-    group: 'Review',
-    label: 'Reject all',
-    description: 'Reject all pending edits.',
-    icon: 'circle-x',
-    type: 'command',
-    command: 'editor.action.inlineDiffs.rejectAll'
-  },
-  {
-    group: 'General',
-    label: 'General',
-    description: 'Open palette and save on the bar.',
-    icon: 'search',
-    type: 'page',
-    page: 'general'
-  },
-  {
-    group: 'General',
-    label: 'Command palette',
-    description: 'Open the command palette.',
-    icon: 'search',
-    type: 'command',
-    command: 'workbench.action.showCommands'
-  },
-  {
-    group: 'General',
-    label: 'Save',
-    description: 'Save the current file.',
-    icon: 'save',
-    type: 'command',
-    command: 'workbench.action.files.save'
-  }
+  action('Layout', 'Layout', 'Open panel and terminal shortcuts on the bar.', 'panel-left', 'page', 'layout'),
+  action('Layout', 'Left panel', 'Show or hide the left sidebar.', 'panel-left', 'command', 'workbench.action.toggleSidebarVisibility'),
+  action('Layout', 'Bottom panel', 'Show or hide the bottom panel.', 'panel-bottom', 'command', 'workbench.action.togglePanel'),
+  action('Layout', 'Right panel', 'Show or hide the right sidebar.', 'panel-right', 'command', 'workbench.action.toggleAuxiliaryBar'),
+  action('Layout', 'Unified sidebar', 'Show or hide the unified sidebar, if that is where your chat sits.', 'panel-right', 'command', 'workbench.action.toggleUnifiedSidebar'),
+  action('Layout', 'Terminal', 'Show or hide the terminal.', 'terminal', 'command', 'workbench.action.terminal.toggleTerminal'),
+  action('Chat', 'Chat', 'Open chat shortcuts on the bar.', 'message-square-plus', 'page', 'chat'),
+  action('Chat', 'New chat', 'Start a new chat.', 'message-square-plus', 'command', 'aichat.newchataction'),
+  action('Chat', 'Duplicate chat', 'Duplicate the current chat into a new thread.', 'split', 'command', 'composer.duplicateChat'),
+  action('Chat', 'Voice', 'Turn voice dictation on or off.', 'mic', 'command', 'composer.toggleVoiceDictation'),
+  action('Modes', 'Modes', 'Open Ask, Plan, and Agent on the bar.', 'layers', 'page', 'modes'),
+  action('Modes', 'Ask', 'Switch the current chat to Ask.', 'message-circle', 'command', 'composerMode.chat'),
+  action('Modes', 'Plan', 'Switch the current chat to Plan.', 'list-checks', 'command', 'composerMode.plan'),
+  action('Modes', 'Agent', 'Switch the current chat to Agent.', 'bot', 'command', 'composerMode.agent'),
+  action('Modes', 'Cycle modes', 'Cycle the current chat through its modes.', 'layers', 'command', 'composer.cycleMode'),
+  action('Skills', 'Skills', 'Open your skills on the bar.', 'folder', 'page', 'skills'),
+  action('Review', 'Review', 'Open generate and accept or reject on the bar.', 'circle-check', 'page', 'review'),
+  action('Review', 'Generate', 'Open inline generate at the cursor.', 'zap', 'command', 'aipopup.action.modal.generate'),
+  action('Review', 'Accept all', 'Accept all pending edits.', 'circle-check', 'command', 'editor.action.inlineDiffs.acceptAll'),
+  action('Review', 'Reject all', 'Reject all pending edits.', 'circle-x', 'command', 'editor.action.inlineDiffs.rejectAll'),
+  action('General', 'General', 'Open palette and save on the bar.', 'search', 'page', 'general'),
+  action('General', 'Command palette', 'Open the command palette.', 'search', 'command', 'workbench.action.showCommands'),
+  action('General', 'Save', 'Save the current file.', 'save', 'command', 'workbench.action.files.save')
 ];
 
 const MAX_SLOTS = 10;

@@ -8,10 +8,10 @@ const {
   SLOTS,
   ACTIONS,
   FIXED_BUTTONS,
-  PAGE_SIZE,
   SKILL_PAGE,
   ACTION_ROW,
   LABEL_FACES,
+  ACTION_PAGE_GROUPS,
   skillFaceToken,
   skillSlotCommand,
   HIDDEN_TOUCHBAR,
@@ -177,9 +177,6 @@ async function paintBar() {
 
   for (const slot of slots) {
     await setBarContext(ID + '.skill' + slot.index, slot.show);
-  }
-  for (let index = SKILL_PAGE + 1; index <= PAGE_SIZE; index++) {
-    await setBarContext(ID + '.skill' + index, false);
   }
 
   for (let index = 1; index <= ACTION_ROW; index++) {
@@ -432,7 +429,7 @@ function activate(context) {
     }
   }
 
-  for (const page of ['layout', 'chat', 'review', 'general']) {
+  for (const page of Object.keys(ACTION_PAGE_GROUPS)) {
     for (let index = 1; index <= ACTION_ROW; index++) {
       for (const iconId of pickableIconIds()) {
         const position = index;

@@ -263,9 +263,6 @@ function backView(view, skills) {
   if (onSkillsPage(current) && current.group) {
     return { name: 'skills', group: '', offset: 0 };
   }
-  if (onSkillsPage(current)) {
-    return mainView();
-  }
   return mainView();
 }
 

@@ -4,4 +4,4 @@ icons/labels/f*/skill-*.png
 *.vsix
 .DS_Store
 .vscode-test/
-*.log
+docs/.showcase-labels/

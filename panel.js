@@ -82,7 +82,7 @@ function renderPanel(webview, extensionUri, model) {
   .tb-halo.space-halo .spacer { width: 24px; }
   .touch { display: flex; align-items: center; width: max-content; min-width: 100%; padding: 10px 12px; box-sizing: border-box; }
   .cluster { display: flex; align-items: center; background: #2c2c2e; border-radius: 8px; flex: none; overflow: hidden; }
-  button.tb, button.spacer, button.chip, button.scroll-btn, div.tb {
+  button.tb, button.spacer, div.tb {
     border: none; color: #fff; font-family: inherit; cursor: pointer; flex: none; background: transparent;
   }
   button.tb, div.tb {
@@ -154,13 +154,7 @@ function renderPanel(webview, extensionUri, model) {
     background: var(--vscode-inputValidation-errorBackground, #5a1d1d);
     color: var(--vscode-inputValidation-errorForeground, #f88);
   }
-  .skills-editor label.field { margin-top: 8px; }
-  .skills-editor label.field:first-child { margin-top: 0; }
-  .skills-editor .detail-actions { margin-top: 12px; justify-content: space-between; }
-  .skills-editor .detail-actions button.pick { flex: 0 0 auto; min-width: 0; }
   button.pick.primary { background: var(--vscode-button-background); color: var(--vscode-button-foreground); }
-  .skill-group { flex: none; margin: 0 4px 0 2px; font-size: 0.72em; opacity: 0.65; }
-  .skill-gap { width: 12px; flex: none; }
   .skills-divider {
     height: 0; margin: 0; border: none;
     border-top: 1px solid var(--vscode-widget-border, rgba(128,128,128,0.35));
@@ -199,10 +193,6 @@ function renderPanel(webview, extensionUri, model) {
   .page-save button.act.saved-flash {
     background: #2f7d4a; color: #fff;
   }
-  button.chip {
-    height: 36px; padding: 0 14px; border-radius: 8px; background: #2c2c2e; color: #fff; font-size: 0.95em;
-  }
-  .editor { margin-top: 14px; }
   .title { font-weight: 600; }
   .row { display: flex; gap: 8px; flex-wrap: wrap; align-items: center; margin-top: 10px; }
   button.act {
@@ -286,14 +276,10 @@ function h(tag, attrs) {
   return node;
 }
 
-function skillParts(label) {
+function skillDisplayText(label) {
   const name = (label || '').trim();
   const bare = name.charAt(0) === '/' ? name.slice(1) : name;
-  return bare || 'name';
-}
-
-function skillDisplayText(label) {
-  return '/' + skillParts(label);
+  return '/' + (bare || 'name');
 }
 
 function iconSrc(id) {
@@ -1240,10 +1226,6 @@ document.body.addEventListener('change', (event) => {
     render();
     return;
   }
-});
-
-document.body.addEventListener('input', (event) => {
-  if (event.target.id === 'search') filterPicker(event.target.value);
 });
 
 document.body.addEventListener('dragstart', (event) => {

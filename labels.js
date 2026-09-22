@@ -222,4 +222,12 @@ function skillLabelPath(extensionPath, index, face) {
   return path.join(extensionPath, 'icons', 'labels', folder, 'skill-' + index + '.png');
 }
 
-module.exports = { writeSkillLabel, writeEmptySkillLabel, skillLabelPath, ICON_SIZE };
+module.exports = {
+  writeSkillLabel,
+  writeEmptySkillLabel,
+  skillLabelPath,
+  ICON_SIZE,
+  decodePngRgba,
+  png,
+  loadPngSprite
+};
