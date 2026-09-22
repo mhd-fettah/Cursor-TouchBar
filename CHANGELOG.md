@@ -2,6 +2,32 @@
 
 All notable changes to ShipBar are documented here.
 
+## [0.2.0] - 2026-09-22
+
+### Added
+- **Choose any icon** — 153 bundled Lucide icons, grouped and searchable in the
+  configuration panel. Icons are no longer welded to a slot position.
+- **Choose any command** — the picker searches curated Cursor commands, titles
+  from installed extensions, and every remaining command ID in the editor.
+- **Pages** — a button can swap the row for another set of buttons, with a Back
+  button added automatically. The Touch Bar supports buttons only, so this is how
+  a second level works.
+- **Prompt buttons** — open a new chat pre-filled with text you saved. Cursor
+  exposes no way for an extension to send the message, so it stops at Enter.
+- **Ten buttons per row**, up from six.
+- **Live preview** of the row being edited, plus drag-to-reorder, per-button
+  on/off, inline warnings for unfinished buttons, and layout export/import.
+- Defaults covering the panels, new chat, and the Ask, Plan, and Agent modes,
+  with a seeded skills page and a one-time welcome notice.
+
+### Changed
+- `shipbar.buttons` is replaced by `shipbar.layout`. Existing configs migrate
+  automatically on first start.
+- Touch Bar contributions are generated from the catalogs in `src/catalog/` by
+  `npm run generate`, rather than hand-written in `package.json`.
+- `icons-download.sh` reads the icon catalog and falls back to macOS `sips` when
+  `rsvg-convert` is missing.
+
 ## [0.1.0] - 2026-07-24
 
 ### Added

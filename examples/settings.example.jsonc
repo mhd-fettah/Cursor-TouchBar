@@ -1,53 +1,126 @@
 // ShipBar example configuration
 //
-// Copy the "shipbar.buttons" block below into your user or workspace
-// settings.json (Cmd+Shift+P → "Preferences: Open User Settings (JSON)").
-// Changes take effect immediately — no reload needed for command
-// remapping. Toggling "enabled" hides/shows the button on the Touch Bar.
+// Copy the "shipbar.layout" block below into your user settings.json
+// (Cmd+Shift+P -> "Preferences: Open User Settings (JSON)"). Changes apply
+// immediately, no reload needed.
 //
-// Note: icons are fixed per slot position (slot1 = Zap icon, slot2 =
-// Check icon, etc.) — only the command each slot runs, and whether it's
-// shown, can be changed live from settings.
+// Easier still: tap the gear on the Touch Bar, or run
+// "ShipBar: Configure Buttons", and edit the same thing with a live preview,
+// an icon grid, and a searchable command list.
+//
+// Rules worth knowing:
+//   - "icon" must be one of the bundled icon names (see src/catalog/icons.js)
+//     and must be unique within its row. A press is matched by icon, so a row
+//     cannot show the same icon twice.
+//   - Up to 10 buttons per row.
+//   - "label" shows in the configuration panel, not on the Touch Bar itself.
+//   - "enabled": false keeps a button configured but off the bar.
 
 {
-    "shipbar.buttons": {
-      // slot1: default = inline AI generate popup (Cmd+K-style)
-      "slot1": {
+  "shipbar.layout": {
+    // The row you see by default.
+    "main": [
+      {
+        "icon": "panel-left",
+        "label": "Left panel",
         "enabled": true,
-        "command": "aipopup.action.modal.generate"
+        "action": { "type": "command", "command": "workbench.action.toggleSidebarVisibility" }
       },
-  
-      // slot2: default = accept all pending agent edits
-      "slot2": {
+      {
+        "icon": "panel-bottom",
+        "label": "Bottom panel",
         "enabled": true,
-        "command": "editor.action.inlineDiffs.acceptAll"
+        "action": { "type": "command", "command": "workbench.action.togglePanel" }
       },
-  
-      // slot3: default = reject all pending agent edits
-      "slot3": {
+      {
+        "icon": "panel-right",
+        "label": "Right panel",
         "enabled": true,
-        "command": "editor.action.inlineDiffs.rejectAll"
+        // Some Cursor layouts use the unified sidebar instead. If this button
+        // does nothing, try "workbench.action.toggleUnifiedSidebar".
+        "action": { "type": "command", "command": "workbench.action.toggleAuxiliaryBar" }
       },
-  
-      // slot4: remapped example — open integrated terminal instead of
-      // duplicating the chat thread
-      "slot4": {
+      {
+        "icon": "message-square-plus",
+        "label": "New chat",
         "enabled": true,
-        "command": "workbench.action.terminal.toggleTerminal"
+        "action": { "type": "command", "command": "aichat.newchataction" }
       },
-  
-      // slot5: disabled example — hides the Mic button entirely from the
-      // Touch Bar (e.g. if you never use voice dictation)
-      "slot5": {
+
+      // Chat modes. "composerMode.chat" is Ask; Plan and Agent match their names.
+      // One button that rotates through them: "composer.cycleMode".
+      {
+        "icon": "message-circle",
+        "label": "Ask mode",
+        "enabled": true,
+        "action": { "type": "command", "command": "composerMode.chat" }
+      },
+      {
+        "icon": "list-checks",
+        "label": "Plan mode",
+        "enabled": true,
+        "action": { "type": "command", "command": "composerMode.plan" }
+      },
+      {
+        "icon": "bot",
+        "label": "Agent mode",
+        "enabled": true,
+        "action": { "type": "command", "command": "composerMode.agent" }
+      },
+
+      // A "page" button swaps the row for another set of buttons. A Back button
+      // is added for you. This is how the Touch Bar does a second level: it
+      // supports buttons only, no popovers and no scrollable lists.
+      {
+        "icon": "folder",
+        "label": "Skills",
+        "enabled": true,
+        "action": { "type": "page", "page": "skills" }
+      },
+
+      // Configured but off the bar. Flip "enabled" to true to use it.
+      {
+        "icon": "circle-check",
+        "label": "Accept all edits",
         "enabled": false,
-        "command": "composer.toggleVoiceDictation"
-      },
-  
-      // slot6: default = start a brand new chat
-      "slot6": {
-        "enabled": true,
-        "command": "aichat.newchataction"
+        "action": { "type": "command", "command": "editor.action.inlineDiffs.acceptAll" }
       }
+    ],
+
+    // Extra rows. Each key is a page name referenced by a "page" action above.
+    "pages": {
+      "skills": [
+        // A "prompt" button opens a new chat with the text already filled in.
+        // You read it and press Enter; Cursor does not let an extension send a
+        // chat message for you.
+        {
+          "icon": "git-pull-request",
+          "label": "Review changes",
+          "enabled": true,
+          "action": {
+            "type": "prompt",
+            "text": "Review my uncommitted changes and list anything risky."
+          }
+        },
+        {
+          "icon": "git-commit-horizontal",
+          "label": "Write commit",
+          "enabled": true,
+          "action": { "type": "prompt", "text": "Write a commit message for my staged changes." }
+        },
+        {
+          "icon": "bug",
+          "label": "Explain error",
+          "enabled": true,
+          "action": {
+            "type": "prompt",
+            "text": "Explain the errors in the Problems panel and how to fix them."
+          }
+        }
+      ]
     }
-  }
-  
+  },
+
+  // Hide the gear button if you would rather keep the slot.
+  "shipbar.showConfigButton": true
+}

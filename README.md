@@ -2,88 +2,124 @@
 
 [![Follow on X](https://img.shields.io/badge/Follow-@_Max__Blackwell-black?logo=x)](https://x.com/_Max_Blackwell)
 
-**Tactile control for your Cursor AI agent, right on your MacBook's Touch Bar.**
+**Build your own Cursor control strip on your MacBook's Touch Bar.**
 
 ## What it is
- 
-ShipBar is a Cursor extension that turns your MacBook's Touch Bar into a
-command strip for Cursor's AI coding agent: 6 configurable action buttons
-plus a settings button, right above your keyboard.
 
-## Features
+ShipBar turns the Touch Bar into a row of buttons for Cursor. Every button is
+yours: pick any command, pick any of 153 bundled icons, and put prompts you use
+often onto extra pages.
 
-| Icon | Button | Action | Command |
-|------|--------|--------|---------|
-| <img src="icons/zap.png" width="20" height="20" alt="Zap" /> | **Zap** | Open the inline AI generate prompt (Cmd+K-style) at your cursor | `aipopup.action.modal.generate` |
-| <img src="icons/circle-check.png" width="20" height="20" alt="Check" /> | **Check** | Accept all pending edits from the agent | `editor.action.inlineDiffs.acceptAll` |
-| <img src="icons/circle-x.png" width="20" height="20" alt="Close" /> | **Close** | Reject all pending edits from the agent | `editor.action.inlineDiffs.rejectAll` |
-| <img src="icons/split.png" width="20" height="20" alt="Branch" /> | **Branch** | Duplicate the current chat into a new thread | `composer.duplicateChat` |
-| <img src="icons/mic.png" width="20" height="20" alt="Mic" /> | **Mic** | Toggle voice dictation on/off | `composer.toggleVoiceDictation` |
-| <img src="icons/sparkles.png" width="20" height="20" alt="Chat" /> | **Chat** | Start a brand new chat | `aichat.newchataction` |
+It works out of the box — install it and the row below is already there.
 
-## Configuration
+## Out of the box
 
-Every button is remappable, and any button can be hidden.
+| Icon | Button | What it does |
+|------|--------|--------------|
+| <img src="icons/panel-left.png" width="20" height="20" alt="" /> | Left panel | Show or hide the Explorer sidebar |
+| <img src="icons/panel-bottom.png" width="20" height="20" alt="" /> | Bottom panel | Show or hide the terminal panel |
+| <img src="icons/panel-right.png" width="20" height="20" alt="" /> | Right panel | Show or hide the secondary sidebar |
+| <img src="icons/message-square-plus.png" width="20" height="20" alt="" /> | New chat | Start a fresh chat thread |
+| <img src="icons/message-circle.png" width="20" height="20" alt="" /> | Ask mode | Switch the chat to Ask |
+| <img src="icons/list-checks.png" width="20" height="20" alt="" /> | Plan mode | Switch the chat to Plan |
+| <img src="icons/bot.png" width="20" height="20" alt="" /> | Agent mode | Switch the chat to Agent |
+| <img src="icons/folder.png" width="20" height="20" alt="" /> | Skills | Open a second row of prompts |
+| <img src="icons/settings.png" width="20" height="20" alt="" /> | Gear | Open the configuration panel |
 
-**Easiest way — Touch Bar:** tap the gear button (7th slot, on by default)
-to open the ShipBar configuration panel right in Cursor. Toggle any button
-on or off, pick a new command from the preset list or enter a custom
-command ID, then hit **Save**. No file editing required.
+Accept-all and reject-all buttons are configured but switched off, so the row
+stays clear of the Control Strip. Turn them on in the panel whenever you like.
 
-You can also open the same panel via `Cmd+Shift+P` → **"ShipBar: Configure
-Buttons"**, or hide the gear button itself with `"shipbar.showConfigButton": false`.
+## Configuring it
 
-**Manual way:** add a `shipbar.buttons` block to your settings.json
+Tap the gear, or press `Cmd+Shift+P` and run **ShipBar: Configure Buttons**.
+
+The panel shows a live preview of the row you are editing. For each button you
+can:
+
+- **Change the icon** — a searchable grid of all 153 icons. Icons already used
+  in that row are greyed out, because a press is matched by icon.
+- **Change what it does** — search every command Cursor and VS Code expose.
+  Cursor's own chat and mode commands are listed with proper names, since they
+  carry no title of their own.
+- **Rename it** — the name appears in the panel and in warnings, not on the bar.
+- **Turn it off** — it stays configured but leaves the Touch Bar.
+- **Reorder it** — drag the grip on the left.
+
+Changes apply the moment you hit Save. No reload.
+
+There is also **Export** and **Import** for moving a layout between machines.
+
+## Three kinds of button
+
+**Runs a command** — any Cursor or VS Code command ID.
+
+**Opens a page** — swaps the row for another set of buttons, with a Back button
+added automatically. This is how a Touch Bar does a submenu: it has no popovers
+or scrollable lists, only buttons, so a second level is a second row.
+
+**Opens a chat prompt** — opens a new chat with your text already filled in.
+You review it and press Enter. Cursor gives no extension a way to send a chat
+message, so ShipBar stops one keystroke short on purpose.
+
+## Editing settings.json directly
+
+The panel writes `shipbar.layout`. You can edit it by hand
 (`Cmd+Shift+P` → **Preferences: Open User Settings (JSON)**):
 
 ```jsonc
 {
-  "shipbar.buttons": {
-    "slot4": {
-      "enabled": true,
-      "command": "workbench.action.terminal.toggleTerminal"
-    },
-    "slot5": {
-      "enabled": false
+  "shipbar.layout": {
+    "main": [
+      {
+        "icon": "panel-left",
+        "label": "Left panel",
+        "enabled": true,
+        "action": { "type": "command", "command": "workbench.action.toggleSidebarVisibility" }
+      },
+      {
+        "icon": "folder",
+        "label": "Skills",
+        "enabled": true,
+        "action": { "type": "page", "page": "skills" }
+      }
+    ],
+    "pages": {
+      "skills": [
+        {
+          "icon": "git-pull-request",
+          "label": "Review changes",
+          "enabled": true,
+          "action": { "type": "prompt", "text": "Review my uncommitted changes." }
+        }
+      ]
     }
   }
 }
 ```
 
-- `command` — any Cursor or VS Code command ID. Changes apply immediately,
-  no reload required.
-- `enabled` — `false` removes the button from the Touch Bar entirely.
-- Only override the slots you want to change; unspecified slots keep their
-  defaults.
+- `icon` must be one of the bundled icon names, and unique within its row.
+- Up to 10 buttons per row.
+- `shipbar.showConfigButton: false` hides the gear.
 
-Slot-to-icon mapping is fixed (slot1 = Zap icon, slot2 = Check icon, and so
-on) — icons can't be swapped live from settings, only the command each slot
-runs and whether it's shown.
+See [`examples/settings.example.jsonc`](examples/settings.example.jsonc) for a
+fully annotated example.
 
-See [`examples/settings.example.jsonc`](examples/settings.example.jsonc) for
-a fully annotated example covering every slot.
+Upgrading from 0.1.x? Your old `shipbar.buttons` setting is migrated to
+`shipbar.layout` automatically the first time 0.2.0 starts.
 
 ## Why use it
- 
-Working with an AI coding agent means making the same few decisions over and
-over: generate, accept, reject, branch, dictate, or start fresh. Each of
-these normally costs you a window switch, a click hunt, or a trip to the
-command palette.
- 
-ShipBar collapses all of that into a single tap:
- 
-- **Faster than the palette** — one press beats `Cmd+Shift+P` and typing a
-  command name
-- **Zap for quick edits** — jump straight into inline generate without
-  leaving the keyboard
-- **Uses hardware you already have** — no extra device to buy, just the
-  Touch Bar sitting idle on your MacBook
+
+Driving an AI agent means the same handful of moves over and over: open a panel,
+start a chat, switch to Plan, accept the diff. Each one normally costs a window
+switch, a click hunt, or a trip to the command palette. ShipBar makes each one a
+single tap on hardware already sitting idle above your keyboard.
 
 ## Requirements
 
 - macOS with a physical Touch Bar
-- [Cursor](https://cursor.com) (the commands above are Cursor-specific; they
-  won't exist in vanilla VS Code)
+- [Cursor](https://cursor.com). The chat and mode commands are Cursor-specific
+  and will not exist in vanilla VS Code; the panel and layout still work, and
+  the panel's command search only lists what your editor actually has.
 
 ## Installation
 
@@ -98,34 +134,51 @@ vsce package --no-dependencies
 `vsce`'s dependency-resolution step fails on projects without one.)*
 
 Then in Cursor: `Extensions` → `...` menu → **Install from VSIX...** and pick
-the generated `shipbar-0.1.0.vsix`.
+the generated `shipbar-0.2.0.vsix`.
 
-### From source (for development)
+### From source
 
 ```bash
 git clone https://github.com/max-blackwell/ShipBar.git
 cd ShipBar
 ```
 
-Open the folder in Cursor and press `F5` to launch an Extension Development
-Host with ShipBar loaded.
+Open the folder in Cursor and press `F5` for an Extension Development Host with
+ShipBar loaded.
 
-## Regenerating icons
+## Working on it
 
-Icons are sourced from [Lucide](https://lucide.dev) and rendered to PNG.
-This includes the six action icons plus the settings (gear) icon used by
-the config panel button:
+A Touch Bar icon is bound to a command in `package.json` and cannot be swapped
+while Cursor is running. ShipBar therefore declares one command per icon and one
+menu entry per icon and position, and picks between them at runtime with context
+keys. Those contributions are generated, not hand-written:
 
 ```bash
-brew install librsvg   # provides rsvg-convert
-./icons-download.sh
+npm run generate        # rewrite the generated half of package.json
+npm run generate:check  # fail if package.json is stale
 ```
+
+The catalogs in [`src/catalog/`](src/catalog) are the source of truth:
+
+- `icons.js` — every icon, grouped for the picker
+- `commands.js` — curated commands with names and descriptions
+- `defaults.js` — the layout a fresh install gets
+
+To add an icon, add it to `icons.js`, then:
+
+```bash
+./icons-download.sh   # render PNGs from Lucide
+npm run generate      # regenerate package.json
+```
+
+Icons come from [Lucide](https://lucide.dev), rendered to white-on-transparent
+96×96 PNGs with `rsvg-convert` (`brew install librsvg`) or macOS `sips`.
 
 ## Contributing
 
-Issues and PRs welcome. Since ShipBar wraps internal Cursor commands, if a
-command ID changes in a Cursor update and an action stops working, please
-open an issue with the Cursor version you're on.
+Issues and PRs welcome. ShipBar wraps internal Cursor commands, so if one
+changes in a Cursor update and a button stops working, open an issue with your
+Cursor version. The fix is usually one line in `src/catalog/commands.js`.
 
 ## License
 
