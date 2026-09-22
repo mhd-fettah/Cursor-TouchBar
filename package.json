@@ -48,72 +48,4071 @@
         "icon": "icons/settings.png"
       },
       {
-        "command": "shipbar.slot1",
-        "title": "ShipBar: Slot 1 (default: Zap)",
-        "icon": "icons/zap.png"
+        "command": "shipbar.back",
+        "title": "Back",
+        "category": "ShipBar",
+        "icon": "icons/chevron-left.png"
       },
       {
-        "command": "shipbar.slot2",
-        "title": "ShipBar: Slot 2 (default: Check)",
+        "command": "shipbar.mode.ask",
+        "title": "Ask",
+        "category": "ShipBar",
+        "icon": "icons/message-circle.png"
+      },
+      {
+        "command": "shipbar.mode.plan",
+        "title": "Plan",
+        "category": "ShipBar",
+        "icon": "icons/list-checks.png"
+      },
+      {
+        "command": "shipbar.mode.agent",
+        "title": "Agent",
+        "category": "ShipBar",
+        "icon": "icons/bot.png"
+      },
+      {
+        "command": "shipbar.next",
+        "title": "Next",
+        "category": "ShipBar",
+        "icon": "icons/chevron-right.png"
+      },
+      {
+        "command": "shipbar.addSkill",
+        "title": "Add skill",
+        "category": "ShipBar",
+        "icon": "icons/plus.png"
+      },
+      {
+        "command": "shipbar.slot1.bot",
+        "title": "Slot 1 · Agent",
+        "category": "ShipBar Icons",
+        "icon": "icons/bot.png"
+      },
+      {
+        "command": "shipbar.slot1.bug",
+        "title": "Slot 1 · Bug",
+        "category": "ShipBar Icons",
+        "icon": "icons/bug.png"
+      },
+      {
+        "command": "shipbar.slot1.chevron-left",
+        "title": "Slot 1 · Back",
+        "category": "ShipBar Icons",
+        "icon": "icons/chevron-left.png"
+      },
+      {
+        "command": "shipbar.slot1.chevron-right",
+        "title": "Slot 1 · Next",
+        "category": "ShipBar Icons",
+        "icon": "icons/chevron-right.png"
+      },
+      {
+        "command": "shipbar.slot1.circle-check",
+        "title": "Slot 1 · Check",
+        "category": "ShipBar Icons",
         "icon": "icons/circle-check.png"
       },
       {
-        "command": "shipbar.slot3",
-        "title": "ShipBar: Slot 3 (default: Close)",
+        "command": "shipbar.slot1.circle-x",
+        "title": "Slot 1 · Close",
+        "category": "ShipBar Icons",
         "icon": "icons/circle-x.png"
       },
       {
-        "command": "shipbar.slot4",
-        "title": "ShipBar: Slot 4 (default: Branch)",
-        "icon": "icons/split.png"
+        "command": "shipbar.slot1.code",
+        "title": "Slot 1 · Code",
+        "category": "ShipBar Icons",
+        "icon": "icons/code.png"
       },
       {
-        "command": "shipbar.slot5",
-        "title": "ShipBar: Slot 5 (default: Mic)",
+        "command": "shipbar.slot1.eye",
+        "title": "Slot 1 · Eye",
+        "category": "ShipBar Icons",
+        "icon": "icons/eye.png"
+      },
+      {
+        "command": "shipbar.slot1.file",
+        "title": "Slot 1 · File",
+        "category": "ShipBar Icons",
+        "icon": "icons/file.png"
+      },
+      {
+        "command": "shipbar.slot1.folder",
+        "title": "Slot 1 · Folder",
+        "category": "ShipBar Icons",
+        "icon": "icons/folder.png"
+      },
+      {
+        "command": "shipbar.slot1.git-branch",
+        "title": "Slot 1 · Git",
+        "category": "ShipBar Icons",
+        "icon": "icons/git-branch.png"
+      },
+      {
+        "command": "shipbar.slot1.layers",
+        "title": "Slot 1 · Layers",
+        "category": "ShipBar Icons",
+        "icon": "icons/layers.png"
+      },
+      {
+        "command": "shipbar.slot1.list",
+        "title": "Slot 1 · List",
+        "category": "ShipBar Icons",
+        "icon": "icons/list.png"
+      },
+      {
+        "command": "shipbar.slot1.list-checks",
+        "title": "Slot 1 · Plan",
+        "category": "ShipBar Icons",
+        "icon": "icons/list-checks.png"
+      },
+      {
+        "command": "shipbar.slot1.message-circle",
+        "title": "Slot 1 · Ask",
+        "category": "ShipBar Icons",
+        "icon": "icons/message-circle.png"
+      },
+      {
+        "command": "shipbar.slot1.message-square",
+        "title": "Slot 1 · Message",
+        "category": "ShipBar Icons",
+        "icon": "icons/message-square.png"
+      },
+      {
+        "command": "shipbar.slot1.message-square-plus",
+        "title": "Slot 1 · New chat",
+        "category": "ShipBar Icons",
+        "icon": "icons/message-square-plus.png"
+      },
+      {
+        "command": "shipbar.slot1.mic",
+        "title": "Slot 1 · Mic",
+        "category": "ShipBar Icons",
         "icon": "icons/mic.png"
       },
       {
-        "command": "shipbar.slot6",
-        "title": "ShipBar: Slot 6 (default: Chat)",
+        "command": "shipbar.slot1.panel-bottom",
+        "title": "Slot 1 · Bottom panel",
+        "category": "ShipBar Icons",
+        "icon": "icons/panel-bottom.png"
+      },
+      {
+        "command": "shipbar.slot1.panel-left",
+        "title": "Slot 1 · Left panel",
+        "category": "ShipBar Icons",
+        "icon": "icons/panel-left.png"
+      },
+      {
+        "command": "shipbar.slot1.panel-right",
+        "title": "Slot 1 · Right panel",
+        "category": "ShipBar Icons",
+        "icon": "icons/panel-right.png"
+      },
+      {
+        "command": "shipbar.slot1.pencil",
+        "title": "Slot 1 · Pencil",
+        "category": "ShipBar Icons",
+        "icon": "icons/pencil.png"
+      },
+      {
+        "command": "shipbar.slot1.pin",
+        "title": "Slot 1 · Pin",
+        "category": "ShipBar Icons",
+        "icon": "icons/pin.png"
+      },
+      {
+        "command": "shipbar.slot1.play",
+        "title": "Slot 1 · Play",
+        "category": "ShipBar Icons",
+        "icon": "icons/play.png"
+      },
+      {
+        "command": "shipbar.slot1.plus",
+        "title": "Slot 1 · Plus",
+        "category": "ShipBar Icons",
+        "icon": "icons/plus.png"
+      },
+      {
+        "command": "shipbar.slot1.save",
+        "title": "Slot 1 · Save",
+        "category": "ShipBar Icons",
+        "icon": "icons/save.png"
+      },
+      {
+        "command": "shipbar.slot1.search",
+        "title": "Slot 1 · Search",
+        "category": "ShipBar Icons",
+        "icon": "icons/search.png"
+      },
+      {
+        "command": "shipbar.slot1.sparkles",
+        "title": "Slot 1 · Sparkles",
+        "category": "ShipBar Icons",
         "icon": "icons/sparkles.png"
+      },
+      {
+        "command": "shipbar.slot1.split",
+        "title": "Slot 1 · Branch",
+        "category": "ShipBar Icons",
+        "icon": "icons/split.png"
+      },
+      {
+        "command": "shipbar.slot1.terminal",
+        "title": "Slot 1 · Terminal",
+        "category": "ShipBar Icons",
+        "icon": "icons/terminal.png"
+      },
+      {
+        "command": "shipbar.slot1.undo-2",
+        "title": "Slot 1 · Undo",
+        "category": "ShipBar Icons",
+        "icon": "icons/undo-2.png"
+      },
+      {
+        "command": "shipbar.slot1.wrench",
+        "title": "Slot 1 · Wrench",
+        "category": "ShipBar Icons",
+        "icon": "icons/wrench.png"
+      },
+      {
+        "command": "shipbar.slot1.zap",
+        "title": "Slot 1 · Zap",
+        "category": "ShipBar Icons",
+        "icon": "icons/zap.png"
+      },
+      {
+        "command": "shipbar.slot2.bot",
+        "title": "Slot 2 · Agent",
+        "category": "ShipBar Icons",
+        "icon": "icons/bot.png"
+      },
+      {
+        "command": "shipbar.slot2.bug",
+        "title": "Slot 2 · Bug",
+        "category": "ShipBar Icons",
+        "icon": "icons/bug.png"
+      },
+      {
+        "command": "shipbar.slot2.chevron-left",
+        "title": "Slot 2 · Back",
+        "category": "ShipBar Icons",
+        "icon": "icons/chevron-left.png"
+      },
+      {
+        "command": "shipbar.slot2.chevron-right",
+        "title": "Slot 2 · Next",
+        "category": "ShipBar Icons",
+        "icon": "icons/chevron-right.png"
+      },
+      {
+        "command": "shipbar.slot2.circle-check",
+        "title": "Slot 2 · Check",
+        "category": "ShipBar Icons",
+        "icon": "icons/circle-check.png"
+      },
+      {
+        "command": "shipbar.slot2.circle-x",
+        "title": "Slot 2 · Close",
+        "category": "ShipBar Icons",
+        "icon": "icons/circle-x.png"
+      },
+      {
+        "command": "shipbar.slot2.code",
+        "title": "Slot 2 · Code",
+        "category": "ShipBar Icons",
+        "icon": "icons/code.png"
+      },
+      {
+        "command": "shipbar.slot2.eye",
+        "title": "Slot 2 · Eye",
+        "category": "ShipBar Icons",
+        "icon": "icons/eye.png"
+      },
+      {
+        "command": "shipbar.slot2.file",
+        "title": "Slot 2 · File",
+        "category": "ShipBar Icons",
+        "icon": "icons/file.png"
+      },
+      {
+        "command": "shipbar.slot2.folder",
+        "title": "Slot 2 · Folder",
+        "category": "ShipBar Icons",
+        "icon": "icons/folder.png"
+      },
+      {
+        "command": "shipbar.slot2.git-branch",
+        "title": "Slot 2 · Git",
+        "category": "ShipBar Icons",
+        "icon": "icons/git-branch.png"
+      },
+      {
+        "command": "shipbar.slot2.layers",
+        "title": "Slot 2 · Layers",
+        "category": "ShipBar Icons",
+        "icon": "icons/layers.png"
+      },
+      {
+        "command": "shipbar.slot2.list",
+        "title": "Slot 2 · List",
+        "category": "ShipBar Icons",
+        "icon": "icons/list.png"
+      },
+      {
+        "command": "shipbar.slot2.list-checks",
+        "title": "Slot 2 · Plan",
+        "category": "ShipBar Icons",
+        "icon": "icons/list-checks.png"
+      },
+      {
+        "command": "shipbar.slot2.message-circle",
+        "title": "Slot 2 · Ask",
+        "category": "ShipBar Icons",
+        "icon": "icons/message-circle.png"
+      },
+      {
+        "command": "shipbar.slot2.message-square",
+        "title": "Slot 2 · Message",
+        "category": "ShipBar Icons",
+        "icon": "icons/message-square.png"
+      },
+      {
+        "command": "shipbar.slot2.message-square-plus",
+        "title": "Slot 2 · New chat",
+        "category": "ShipBar Icons",
+        "icon": "icons/message-square-plus.png"
+      },
+      {
+        "command": "shipbar.slot2.mic",
+        "title": "Slot 2 · Mic",
+        "category": "ShipBar Icons",
+        "icon": "icons/mic.png"
+      },
+      {
+        "command": "shipbar.slot2.panel-bottom",
+        "title": "Slot 2 · Bottom panel",
+        "category": "ShipBar Icons",
+        "icon": "icons/panel-bottom.png"
+      },
+      {
+        "command": "shipbar.slot2.panel-left",
+        "title": "Slot 2 · Left panel",
+        "category": "ShipBar Icons",
+        "icon": "icons/panel-left.png"
+      },
+      {
+        "command": "shipbar.slot2.panel-right",
+        "title": "Slot 2 · Right panel",
+        "category": "ShipBar Icons",
+        "icon": "icons/panel-right.png"
+      },
+      {
+        "command": "shipbar.slot2.pencil",
+        "title": "Slot 2 · Pencil",
+        "category": "ShipBar Icons",
+        "icon": "icons/pencil.png"
+      },
+      {
+        "command": "shipbar.slot2.pin",
+        "title": "Slot 2 · Pin",
+        "category": "ShipBar Icons",
+        "icon": "icons/pin.png"
+      },
+      {
+        "command": "shipbar.slot2.play",
+        "title": "Slot 2 · Play",
+        "category": "ShipBar Icons",
+        "icon": "icons/play.png"
+      },
+      {
+        "command": "shipbar.slot2.plus",
+        "title": "Slot 2 · Plus",
+        "category": "ShipBar Icons",
+        "icon": "icons/plus.png"
+      },
+      {
+        "command": "shipbar.slot2.save",
+        "title": "Slot 2 · Save",
+        "category": "ShipBar Icons",
+        "icon": "icons/save.png"
+      },
+      {
+        "command": "shipbar.slot2.search",
+        "title": "Slot 2 · Search",
+        "category": "ShipBar Icons",
+        "icon": "icons/search.png"
+      },
+      {
+        "command": "shipbar.slot2.sparkles",
+        "title": "Slot 2 · Sparkles",
+        "category": "ShipBar Icons",
+        "icon": "icons/sparkles.png"
+      },
+      {
+        "command": "shipbar.slot2.split",
+        "title": "Slot 2 · Branch",
+        "category": "ShipBar Icons",
+        "icon": "icons/split.png"
+      },
+      {
+        "command": "shipbar.slot2.terminal",
+        "title": "Slot 2 · Terminal",
+        "category": "ShipBar Icons",
+        "icon": "icons/terminal.png"
+      },
+      {
+        "command": "shipbar.slot2.undo-2",
+        "title": "Slot 2 · Undo",
+        "category": "ShipBar Icons",
+        "icon": "icons/undo-2.png"
+      },
+      {
+        "command": "shipbar.slot2.wrench",
+        "title": "Slot 2 · Wrench",
+        "category": "ShipBar Icons",
+        "icon": "icons/wrench.png"
+      },
+      {
+        "command": "shipbar.slot2.zap",
+        "title": "Slot 2 · Zap",
+        "category": "ShipBar Icons",
+        "icon": "icons/zap.png"
+      },
+      {
+        "command": "shipbar.slot3.bot",
+        "title": "Slot 3 · Agent",
+        "category": "ShipBar Icons",
+        "icon": "icons/bot.png"
+      },
+      {
+        "command": "shipbar.slot3.bug",
+        "title": "Slot 3 · Bug",
+        "category": "ShipBar Icons",
+        "icon": "icons/bug.png"
+      },
+      {
+        "command": "shipbar.slot3.chevron-left",
+        "title": "Slot 3 · Back",
+        "category": "ShipBar Icons",
+        "icon": "icons/chevron-left.png"
+      },
+      {
+        "command": "shipbar.slot3.chevron-right",
+        "title": "Slot 3 · Next",
+        "category": "ShipBar Icons",
+        "icon": "icons/chevron-right.png"
+      },
+      {
+        "command": "shipbar.slot3.circle-check",
+        "title": "Slot 3 · Check",
+        "category": "ShipBar Icons",
+        "icon": "icons/circle-check.png"
+      },
+      {
+        "command": "shipbar.slot3.circle-x",
+        "title": "Slot 3 · Close",
+        "category": "ShipBar Icons",
+        "icon": "icons/circle-x.png"
+      },
+      {
+        "command": "shipbar.slot3.code",
+        "title": "Slot 3 · Code",
+        "category": "ShipBar Icons",
+        "icon": "icons/code.png"
+      },
+      {
+        "command": "shipbar.slot3.eye",
+        "title": "Slot 3 · Eye",
+        "category": "ShipBar Icons",
+        "icon": "icons/eye.png"
+      },
+      {
+        "command": "shipbar.slot3.file",
+        "title": "Slot 3 · File",
+        "category": "ShipBar Icons",
+        "icon": "icons/file.png"
+      },
+      {
+        "command": "shipbar.slot3.folder",
+        "title": "Slot 3 · Folder",
+        "category": "ShipBar Icons",
+        "icon": "icons/folder.png"
+      },
+      {
+        "command": "shipbar.slot3.git-branch",
+        "title": "Slot 3 · Git",
+        "category": "ShipBar Icons",
+        "icon": "icons/git-branch.png"
+      },
+      {
+        "command": "shipbar.slot3.layers",
+        "title": "Slot 3 · Layers",
+        "category": "ShipBar Icons",
+        "icon": "icons/layers.png"
+      },
+      {
+        "command": "shipbar.slot3.list",
+        "title": "Slot 3 · List",
+        "category": "ShipBar Icons",
+        "icon": "icons/list.png"
+      },
+      {
+        "command": "shipbar.slot3.list-checks",
+        "title": "Slot 3 · Plan",
+        "category": "ShipBar Icons",
+        "icon": "icons/list-checks.png"
+      },
+      {
+        "command": "shipbar.slot3.message-circle",
+        "title": "Slot 3 · Ask",
+        "category": "ShipBar Icons",
+        "icon": "icons/message-circle.png"
+      },
+      {
+        "command": "shipbar.slot3.message-square",
+        "title": "Slot 3 · Message",
+        "category": "ShipBar Icons",
+        "icon": "icons/message-square.png"
+      },
+      {
+        "command": "shipbar.slot3.message-square-plus",
+        "title": "Slot 3 · New chat",
+        "category": "ShipBar Icons",
+        "icon": "icons/message-square-plus.png"
+      },
+      {
+        "command": "shipbar.slot3.mic",
+        "title": "Slot 3 · Mic",
+        "category": "ShipBar Icons",
+        "icon": "icons/mic.png"
+      },
+      {
+        "command": "shipbar.slot3.panel-bottom",
+        "title": "Slot 3 · Bottom panel",
+        "category": "ShipBar Icons",
+        "icon": "icons/panel-bottom.png"
+      },
+      {
+        "command": "shipbar.slot3.panel-left",
+        "title": "Slot 3 · Left panel",
+        "category": "ShipBar Icons",
+        "icon": "icons/panel-left.png"
+      },
+      {
+        "command": "shipbar.slot3.panel-right",
+        "title": "Slot 3 · Right panel",
+        "category": "ShipBar Icons",
+        "icon": "icons/panel-right.png"
+      },
+      {
+        "command": "shipbar.slot3.pencil",
+        "title": "Slot 3 · Pencil",
+        "category": "ShipBar Icons",
+        "icon": "icons/pencil.png"
+      },
+      {
+        "command": "shipbar.slot3.pin",
+        "title": "Slot 3 · Pin",
+        "category": "ShipBar Icons",
+        "icon": "icons/pin.png"
+      },
+      {
+        "command": "shipbar.slot3.play",
+        "title": "Slot 3 · Play",
+        "category": "ShipBar Icons",
+        "icon": "icons/play.png"
+      },
+      {
+        "command": "shipbar.slot3.plus",
+        "title": "Slot 3 · Plus",
+        "category": "ShipBar Icons",
+        "icon": "icons/plus.png"
+      },
+      {
+        "command": "shipbar.slot3.save",
+        "title": "Slot 3 · Save",
+        "category": "ShipBar Icons",
+        "icon": "icons/save.png"
+      },
+      {
+        "command": "shipbar.slot3.search",
+        "title": "Slot 3 · Search",
+        "category": "ShipBar Icons",
+        "icon": "icons/search.png"
+      },
+      {
+        "command": "shipbar.slot3.sparkles",
+        "title": "Slot 3 · Sparkles",
+        "category": "ShipBar Icons",
+        "icon": "icons/sparkles.png"
+      },
+      {
+        "command": "shipbar.slot3.split",
+        "title": "Slot 3 · Branch",
+        "category": "ShipBar Icons",
+        "icon": "icons/split.png"
+      },
+      {
+        "command": "shipbar.slot3.terminal",
+        "title": "Slot 3 · Terminal",
+        "category": "ShipBar Icons",
+        "icon": "icons/terminal.png"
+      },
+      {
+        "command": "shipbar.slot3.undo-2",
+        "title": "Slot 3 · Undo",
+        "category": "ShipBar Icons",
+        "icon": "icons/undo-2.png"
+      },
+      {
+        "command": "shipbar.slot3.wrench",
+        "title": "Slot 3 · Wrench",
+        "category": "ShipBar Icons",
+        "icon": "icons/wrench.png"
+      },
+      {
+        "command": "shipbar.slot3.zap",
+        "title": "Slot 3 · Zap",
+        "category": "ShipBar Icons",
+        "icon": "icons/zap.png"
+      },
+      {
+        "command": "shipbar.slot4.bot",
+        "title": "Slot 4 · Agent",
+        "category": "ShipBar Icons",
+        "icon": "icons/bot.png"
+      },
+      {
+        "command": "shipbar.slot4.bug",
+        "title": "Slot 4 · Bug",
+        "category": "ShipBar Icons",
+        "icon": "icons/bug.png"
+      },
+      {
+        "command": "shipbar.slot4.chevron-left",
+        "title": "Slot 4 · Back",
+        "category": "ShipBar Icons",
+        "icon": "icons/chevron-left.png"
+      },
+      {
+        "command": "shipbar.slot4.chevron-right",
+        "title": "Slot 4 · Next",
+        "category": "ShipBar Icons",
+        "icon": "icons/chevron-right.png"
+      },
+      {
+        "command": "shipbar.slot4.circle-check",
+        "title": "Slot 4 · Check",
+        "category": "ShipBar Icons",
+        "icon": "icons/circle-check.png"
+      },
+      {
+        "command": "shipbar.slot4.circle-x",
+        "title": "Slot 4 · Close",
+        "category": "ShipBar Icons",
+        "icon": "icons/circle-x.png"
+      },
+      {
+        "command": "shipbar.slot4.code",
+        "title": "Slot 4 · Code",
+        "category": "ShipBar Icons",
+        "icon": "icons/code.png"
+      },
+      {
+        "command": "shipbar.slot4.eye",
+        "title": "Slot 4 · Eye",
+        "category": "ShipBar Icons",
+        "icon": "icons/eye.png"
+      },
+      {
+        "command": "shipbar.slot4.file",
+        "title": "Slot 4 · File",
+        "category": "ShipBar Icons",
+        "icon": "icons/file.png"
+      },
+      {
+        "command": "shipbar.slot4.folder",
+        "title": "Slot 4 · Folder",
+        "category": "ShipBar Icons",
+        "icon": "icons/folder.png"
+      },
+      {
+        "command": "shipbar.slot4.git-branch",
+        "title": "Slot 4 · Git",
+        "category": "ShipBar Icons",
+        "icon": "icons/git-branch.png"
+      },
+      {
+        "command": "shipbar.slot4.layers",
+        "title": "Slot 4 · Layers",
+        "category": "ShipBar Icons",
+        "icon": "icons/layers.png"
+      },
+      {
+        "command": "shipbar.slot4.list",
+        "title": "Slot 4 · List",
+        "category": "ShipBar Icons",
+        "icon": "icons/list.png"
+      },
+      {
+        "command": "shipbar.slot4.list-checks",
+        "title": "Slot 4 · Plan",
+        "category": "ShipBar Icons",
+        "icon": "icons/list-checks.png"
+      },
+      {
+        "command": "shipbar.slot4.message-circle",
+        "title": "Slot 4 · Ask",
+        "category": "ShipBar Icons",
+        "icon": "icons/message-circle.png"
+      },
+      {
+        "command": "shipbar.slot4.message-square",
+        "title": "Slot 4 · Message",
+        "category": "ShipBar Icons",
+        "icon": "icons/message-square.png"
+      },
+      {
+        "command": "shipbar.slot4.message-square-plus",
+        "title": "Slot 4 · New chat",
+        "category": "ShipBar Icons",
+        "icon": "icons/message-square-plus.png"
+      },
+      {
+        "command": "shipbar.slot4.mic",
+        "title": "Slot 4 · Mic",
+        "category": "ShipBar Icons",
+        "icon": "icons/mic.png"
+      },
+      {
+        "command": "shipbar.slot4.panel-bottom",
+        "title": "Slot 4 · Bottom panel",
+        "category": "ShipBar Icons",
+        "icon": "icons/panel-bottom.png"
+      },
+      {
+        "command": "shipbar.slot4.panel-left",
+        "title": "Slot 4 · Left panel",
+        "category": "ShipBar Icons",
+        "icon": "icons/panel-left.png"
+      },
+      {
+        "command": "shipbar.slot4.panel-right",
+        "title": "Slot 4 · Right panel",
+        "category": "ShipBar Icons",
+        "icon": "icons/panel-right.png"
+      },
+      {
+        "command": "shipbar.slot4.pencil",
+        "title": "Slot 4 · Pencil",
+        "category": "ShipBar Icons",
+        "icon": "icons/pencil.png"
+      },
+      {
+        "command": "shipbar.slot4.pin",
+        "title": "Slot 4 · Pin",
+        "category": "ShipBar Icons",
+        "icon": "icons/pin.png"
+      },
+      {
+        "command": "shipbar.slot4.play",
+        "title": "Slot 4 · Play",
+        "category": "ShipBar Icons",
+        "icon": "icons/play.png"
+      },
+      {
+        "command": "shipbar.slot4.plus",
+        "title": "Slot 4 · Plus",
+        "category": "ShipBar Icons",
+        "icon": "icons/plus.png"
+      },
+      {
+        "command": "shipbar.slot4.save",
+        "title": "Slot 4 · Save",
+        "category": "ShipBar Icons",
+        "icon": "icons/save.png"
+      },
+      {
+        "command": "shipbar.slot4.search",
+        "title": "Slot 4 · Search",
+        "category": "ShipBar Icons",
+        "icon": "icons/search.png"
+      },
+      {
+        "command": "shipbar.slot4.sparkles",
+        "title": "Slot 4 · Sparkles",
+        "category": "ShipBar Icons",
+        "icon": "icons/sparkles.png"
+      },
+      {
+        "command": "shipbar.slot4.split",
+        "title": "Slot 4 · Branch",
+        "category": "ShipBar Icons",
+        "icon": "icons/split.png"
+      },
+      {
+        "command": "shipbar.slot4.terminal",
+        "title": "Slot 4 · Terminal",
+        "category": "ShipBar Icons",
+        "icon": "icons/terminal.png"
+      },
+      {
+        "command": "shipbar.slot4.undo-2",
+        "title": "Slot 4 · Undo",
+        "category": "ShipBar Icons",
+        "icon": "icons/undo-2.png"
+      },
+      {
+        "command": "shipbar.slot4.wrench",
+        "title": "Slot 4 · Wrench",
+        "category": "ShipBar Icons",
+        "icon": "icons/wrench.png"
+      },
+      {
+        "command": "shipbar.slot4.zap",
+        "title": "Slot 4 · Zap",
+        "category": "ShipBar Icons",
+        "icon": "icons/zap.png"
+      },
+      {
+        "command": "shipbar.slot5.bot",
+        "title": "Slot 5 · Agent",
+        "category": "ShipBar Icons",
+        "icon": "icons/bot.png"
+      },
+      {
+        "command": "shipbar.slot5.bug",
+        "title": "Slot 5 · Bug",
+        "category": "ShipBar Icons",
+        "icon": "icons/bug.png"
+      },
+      {
+        "command": "shipbar.slot5.chevron-left",
+        "title": "Slot 5 · Back",
+        "category": "ShipBar Icons",
+        "icon": "icons/chevron-left.png"
+      },
+      {
+        "command": "shipbar.slot5.chevron-right",
+        "title": "Slot 5 · Next",
+        "category": "ShipBar Icons",
+        "icon": "icons/chevron-right.png"
+      },
+      {
+        "command": "shipbar.slot5.circle-check",
+        "title": "Slot 5 · Check",
+        "category": "ShipBar Icons",
+        "icon": "icons/circle-check.png"
+      },
+      {
+        "command": "shipbar.slot5.circle-x",
+        "title": "Slot 5 · Close",
+        "category": "ShipBar Icons",
+        "icon": "icons/circle-x.png"
+      },
+      {
+        "command": "shipbar.slot5.code",
+        "title": "Slot 5 · Code",
+        "category": "ShipBar Icons",
+        "icon": "icons/code.png"
+      },
+      {
+        "command": "shipbar.slot5.eye",
+        "title": "Slot 5 · Eye",
+        "category": "ShipBar Icons",
+        "icon": "icons/eye.png"
+      },
+      {
+        "command": "shipbar.slot5.file",
+        "title": "Slot 5 · File",
+        "category": "ShipBar Icons",
+        "icon": "icons/file.png"
+      },
+      {
+        "command": "shipbar.slot5.folder",
+        "title": "Slot 5 · Folder",
+        "category": "ShipBar Icons",
+        "icon": "icons/folder.png"
+      },
+      {
+        "command": "shipbar.slot5.git-branch",
+        "title": "Slot 5 · Git",
+        "category": "ShipBar Icons",
+        "icon": "icons/git-branch.png"
+      },
+      {
+        "command": "shipbar.slot5.layers",
+        "title": "Slot 5 · Layers",
+        "category": "ShipBar Icons",
+        "icon": "icons/layers.png"
+      },
+      {
+        "command": "shipbar.slot5.list",
+        "title": "Slot 5 · List",
+        "category": "ShipBar Icons",
+        "icon": "icons/list.png"
+      },
+      {
+        "command": "shipbar.slot5.list-checks",
+        "title": "Slot 5 · Plan",
+        "category": "ShipBar Icons",
+        "icon": "icons/list-checks.png"
+      },
+      {
+        "command": "shipbar.slot5.message-circle",
+        "title": "Slot 5 · Ask",
+        "category": "ShipBar Icons",
+        "icon": "icons/message-circle.png"
+      },
+      {
+        "command": "shipbar.slot5.message-square",
+        "title": "Slot 5 · Message",
+        "category": "ShipBar Icons",
+        "icon": "icons/message-square.png"
+      },
+      {
+        "command": "shipbar.slot5.message-square-plus",
+        "title": "Slot 5 · New chat",
+        "category": "ShipBar Icons",
+        "icon": "icons/message-square-plus.png"
+      },
+      {
+        "command": "shipbar.slot5.mic",
+        "title": "Slot 5 · Mic",
+        "category": "ShipBar Icons",
+        "icon": "icons/mic.png"
+      },
+      {
+        "command": "shipbar.slot5.panel-bottom",
+        "title": "Slot 5 · Bottom panel",
+        "category": "ShipBar Icons",
+        "icon": "icons/panel-bottom.png"
+      },
+      {
+        "command": "shipbar.slot5.panel-left",
+        "title": "Slot 5 · Left panel",
+        "category": "ShipBar Icons",
+        "icon": "icons/panel-left.png"
+      },
+      {
+        "command": "shipbar.slot5.panel-right",
+        "title": "Slot 5 · Right panel",
+        "category": "ShipBar Icons",
+        "icon": "icons/panel-right.png"
+      },
+      {
+        "command": "shipbar.slot5.pencil",
+        "title": "Slot 5 · Pencil",
+        "category": "ShipBar Icons",
+        "icon": "icons/pencil.png"
+      },
+      {
+        "command": "shipbar.slot5.pin",
+        "title": "Slot 5 · Pin",
+        "category": "ShipBar Icons",
+        "icon": "icons/pin.png"
+      },
+      {
+        "command": "shipbar.slot5.play",
+        "title": "Slot 5 · Play",
+        "category": "ShipBar Icons",
+        "icon": "icons/play.png"
+      },
+      {
+        "command": "shipbar.slot5.plus",
+        "title": "Slot 5 · Plus",
+        "category": "ShipBar Icons",
+        "icon": "icons/plus.png"
+      },
+      {
+        "command": "shipbar.slot5.save",
+        "title": "Slot 5 · Save",
+        "category": "ShipBar Icons",
+        "icon": "icons/save.png"
+      },
+      {
+        "command": "shipbar.slot5.search",
+        "title": "Slot 5 · Search",
+        "category": "ShipBar Icons",
+        "icon": "icons/search.png"
+      },
+      {
+        "command": "shipbar.slot5.sparkles",
+        "title": "Slot 5 · Sparkles",
+        "category": "ShipBar Icons",
+        "icon": "icons/sparkles.png"
+      },
+      {
+        "command": "shipbar.slot5.split",
+        "title": "Slot 5 · Branch",
+        "category": "ShipBar Icons",
+        "icon": "icons/split.png"
+      },
+      {
+        "command": "shipbar.slot5.terminal",
+        "title": "Slot 5 · Terminal",
+        "category": "ShipBar Icons",
+        "icon": "icons/terminal.png"
+      },
+      {
+        "command": "shipbar.slot5.undo-2",
+        "title": "Slot 5 · Undo",
+        "category": "ShipBar Icons",
+        "icon": "icons/undo-2.png"
+      },
+      {
+        "command": "shipbar.slot5.wrench",
+        "title": "Slot 5 · Wrench",
+        "category": "ShipBar Icons",
+        "icon": "icons/wrench.png"
+      },
+      {
+        "command": "shipbar.slot5.zap",
+        "title": "Slot 5 · Zap",
+        "category": "ShipBar Icons",
+        "icon": "icons/zap.png"
+      },
+      {
+        "command": "shipbar.slot6.bot",
+        "title": "Slot 6 · Agent",
+        "category": "ShipBar Icons",
+        "icon": "icons/bot.png"
+      },
+      {
+        "command": "shipbar.slot6.bug",
+        "title": "Slot 6 · Bug",
+        "category": "ShipBar Icons",
+        "icon": "icons/bug.png"
+      },
+      {
+        "command": "shipbar.slot6.chevron-left",
+        "title": "Slot 6 · Back",
+        "category": "ShipBar Icons",
+        "icon": "icons/chevron-left.png"
+      },
+      {
+        "command": "shipbar.slot6.chevron-right",
+        "title": "Slot 6 · Next",
+        "category": "ShipBar Icons",
+        "icon": "icons/chevron-right.png"
+      },
+      {
+        "command": "shipbar.slot6.circle-check",
+        "title": "Slot 6 · Check",
+        "category": "ShipBar Icons",
+        "icon": "icons/circle-check.png"
+      },
+      {
+        "command": "shipbar.slot6.circle-x",
+        "title": "Slot 6 · Close",
+        "category": "ShipBar Icons",
+        "icon": "icons/circle-x.png"
+      },
+      {
+        "command": "shipbar.slot6.code",
+        "title": "Slot 6 · Code",
+        "category": "ShipBar Icons",
+        "icon": "icons/code.png"
+      },
+      {
+        "command": "shipbar.slot6.eye",
+        "title": "Slot 6 · Eye",
+        "category": "ShipBar Icons",
+        "icon": "icons/eye.png"
+      },
+      {
+        "command": "shipbar.slot6.file",
+        "title": "Slot 6 · File",
+        "category": "ShipBar Icons",
+        "icon": "icons/file.png"
+      },
+      {
+        "command": "shipbar.slot6.folder",
+        "title": "Slot 6 · Folder",
+        "category": "ShipBar Icons",
+        "icon": "icons/folder.png"
+      },
+      {
+        "command": "shipbar.slot6.git-branch",
+        "title": "Slot 6 · Git",
+        "category": "ShipBar Icons",
+        "icon": "icons/git-branch.png"
+      },
+      {
+        "command": "shipbar.slot6.layers",
+        "title": "Slot 6 · Layers",
+        "category": "ShipBar Icons",
+        "icon": "icons/layers.png"
+      },
+      {
+        "command": "shipbar.slot6.list",
+        "title": "Slot 6 · List",
+        "category": "ShipBar Icons",
+        "icon": "icons/list.png"
+      },
+      {
+        "command": "shipbar.slot6.list-checks",
+        "title": "Slot 6 · Plan",
+        "category": "ShipBar Icons",
+        "icon": "icons/list-checks.png"
+      },
+      {
+        "command": "shipbar.slot6.message-circle",
+        "title": "Slot 6 · Ask",
+        "category": "ShipBar Icons",
+        "icon": "icons/message-circle.png"
+      },
+      {
+        "command": "shipbar.slot6.message-square",
+        "title": "Slot 6 · Message",
+        "category": "ShipBar Icons",
+        "icon": "icons/message-square.png"
+      },
+      {
+        "command": "shipbar.slot6.message-square-plus",
+        "title": "Slot 6 · New chat",
+        "category": "ShipBar Icons",
+        "icon": "icons/message-square-plus.png"
+      },
+      {
+        "command": "shipbar.slot6.mic",
+        "title": "Slot 6 · Mic",
+        "category": "ShipBar Icons",
+        "icon": "icons/mic.png"
+      },
+      {
+        "command": "shipbar.slot6.panel-bottom",
+        "title": "Slot 6 · Bottom panel",
+        "category": "ShipBar Icons",
+        "icon": "icons/panel-bottom.png"
+      },
+      {
+        "command": "shipbar.slot6.panel-left",
+        "title": "Slot 6 · Left panel",
+        "category": "ShipBar Icons",
+        "icon": "icons/panel-left.png"
+      },
+      {
+        "command": "shipbar.slot6.panel-right",
+        "title": "Slot 6 · Right panel",
+        "category": "ShipBar Icons",
+        "icon": "icons/panel-right.png"
+      },
+      {
+        "command": "shipbar.slot6.pencil",
+        "title": "Slot 6 · Pencil",
+        "category": "ShipBar Icons",
+        "icon": "icons/pencil.png"
+      },
+      {
+        "command": "shipbar.slot6.pin",
+        "title": "Slot 6 · Pin",
+        "category": "ShipBar Icons",
+        "icon": "icons/pin.png"
+      },
+      {
+        "command": "shipbar.slot6.play",
+        "title": "Slot 6 · Play",
+        "category": "ShipBar Icons",
+        "icon": "icons/play.png"
+      },
+      {
+        "command": "shipbar.slot6.plus",
+        "title": "Slot 6 · Plus",
+        "category": "ShipBar Icons",
+        "icon": "icons/plus.png"
+      },
+      {
+        "command": "shipbar.slot6.save",
+        "title": "Slot 6 · Save",
+        "category": "ShipBar Icons",
+        "icon": "icons/save.png"
+      },
+      {
+        "command": "shipbar.slot6.search",
+        "title": "Slot 6 · Search",
+        "category": "ShipBar Icons",
+        "icon": "icons/search.png"
+      },
+      {
+        "command": "shipbar.slot6.sparkles",
+        "title": "Slot 6 · Sparkles",
+        "category": "ShipBar Icons",
+        "icon": "icons/sparkles.png"
+      },
+      {
+        "command": "shipbar.slot6.split",
+        "title": "Slot 6 · Branch",
+        "category": "ShipBar Icons",
+        "icon": "icons/split.png"
+      },
+      {
+        "command": "shipbar.slot6.terminal",
+        "title": "Slot 6 · Terminal",
+        "category": "ShipBar Icons",
+        "icon": "icons/terminal.png"
+      },
+      {
+        "command": "shipbar.slot6.undo-2",
+        "title": "Slot 6 · Undo",
+        "category": "ShipBar Icons",
+        "icon": "icons/undo-2.png"
+      },
+      {
+        "command": "shipbar.slot6.wrench",
+        "title": "Slot 6 · Wrench",
+        "category": "ShipBar Icons",
+        "icon": "icons/wrench.png"
+      },
+      {
+        "command": "shipbar.slot6.zap",
+        "title": "Slot 6 · Zap",
+        "category": "ShipBar Icons",
+        "icon": "icons/zap.png"
+      },
+      {
+        "command": "shipbar.item1.bot",
+        "title": "Skill 1 · Agent",
+        "category": "ShipBar Icons",
+        "icon": "icons/bot.png"
+      },
+      {
+        "command": "shipbar.item1.bug",
+        "title": "Skill 1 · Bug",
+        "category": "ShipBar Icons",
+        "icon": "icons/bug.png"
+      },
+      {
+        "command": "shipbar.item1.chevron-left",
+        "title": "Skill 1 · Back",
+        "category": "ShipBar Icons",
+        "icon": "icons/chevron-left.png"
+      },
+      {
+        "command": "shipbar.item1.chevron-right",
+        "title": "Skill 1 · Next",
+        "category": "ShipBar Icons",
+        "icon": "icons/chevron-right.png"
+      },
+      {
+        "command": "shipbar.item1.circle-check",
+        "title": "Skill 1 · Check",
+        "category": "ShipBar Icons",
+        "icon": "icons/circle-check.png"
+      },
+      {
+        "command": "shipbar.item1.circle-x",
+        "title": "Skill 1 · Close",
+        "category": "ShipBar Icons",
+        "icon": "icons/circle-x.png"
+      },
+      {
+        "command": "shipbar.item1.code",
+        "title": "Skill 1 · Code",
+        "category": "ShipBar Icons",
+        "icon": "icons/code.png"
+      },
+      {
+        "command": "shipbar.item1.eye",
+        "title": "Skill 1 · Eye",
+        "category": "ShipBar Icons",
+        "icon": "icons/eye.png"
+      },
+      {
+        "command": "shipbar.item1.file",
+        "title": "Skill 1 · File",
+        "category": "ShipBar Icons",
+        "icon": "icons/file.png"
+      },
+      {
+        "command": "shipbar.item1.folder",
+        "title": "Skill 1 · Folder",
+        "category": "ShipBar Icons",
+        "icon": "icons/folder.png"
+      },
+      {
+        "command": "shipbar.item1.git-branch",
+        "title": "Skill 1 · Git",
+        "category": "ShipBar Icons",
+        "icon": "icons/git-branch.png"
+      },
+      {
+        "command": "shipbar.item1.layers",
+        "title": "Skill 1 · Layers",
+        "category": "ShipBar Icons",
+        "icon": "icons/layers.png"
+      },
+      {
+        "command": "shipbar.item1.list",
+        "title": "Skill 1 · List",
+        "category": "ShipBar Icons",
+        "icon": "icons/list.png"
+      },
+      {
+        "command": "shipbar.item1.list-checks",
+        "title": "Skill 1 · Plan",
+        "category": "ShipBar Icons",
+        "icon": "icons/list-checks.png"
+      },
+      {
+        "command": "shipbar.item1.message-circle",
+        "title": "Skill 1 · Ask",
+        "category": "ShipBar Icons",
+        "icon": "icons/message-circle.png"
+      },
+      {
+        "command": "shipbar.item1.message-square",
+        "title": "Skill 1 · Message",
+        "category": "ShipBar Icons",
+        "icon": "icons/message-square.png"
+      },
+      {
+        "command": "shipbar.item1.message-square-plus",
+        "title": "Skill 1 · New chat",
+        "category": "ShipBar Icons",
+        "icon": "icons/message-square-plus.png"
+      },
+      {
+        "command": "shipbar.item1.mic",
+        "title": "Skill 1 · Mic",
+        "category": "ShipBar Icons",
+        "icon": "icons/mic.png"
+      },
+      {
+        "command": "shipbar.item1.panel-bottom",
+        "title": "Skill 1 · Bottom panel",
+        "category": "ShipBar Icons",
+        "icon": "icons/panel-bottom.png"
+      },
+      {
+        "command": "shipbar.item1.panel-left",
+        "title": "Skill 1 · Left panel",
+        "category": "ShipBar Icons",
+        "icon": "icons/panel-left.png"
+      },
+      {
+        "command": "shipbar.item1.panel-right",
+        "title": "Skill 1 · Right panel",
+        "category": "ShipBar Icons",
+        "icon": "icons/panel-right.png"
+      },
+      {
+        "command": "shipbar.item1.pencil",
+        "title": "Skill 1 · Pencil",
+        "category": "ShipBar Icons",
+        "icon": "icons/pencil.png"
+      },
+      {
+        "command": "shipbar.item1.pin",
+        "title": "Skill 1 · Pin",
+        "category": "ShipBar Icons",
+        "icon": "icons/pin.png"
+      },
+      {
+        "command": "shipbar.item1.play",
+        "title": "Skill 1 · Play",
+        "category": "ShipBar Icons",
+        "icon": "icons/play.png"
+      },
+      {
+        "command": "shipbar.item1.plus",
+        "title": "Skill 1 · Plus",
+        "category": "ShipBar Icons",
+        "icon": "icons/plus.png"
+      },
+      {
+        "command": "shipbar.item1.save",
+        "title": "Skill 1 · Save",
+        "category": "ShipBar Icons",
+        "icon": "icons/save.png"
+      },
+      {
+        "command": "shipbar.item1.search",
+        "title": "Skill 1 · Search",
+        "category": "ShipBar Icons",
+        "icon": "icons/search.png"
+      },
+      {
+        "command": "shipbar.item1.sparkles",
+        "title": "Skill 1 · Sparkles",
+        "category": "ShipBar Icons",
+        "icon": "icons/sparkles.png"
+      },
+      {
+        "command": "shipbar.item1.split",
+        "title": "Skill 1 · Branch",
+        "category": "ShipBar Icons",
+        "icon": "icons/split.png"
+      },
+      {
+        "command": "shipbar.item1.terminal",
+        "title": "Skill 1 · Terminal",
+        "category": "ShipBar Icons",
+        "icon": "icons/terminal.png"
+      },
+      {
+        "command": "shipbar.item1.undo-2",
+        "title": "Skill 1 · Undo",
+        "category": "ShipBar Icons",
+        "icon": "icons/undo-2.png"
+      },
+      {
+        "command": "shipbar.item1.wrench",
+        "title": "Skill 1 · Wrench",
+        "category": "ShipBar Icons",
+        "icon": "icons/wrench.png"
+      },
+      {
+        "command": "shipbar.item1.zap",
+        "title": "Skill 1 · Zap",
+        "category": "ShipBar Icons",
+        "icon": "icons/zap.png"
+      },
+      {
+        "command": "shipbar.item2.bot",
+        "title": "Skill 2 · Agent",
+        "category": "ShipBar Icons",
+        "icon": "icons/bot.png"
+      },
+      {
+        "command": "shipbar.item2.bug",
+        "title": "Skill 2 · Bug",
+        "category": "ShipBar Icons",
+        "icon": "icons/bug.png"
+      },
+      {
+        "command": "shipbar.item2.chevron-left",
+        "title": "Skill 2 · Back",
+        "category": "ShipBar Icons",
+        "icon": "icons/chevron-left.png"
+      },
+      {
+        "command": "shipbar.item2.chevron-right",
+        "title": "Skill 2 · Next",
+        "category": "ShipBar Icons",
+        "icon": "icons/chevron-right.png"
+      },
+      {
+        "command": "shipbar.item2.circle-check",
+        "title": "Skill 2 · Check",
+        "category": "ShipBar Icons",
+        "icon": "icons/circle-check.png"
+      },
+      {
+        "command": "shipbar.item2.circle-x",
+        "title": "Skill 2 · Close",
+        "category": "ShipBar Icons",
+        "icon": "icons/circle-x.png"
+      },
+      {
+        "command": "shipbar.item2.code",
+        "title": "Skill 2 · Code",
+        "category": "ShipBar Icons",
+        "icon": "icons/code.png"
+      },
+      {
+        "command": "shipbar.item2.eye",
+        "title": "Skill 2 · Eye",
+        "category": "ShipBar Icons",
+        "icon": "icons/eye.png"
+      },
+      {
+        "command": "shipbar.item2.file",
+        "title": "Skill 2 · File",
+        "category": "ShipBar Icons",
+        "icon": "icons/file.png"
+      },
+      {
+        "command": "shipbar.item2.folder",
+        "title": "Skill 2 · Folder",
+        "category": "ShipBar Icons",
+        "icon": "icons/folder.png"
+      },
+      {
+        "command": "shipbar.item2.git-branch",
+        "title": "Skill 2 · Git",
+        "category": "ShipBar Icons",
+        "icon": "icons/git-branch.png"
+      },
+      {
+        "command": "shipbar.item2.layers",
+        "title": "Skill 2 · Layers",
+        "category": "ShipBar Icons",
+        "icon": "icons/layers.png"
+      },
+      {
+        "command": "shipbar.item2.list",
+        "title": "Skill 2 · List",
+        "category": "ShipBar Icons",
+        "icon": "icons/list.png"
+      },
+      {
+        "command": "shipbar.item2.list-checks",
+        "title": "Skill 2 · Plan",
+        "category": "ShipBar Icons",
+        "icon": "icons/list-checks.png"
+      },
+      {
+        "command": "shipbar.item2.message-circle",
+        "title": "Skill 2 · Ask",
+        "category": "ShipBar Icons",
+        "icon": "icons/message-circle.png"
+      },
+      {
+        "command": "shipbar.item2.message-square",
+        "title": "Skill 2 · Message",
+        "category": "ShipBar Icons",
+        "icon": "icons/message-square.png"
+      },
+      {
+        "command": "shipbar.item2.message-square-plus",
+        "title": "Skill 2 · New chat",
+        "category": "ShipBar Icons",
+        "icon": "icons/message-square-plus.png"
+      },
+      {
+        "command": "shipbar.item2.mic",
+        "title": "Skill 2 · Mic",
+        "category": "ShipBar Icons",
+        "icon": "icons/mic.png"
+      },
+      {
+        "command": "shipbar.item2.panel-bottom",
+        "title": "Skill 2 · Bottom panel",
+        "category": "ShipBar Icons",
+        "icon": "icons/panel-bottom.png"
+      },
+      {
+        "command": "shipbar.item2.panel-left",
+        "title": "Skill 2 · Left panel",
+        "category": "ShipBar Icons",
+        "icon": "icons/panel-left.png"
+      },
+      {
+        "command": "shipbar.item2.panel-right",
+        "title": "Skill 2 · Right panel",
+        "category": "ShipBar Icons",
+        "icon": "icons/panel-right.png"
+      },
+      {
+        "command": "shipbar.item2.pencil",
+        "title": "Skill 2 · Pencil",
+        "category": "ShipBar Icons",
+        "icon": "icons/pencil.png"
+      },
+      {
+        "command": "shipbar.item2.pin",
+        "title": "Skill 2 · Pin",
+        "category": "ShipBar Icons",
+        "icon": "icons/pin.png"
+      },
+      {
+        "command": "shipbar.item2.play",
+        "title": "Skill 2 · Play",
+        "category": "ShipBar Icons",
+        "icon": "icons/play.png"
+      },
+      {
+        "command": "shipbar.item2.plus",
+        "title": "Skill 2 · Plus",
+        "category": "ShipBar Icons",
+        "icon": "icons/plus.png"
+      },
+      {
+        "command": "shipbar.item2.save",
+        "title": "Skill 2 · Save",
+        "category": "ShipBar Icons",
+        "icon": "icons/save.png"
+      },
+      {
+        "command": "shipbar.item2.search",
+        "title": "Skill 2 · Search",
+        "category": "ShipBar Icons",
+        "icon": "icons/search.png"
+      },
+      {
+        "command": "shipbar.item2.sparkles",
+        "title": "Skill 2 · Sparkles",
+        "category": "ShipBar Icons",
+        "icon": "icons/sparkles.png"
+      },
+      {
+        "command": "shipbar.item2.split",
+        "title": "Skill 2 · Branch",
+        "category": "ShipBar Icons",
+        "icon": "icons/split.png"
+      },
+      {
+        "command": "shipbar.item2.terminal",
+        "title": "Skill 2 · Terminal",
+        "category": "ShipBar Icons",
+        "icon": "icons/terminal.png"
+      },
+      {
+        "command": "shipbar.item2.undo-2",
+        "title": "Skill 2 · Undo",
+        "category": "ShipBar Icons",
+        "icon": "icons/undo-2.png"
+      },
+      {
+        "command": "shipbar.item2.wrench",
+        "title": "Skill 2 · Wrench",
+        "category": "ShipBar Icons",
+        "icon": "icons/wrench.png"
+      },
+      {
+        "command": "shipbar.item2.zap",
+        "title": "Skill 2 · Zap",
+        "category": "ShipBar Icons",
+        "icon": "icons/zap.png"
+      },
+      {
+        "command": "shipbar.item3.bot",
+        "title": "Skill 3 · Agent",
+        "category": "ShipBar Icons",
+        "icon": "icons/bot.png"
+      },
+      {
+        "command": "shipbar.item3.bug",
+        "title": "Skill 3 · Bug",
+        "category": "ShipBar Icons",
+        "icon": "icons/bug.png"
+      },
+      {
+        "command": "shipbar.item3.chevron-left",
+        "title": "Skill 3 · Back",
+        "category": "ShipBar Icons",
+        "icon": "icons/chevron-left.png"
+      },
+      {
+        "command": "shipbar.item3.chevron-right",
+        "title": "Skill 3 · Next",
+        "category": "ShipBar Icons",
+        "icon": "icons/chevron-right.png"
+      },
+      {
+        "command": "shipbar.item3.circle-check",
+        "title": "Skill 3 · Check",
+        "category": "ShipBar Icons",
+        "icon": "icons/circle-check.png"
+      },
+      {
+        "command": "shipbar.item3.circle-x",
+        "title": "Skill 3 · Close",
+        "category": "ShipBar Icons",
+        "icon": "icons/circle-x.png"
+      },
+      {
+        "command": "shipbar.item3.code",
+        "title": "Skill 3 · Code",
+        "category": "ShipBar Icons",
+        "icon": "icons/code.png"
+      },
+      {
+        "command": "shipbar.item3.eye",
+        "title": "Skill 3 · Eye",
+        "category": "ShipBar Icons",
+        "icon": "icons/eye.png"
+      },
+      {
+        "command": "shipbar.item3.file",
+        "title": "Skill 3 · File",
+        "category": "ShipBar Icons",
+        "icon": "icons/file.png"
+      },
+      {
+        "command": "shipbar.item3.folder",
+        "title": "Skill 3 · Folder",
+        "category": "ShipBar Icons",
+        "icon": "icons/folder.png"
+      },
+      {
+        "command": "shipbar.item3.git-branch",
+        "title": "Skill 3 · Git",
+        "category": "ShipBar Icons",
+        "icon": "icons/git-branch.png"
+      },
+      {
+        "command": "shipbar.item3.layers",
+        "title": "Skill 3 · Layers",
+        "category": "ShipBar Icons",
+        "icon": "icons/layers.png"
+      },
+      {
+        "command": "shipbar.item3.list",
+        "title": "Skill 3 · List",
+        "category": "ShipBar Icons",
+        "icon": "icons/list.png"
+      },
+      {
+        "command": "shipbar.item3.list-checks",
+        "title": "Skill 3 · Plan",
+        "category": "ShipBar Icons",
+        "icon": "icons/list-checks.png"
+      },
+      {
+        "command": "shipbar.item3.message-circle",
+        "title": "Skill 3 · Ask",
+        "category": "ShipBar Icons",
+        "icon": "icons/message-circle.png"
+      },
+      {
+        "command": "shipbar.item3.message-square",
+        "title": "Skill 3 · Message",
+        "category": "ShipBar Icons",
+        "icon": "icons/message-square.png"
+      },
+      {
+        "command": "shipbar.item3.message-square-plus",
+        "title": "Skill 3 · New chat",
+        "category": "ShipBar Icons",
+        "icon": "icons/message-square-plus.png"
+      },
+      {
+        "command": "shipbar.item3.mic",
+        "title": "Skill 3 · Mic",
+        "category": "ShipBar Icons",
+        "icon": "icons/mic.png"
+      },
+      {
+        "command": "shipbar.item3.panel-bottom",
+        "title": "Skill 3 · Bottom panel",
+        "category": "ShipBar Icons",
+        "icon": "icons/panel-bottom.png"
+      },
+      {
+        "command": "shipbar.item3.panel-left",
+        "title": "Skill 3 · Left panel",
+        "category": "ShipBar Icons",
+        "icon": "icons/panel-left.png"
+      },
+      {
+        "command": "shipbar.item3.panel-right",
+        "title": "Skill 3 · Right panel",
+        "category": "ShipBar Icons",
+        "icon": "icons/panel-right.png"
+      },
+      {
+        "command": "shipbar.item3.pencil",
+        "title": "Skill 3 · Pencil",
+        "category": "ShipBar Icons",
+        "icon": "icons/pencil.png"
+      },
+      {
+        "command": "shipbar.item3.pin",
+        "title": "Skill 3 · Pin",
+        "category": "ShipBar Icons",
+        "icon": "icons/pin.png"
+      },
+      {
+        "command": "shipbar.item3.play",
+        "title": "Skill 3 · Play",
+        "category": "ShipBar Icons",
+        "icon": "icons/play.png"
+      },
+      {
+        "command": "shipbar.item3.plus",
+        "title": "Skill 3 · Plus",
+        "category": "ShipBar Icons",
+        "icon": "icons/plus.png"
+      },
+      {
+        "command": "shipbar.item3.save",
+        "title": "Skill 3 · Save",
+        "category": "ShipBar Icons",
+        "icon": "icons/save.png"
+      },
+      {
+        "command": "shipbar.item3.search",
+        "title": "Skill 3 · Search",
+        "category": "ShipBar Icons",
+        "icon": "icons/search.png"
+      },
+      {
+        "command": "shipbar.item3.sparkles",
+        "title": "Skill 3 · Sparkles",
+        "category": "ShipBar Icons",
+        "icon": "icons/sparkles.png"
+      },
+      {
+        "command": "shipbar.item3.split",
+        "title": "Skill 3 · Branch",
+        "category": "ShipBar Icons",
+        "icon": "icons/split.png"
+      },
+      {
+        "command": "shipbar.item3.terminal",
+        "title": "Skill 3 · Terminal",
+        "category": "ShipBar Icons",
+        "icon": "icons/terminal.png"
+      },
+      {
+        "command": "shipbar.item3.undo-2",
+        "title": "Skill 3 · Undo",
+        "category": "ShipBar Icons",
+        "icon": "icons/undo-2.png"
+      },
+      {
+        "command": "shipbar.item3.wrench",
+        "title": "Skill 3 · Wrench",
+        "category": "ShipBar Icons",
+        "icon": "icons/wrench.png"
+      },
+      {
+        "command": "shipbar.item3.zap",
+        "title": "Skill 3 · Zap",
+        "category": "ShipBar Icons",
+        "icon": "icons/zap.png"
+      },
+      {
+        "command": "shipbar.item4.bot",
+        "title": "Skill 4 · Agent",
+        "category": "ShipBar Icons",
+        "icon": "icons/bot.png"
+      },
+      {
+        "command": "shipbar.item4.bug",
+        "title": "Skill 4 · Bug",
+        "category": "ShipBar Icons",
+        "icon": "icons/bug.png"
+      },
+      {
+        "command": "shipbar.item4.chevron-left",
+        "title": "Skill 4 · Back",
+        "category": "ShipBar Icons",
+        "icon": "icons/chevron-left.png"
+      },
+      {
+        "command": "shipbar.item4.chevron-right",
+        "title": "Skill 4 · Next",
+        "category": "ShipBar Icons",
+        "icon": "icons/chevron-right.png"
+      },
+      {
+        "command": "shipbar.item4.circle-check",
+        "title": "Skill 4 · Check",
+        "category": "ShipBar Icons",
+        "icon": "icons/circle-check.png"
+      },
+      {
+        "command": "shipbar.item4.circle-x",
+        "title": "Skill 4 · Close",
+        "category": "ShipBar Icons",
+        "icon": "icons/circle-x.png"
+      },
+      {
+        "command": "shipbar.item4.code",
+        "title": "Skill 4 · Code",
+        "category": "ShipBar Icons",
+        "icon": "icons/code.png"
+      },
+      {
+        "command": "shipbar.item4.eye",
+        "title": "Skill 4 · Eye",
+        "category": "ShipBar Icons",
+        "icon": "icons/eye.png"
+      },
+      {
+        "command": "shipbar.item4.file",
+        "title": "Skill 4 · File",
+        "category": "ShipBar Icons",
+        "icon": "icons/file.png"
+      },
+      {
+        "command": "shipbar.item4.folder",
+        "title": "Skill 4 · Folder",
+        "category": "ShipBar Icons",
+        "icon": "icons/folder.png"
+      },
+      {
+        "command": "shipbar.item4.git-branch",
+        "title": "Skill 4 · Git",
+        "category": "ShipBar Icons",
+        "icon": "icons/git-branch.png"
+      },
+      {
+        "command": "shipbar.item4.layers",
+        "title": "Skill 4 · Layers",
+        "category": "ShipBar Icons",
+        "icon": "icons/layers.png"
+      },
+      {
+        "command": "shipbar.item4.list",
+        "title": "Skill 4 · List",
+        "category": "ShipBar Icons",
+        "icon": "icons/list.png"
+      },
+      {
+        "command": "shipbar.item4.list-checks",
+        "title": "Skill 4 · Plan",
+        "category": "ShipBar Icons",
+        "icon": "icons/list-checks.png"
+      },
+      {
+        "command": "shipbar.item4.message-circle",
+        "title": "Skill 4 · Ask",
+        "category": "ShipBar Icons",
+        "icon": "icons/message-circle.png"
+      },
+      {
+        "command": "shipbar.item4.message-square",
+        "title": "Skill 4 · Message",
+        "category": "ShipBar Icons",
+        "icon": "icons/message-square.png"
+      },
+      {
+        "command": "shipbar.item4.message-square-plus",
+        "title": "Skill 4 · New chat",
+        "category": "ShipBar Icons",
+        "icon": "icons/message-square-plus.png"
+      },
+      {
+        "command": "shipbar.item4.mic",
+        "title": "Skill 4 · Mic",
+        "category": "ShipBar Icons",
+        "icon": "icons/mic.png"
+      },
+      {
+        "command": "shipbar.item4.panel-bottom",
+        "title": "Skill 4 · Bottom panel",
+        "category": "ShipBar Icons",
+        "icon": "icons/panel-bottom.png"
+      },
+      {
+        "command": "shipbar.item4.panel-left",
+        "title": "Skill 4 · Left panel",
+        "category": "ShipBar Icons",
+        "icon": "icons/panel-left.png"
+      },
+      {
+        "command": "shipbar.item4.panel-right",
+        "title": "Skill 4 · Right panel",
+        "category": "ShipBar Icons",
+        "icon": "icons/panel-right.png"
+      },
+      {
+        "command": "shipbar.item4.pencil",
+        "title": "Skill 4 · Pencil",
+        "category": "ShipBar Icons",
+        "icon": "icons/pencil.png"
+      },
+      {
+        "command": "shipbar.item4.pin",
+        "title": "Skill 4 · Pin",
+        "category": "ShipBar Icons",
+        "icon": "icons/pin.png"
+      },
+      {
+        "command": "shipbar.item4.play",
+        "title": "Skill 4 · Play",
+        "category": "ShipBar Icons",
+        "icon": "icons/play.png"
+      },
+      {
+        "command": "shipbar.item4.plus",
+        "title": "Skill 4 · Plus",
+        "category": "ShipBar Icons",
+        "icon": "icons/plus.png"
+      },
+      {
+        "command": "shipbar.item4.save",
+        "title": "Skill 4 · Save",
+        "category": "ShipBar Icons",
+        "icon": "icons/save.png"
+      },
+      {
+        "command": "shipbar.item4.search",
+        "title": "Skill 4 · Search",
+        "category": "ShipBar Icons",
+        "icon": "icons/search.png"
+      },
+      {
+        "command": "shipbar.item4.sparkles",
+        "title": "Skill 4 · Sparkles",
+        "category": "ShipBar Icons",
+        "icon": "icons/sparkles.png"
+      },
+      {
+        "command": "shipbar.item4.split",
+        "title": "Skill 4 · Branch",
+        "category": "ShipBar Icons",
+        "icon": "icons/split.png"
+      },
+      {
+        "command": "shipbar.item4.terminal",
+        "title": "Skill 4 · Terminal",
+        "category": "ShipBar Icons",
+        "icon": "icons/terminal.png"
+      },
+      {
+        "command": "shipbar.item4.undo-2",
+        "title": "Skill 4 · Undo",
+        "category": "ShipBar Icons",
+        "icon": "icons/undo-2.png"
+      },
+      {
+        "command": "shipbar.item4.wrench",
+        "title": "Skill 4 · Wrench",
+        "category": "ShipBar Icons",
+        "icon": "icons/wrench.png"
+      },
+      {
+        "command": "shipbar.item4.zap",
+        "title": "Skill 4 · Zap",
+        "category": "ShipBar Icons",
+        "icon": "icons/zap.png"
+      },
+      {
+        "command": "shipbar.item5.bot",
+        "title": "Skill 5 · Agent",
+        "category": "ShipBar Icons",
+        "icon": "icons/bot.png"
+      },
+      {
+        "command": "shipbar.item5.bug",
+        "title": "Skill 5 · Bug",
+        "category": "ShipBar Icons",
+        "icon": "icons/bug.png"
+      },
+      {
+        "command": "shipbar.item5.chevron-left",
+        "title": "Skill 5 · Back",
+        "category": "ShipBar Icons",
+        "icon": "icons/chevron-left.png"
+      },
+      {
+        "command": "shipbar.item5.chevron-right",
+        "title": "Skill 5 · Next",
+        "category": "ShipBar Icons",
+        "icon": "icons/chevron-right.png"
+      },
+      {
+        "command": "shipbar.item5.circle-check",
+        "title": "Skill 5 · Check",
+        "category": "ShipBar Icons",
+        "icon": "icons/circle-check.png"
+      },
+      {
+        "command": "shipbar.item5.circle-x",
+        "title": "Skill 5 · Close",
+        "category": "ShipBar Icons",
+        "icon": "icons/circle-x.png"
+      },
+      {
+        "command": "shipbar.item5.code",
+        "title": "Skill 5 · Code",
+        "category": "ShipBar Icons",
+        "icon": "icons/code.png"
+      },
+      {
+        "command": "shipbar.item5.eye",
+        "title": "Skill 5 · Eye",
+        "category": "ShipBar Icons",
+        "icon": "icons/eye.png"
+      },
+      {
+        "command": "shipbar.item5.file",
+        "title": "Skill 5 · File",
+        "category": "ShipBar Icons",
+        "icon": "icons/file.png"
+      },
+      {
+        "command": "shipbar.item5.folder",
+        "title": "Skill 5 · Folder",
+        "category": "ShipBar Icons",
+        "icon": "icons/folder.png"
+      },
+      {
+        "command": "shipbar.item5.git-branch",
+        "title": "Skill 5 · Git",
+        "category": "ShipBar Icons",
+        "icon": "icons/git-branch.png"
+      },
+      {
+        "command": "shipbar.item5.layers",
+        "title": "Skill 5 · Layers",
+        "category": "ShipBar Icons",
+        "icon": "icons/layers.png"
+      },
+      {
+        "command": "shipbar.item5.list",
+        "title": "Skill 5 · List",
+        "category": "ShipBar Icons",
+        "icon": "icons/list.png"
+      },
+      {
+        "command": "shipbar.item5.list-checks",
+        "title": "Skill 5 · Plan",
+        "category": "ShipBar Icons",
+        "icon": "icons/list-checks.png"
+      },
+      {
+        "command": "shipbar.item5.message-circle",
+        "title": "Skill 5 · Ask",
+        "category": "ShipBar Icons",
+        "icon": "icons/message-circle.png"
+      },
+      {
+        "command": "shipbar.item5.message-square",
+        "title": "Skill 5 · Message",
+        "category": "ShipBar Icons",
+        "icon": "icons/message-square.png"
+      },
+      {
+        "command": "shipbar.item5.message-square-plus",
+        "title": "Skill 5 · New chat",
+        "category": "ShipBar Icons",
+        "icon": "icons/message-square-plus.png"
+      },
+      {
+        "command": "shipbar.item5.mic",
+        "title": "Skill 5 · Mic",
+        "category": "ShipBar Icons",
+        "icon": "icons/mic.png"
+      },
+      {
+        "command": "shipbar.item5.panel-bottom",
+        "title": "Skill 5 · Bottom panel",
+        "category": "ShipBar Icons",
+        "icon": "icons/panel-bottom.png"
+      },
+      {
+        "command": "shipbar.item5.panel-left",
+        "title": "Skill 5 · Left panel",
+        "category": "ShipBar Icons",
+        "icon": "icons/panel-left.png"
+      },
+      {
+        "command": "shipbar.item5.panel-right",
+        "title": "Skill 5 · Right panel",
+        "category": "ShipBar Icons",
+        "icon": "icons/panel-right.png"
+      },
+      {
+        "command": "shipbar.item5.pencil",
+        "title": "Skill 5 · Pencil",
+        "category": "ShipBar Icons",
+        "icon": "icons/pencil.png"
+      },
+      {
+        "command": "shipbar.item5.pin",
+        "title": "Skill 5 · Pin",
+        "category": "ShipBar Icons",
+        "icon": "icons/pin.png"
+      },
+      {
+        "command": "shipbar.item5.play",
+        "title": "Skill 5 · Play",
+        "category": "ShipBar Icons",
+        "icon": "icons/play.png"
+      },
+      {
+        "command": "shipbar.item5.plus",
+        "title": "Skill 5 · Plus",
+        "category": "ShipBar Icons",
+        "icon": "icons/plus.png"
+      },
+      {
+        "command": "shipbar.item5.save",
+        "title": "Skill 5 · Save",
+        "category": "ShipBar Icons",
+        "icon": "icons/save.png"
+      },
+      {
+        "command": "shipbar.item5.search",
+        "title": "Skill 5 · Search",
+        "category": "ShipBar Icons",
+        "icon": "icons/search.png"
+      },
+      {
+        "command": "shipbar.item5.sparkles",
+        "title": "Skill 5 · Sparkles",
+        "category": "ShipBar Icons",
+        "icon": "icons/sparkles.png"
+      },
+      {
+        "command": "shipbar.item5.split",
+        "title": "Skill 5 · Branch",
+        "category": "ShipBar Icons",
+        "icon": "icons/split.png"
+      },
+      {
+        "command": "shipbar.item5.terminal",
+        "title": "Skill 5 · Terminal",
+        "category": "ShipBar Icons",
+        "icon": "icons/terminal.png"
+      },
+      {
+        "command": "shipbar.item5.undo-2",
+        "title": "Skill 5 · Undo",
+        "category": "ShipBar Icons",
+        "icon": "icons/undo-2.png"
+      },
+      {
+        "command": "shipbar.item5.wrench",
+        "title": "Skill 5 · Wrench",
+        "category": "ShipBar Icons",
+        "icon": "icons/wrench.png"
+      },
+      {
+        "command": "shipbar.item5.zap",
+        "title": "Skill 5 · Zap",
+        "category": "ShipBar Icons",
+        "icon": "icons/zap.png"
       }
     ],
     "menus": {
       "touchBar": [
         {
-          "command": "shipbar.slot1",
-          "group": "1_actions@1",
-          "when": "config.shipbar.buttons.slot1.enabled"
-        },
-        {
-          "command": "shipbar.slot2",
-          "group": "1_actions@2",
-          "when": "config.shipbar.buttons.slot2.enabled"
-        },
-        {
-          "command": "shipbar.slot3",
-          "group": "1_actions@3",
-          "when": "config.shipbar.buttons.slot3.enabled"
-        },
-        {
-          "command": "shipbar.slot4",
-          "group": "1_actions@4",
-          "when": "config.shipbar.buttons.slot4.enabled"
-        },
-        {
-          "command": "shipbar.slot5",
-          "group": "2_input@1",
-          "when": "config.shipbar.buttons.slot5.enabled"
-        },
-        {
-          "command": "shipbar.slot6",
-          "group": "2_input@2",
-          "when": "config.shipbar.buttons.slot6.enabled"
-        },
-        {
           "command": "shipbar.configure",
-          "group": "3_settings@1",
+          "group": "9_gear@1",
           "when": "config.shipbar.showConfigButton"
+        },
+        {
+          "command": "shipbar.back",
+          "group": "1_row@1",
+          "when": "shipbar.page == modes || shipbar.page == skills || shipbar.page == group"
+        },
+        {
+          "command": "shipbar.mode.ask",
+          "group": "1_row@2",
+          "when": "shipbar.page == modes"
+        },
+        {
+          "command": "shipbar.mode.plan",
+          "group": "1_row@3",
+          "when": "shipbar.page == modes"
+        },
+        {
+          "command": "shipbar.mode.agent",
+          "group": "1_row@4",
+          "when": "shipbar.page == modes"
+        },
+        {
+          "command": "shipbar.next",
+          "group": "1_row@7",
+          "when": "shipbar.hasNext"
+        },
+        {
+          "command": "shipbar.addSkill",
+          "group": "1_row@2",
+          "when": "shipbar.showAdd"
+        },
+        {
+          "command": "shipbar.slot1.bot",
+          "group": "1_row@1",
+          "when": "(!shipbar.page || shipbar.page == main) && config.shipbar.buttons.slot1.enabled && config.shipbar.buttons.slot1.icon == bot"
+        },
+        {
+          "command": "shipbar.slot1.bug",
+          "group": "1_row@1",
+          "when": "(!shipbar.page || shipbar.page == main) && config.shipbar.buttons.slot1.enabled && config.shipbar.buttons.slot1.icon == bug"
+        },
+        {
+          "command": "shipbar.slot1.chevron-left",
+          "group": "1_row@1",
+          "when": "(!shipbar.page || shipbar.page == main) && config.shipbar.buttons.slot1.enabled && config.shipbar.buttons.slot1.icon == chevron-left"
+        },
+        {
+          "command": "shipbar.slot1.chevron-right",
+          "group": "1_row@1",
+          "when": "(!shipbar.page || shipbar.page == main) && config.shipbar.buttons.slot1.enabled && config.shipbar.buttons.slot1.icon == chevron-right"
+        },
+        {
+          "command": "shipbar.slot1.circle-check",
+          "group": "1_row@1",
+          "when": "(!shipbar.page || shipbar.page == main) && config.shipbar.buttons.slot1.enabled && config.shipbar.buttons.slot1.icon == circle-check"
+        },
+        {
+          "command": "shipbar.slot1.circle-x",
+          "group": "1_row@1",
+          "when": "(!shipbar.page || shipbar.page == main) && config.shipbar.buttons.slot1.enabled && config.shipbar.buttons.slot1.icon == circle-x"
+        },
+        {
+          "command": "shipbar.slot1.code",
+          "group": "1_row@1",
+          "when": "(!shipbar.page || shipbar.page == main) && config.shipbar.buttons.slot1.enabled && config.shipbar.buttons.slot1.icon == code"
+        },
+        {
+          "command": "shipbar.slot1.eye",
+          "group": "1_row@1",
+          "when": "(!shipbar.page || shipbar.page == main) && config.shipbar.buttons.slot1.enabled && config.shipbar.buttons.slot1.icon == eye"
+        },
+        {
+          "command": "shipbar.slot1.file",
+          "group": "1_row@1",
+          "when": "(!shipbar.page || shipbar.page == main) && config.shipbar.buttons.slot1.enabled && config.shipbar.buttons.slot1.icon == file"
+        },
+        {
+          "command": "shipbar.slot1.folder",
+          "group": "1_row@1",
+          "when": "(!shipbar.page || shipbar.page == main) && config.shipbar.buttons.slot1.enabled && config.shipbar.buttons.slot1.icon == folder"
+        },
+        {
+          "command": "shipbar.slot1.git-branch",
+          "group": "1_row@1",
+          "when": "(!shipbar.page || shipbar.page == main) && config.shipbar.buttons.slot1.enabled && config.shipbar.buttons.slot1.icon == git-branch"
+        },
+        {
+          "command": "shipbar.slot1.layers",
+          "group": "1_row@1",
+          "when": "(!shipbar.page || shipbar.page == main) && config.shipbar.buttons.slot1.enabled && config.shipbar.buttons.slot1.icon == layers"
+        },
+        {
+          "command": "shipbar.slot1.list",
+          "group": "1_row@1",
+          "when": "(!shipbar.page || shipbar.page == main) && config.shipbar.buttons.slot1.enabled && config.shipbar.buttons.slot1.icon == list"
+        },
+        {
+          "command": "shipbar.slot1.list-checks",
+          "group": "1_row@1",
+          "when": "(!shipbar.page || shipbar.page == main) && config.shipbar.buttons.slot1.enabled && config.shipbar.buttons.slot1.icon == list-checks"
+        },
+        {
+          "command": "shipbar.slot1.message-circle",
+          "group": "1_row@1",
+          "when": "(!shipbar.page || shipbar.page == main) && config.shipbar.buttons.slot1.enabled && config.shipbar.buttons.slot1.icon == message-circle"
+        },
+        {
+          "command": "shipbar.slot1.message-square",
+          "group": "1_row@1",
+          "when": "(!shipbar.page || shipbar.page == main) && config.shipbar.buttons.slot1.enabled && config.shipbar.buttons.slot1.icon == message-square"
+        },
+        {
+          "command": "shipbar.slot1.message-square-plus",
+          "group": "1_row@1",
+          "when": "(!shipbar.page || shipbar.page == main) && config.shipbar.buttons.slot1.enabled && config.shipbar.buttons.slot1.icon == message-square-plus"
+        },
+        {
+          "command": "shipbar.slot1.mic",
+          "group": "1_row@1",
+          "when": "(!shipbar.page || shipbar.page == main) && config.shipbar.buttons.slot1.enabled && config.shipbar.buttons.slot1.icon == mic"
+        },
+        {
+          "command": "shipbar.slot1.panel-bottom",
+          "group": "1_row@1",
+          "when": "(!shipbar.page || shipbar.page == main) && config.shipbar.buttons.slot1.enabled && config.shipbar.buttons.slot1.icon == panel-bottom"
+        },
+        {
+          "command": "shipbar.slot1.panel-left",
+          "group": "1_row@1",
+          "when": "(!shipbar.page || shipbar.page == main) && config.shipbar.buttons.slot1.enabled && config.shipbar.buttons.slot1.icon == panel-left"
+        },
+        {
+          "command": "shipbar.slot1.panel-right",
+          "group": "1_row@1",
+          "when": "(!shipbar.page || shipbar.page == main) && config.shipbar.buttons.slot1.enabled && config.shipbar.buttons.slot1.icon == panel-right"
+        },
+        {
+          "command": "shipbar.slot1.pencil",
+          "group": "1_row@1",
+          "when": "(!shipbar.page || shipbar.page == main) && config.shipbar.buttons.slot1.enabled && config.shipbar.buttons.slot1.icon == pencil"
+        },
+        {
+          "command": "shipbar.slot1.pin",
+          "group": "1_row@1",
+          "when": "(!shipbar.page || shipbar.page == main) && config.shipbar.buttons.slot1.enabled && config.shipbar.buttons.slot1.icon == pin"
+        },
+        {
+          "command": "shipbar.slot1.play",
+          "group": "1_row@1",
+          "when": "(!shipbar.page || shipbar.page == main) && config.shipbar.buttons.slot1.enabled && config.shipbar.buttons.slot1.icon == play"
+        },
+        {
+          "command": "shipbar.slot1.plus",
+          "group": "1_row@1",
+          "when": "(!shipbar.page || shipbar.page == main) && config.shipbar.buttons.slot1.enabled && config.shipbar.buttons.slot1.icon == plus"
+        },
+        {
+          "command": "shipbar.slot1.save",
+          "group": "1_row@1",
+          "when": "(!shipbar.page || shipbar.page == main) && config.shipbar.buttons.slot1.enabled && config.shipbar.buttons.slot1.icon == save"
+        },
+        {
+          "command": "shipbar.slot1.search",
+          "group": "1_row@1",
+          "when": "(!shipbar.page || shipbar.page == main) && config.shipbar.buttons.slot1.enabled && config.shipbar.buttons.slot1.icon == search"
+        },
+        {
+          "command": "shipbar.slot1.sparkles",
+          "group": "1_row@1",
+          "when": "(!shipbar.page || shipbar.page == main) && config.shipbar.buttons.slot1.enabled && config.shipbar.buttons.slot1.icon == sparkles"
+        },
+        {
+          "command": "shipbar.slot1.split",
+          "group": "1_row@1",
+          "when": "(!shipbar.page || shipbar.page == main) && config.shipbar.buttons.slot1.enabled && config.shipbar.buttons.slot1.icon == split"
+        },
+        {
+          "command": "shipbar.slot1.terminal",
+          "group": "1_row@1",
+          "when": "(!shipbar.page || shipbar.page == main) && config.shipbar.buttons.slot1.enabled && config.shipbar.buttons.slot1.icon == terminal"
+        },
+        {
+          "command": "shipbar.slot1.undo-2",
+          "group": "1_row@1",
+          "when": "(!shipbar.page || shipbar.page == main) && config.shipbar.buttons.slot1.enabled && config.shipbar.buttons.slot1.icon == undo-2"
+        },
+        {
+          "command": "shipbar.slot1.wrench",
+          "group": "1_row@1",
+          "when": "(!shipbar.page || shipbar.page == main) && config.shipbar.buttons.slot1.enabled && config.shipbar.buttons.slot1.icon == wrench"
+        },
+        {
+          "command": "shipbar.slot1.zap",
+          "group": "1_row@1",
+          "when": "(!shipbar.page || shipbar.page == main) && config.shipbar.buttons.slot1.enabled && config.shipbar.buttons.slot1.icon == zap"
+        },
+        {
+          "command": "shipbar.slot2.bot",
+          "group": "1_row@2",
+          "when": "(!shipbar.page || shipbar.page == main) && config.shipbar.buttons.slot2.enabled && config.shipbar.buttons.slot2.icon == bot"
+        },
+        {
+          "command": "shipbar.slot2.bug",
+          "group": "1_row@2",
+          "when": "(!shipbar.page || shipbar.page == main) && config.shipbar.buttons.slot2.enabled && config.shipbar.buttons.slot2.icon == bug"
+        },
+        {
+          "command": "shipbar.slot2.chevron-left",
+          "group": "1_row@2",
+          "when": "(!shipbar.page || shipbar.page == main) && config.shipbar.buttons.slot2.enabled && config.shipbar.buttons.slot2.icon == chevron-left"
+        },
+        {
+          "command": "shipbar.slot2.chevron-right",
+          "group": "1_row@2",
+          "when": "(!shipbar.page || shipbar.page == main) && config.shipbar.buttons.slot2.enabled && config.shipbar.buttons.slot2.icon == chevron-right"
+        },
+        {
+          "command": "shipbar.slot2.circle-check",
+          "group": "1_row@2",
+          "when": "(!shipbar.page || shipbar.page == main) && config.shipbar.buttons.slot2.enabled && config.shipbar.buttons.slot2.icon == circle-check"
+        },
+        {
+          "command": "shipbar.slot2.circle-x",
+          "group": "1_row@2",
+          "when": "(!shipbar.page || shipbar.page == main) && config.shipbar.buttons.slot2.enabled && config.shipbar.buttons.slot2.icon == circle-x"
+        },
+        {
+          "command": "shipbar.slot2.code",
+          "group": "1_row@2",
+          "when": "(!shipbar.page || shipbar.page == main) && config.shipbar.buttons.slot2.enabled && config.shipbar.buttons.slot2.icon == code"
+        },
+        {
+          "command": "shipbar.slot2.eye",
+          "group": "1_row@2",
+          "when": "(!shipbar.page || shipbar.page == main) && config.shipbar.buttons.slot2.enabled && config.shipbar.buttons.slot2.icon == eye"
+        },
+        {
+          "command": "shipbar.slot2.file",
+          "group": "1_row@2",
+          "when": "(!shipbar.page || shipbar.page == main) && config.shipbar.buttons.slot2.enabled && config.shipbar.buttons.slot2.icon == file"
+        },
+        {
+          "command": "shipbar.slot2.folder",
+          "group": "1_row@2",
+          "when": "(!shipbar.page || shipbar.page == main) && config.shipbar.buttons.slot2.enabled && config.shipbar.buttons.slot2.icon == folder"
+        },
+        {
+          "command": "shipbar.slot2.git-branch",
+          "group": "1_row@2",
+          "when": "(!shipbar.page || shipbar.page == main) && config.shipbar.buttons.slot2.enabled && config.shipbar.buttons.slot2.icon == git-branch"
+        },
+        {
+          "command": "shipbar.slot2.layers",
+          "group": "1_row@2",
+          "when": "(!shipbar.page || shipbar.page == main) && config.shipbar.buttons.slot2.enabled && config.shipbar.buttons.slot2.icon == layers"
+        },
+        {
+          "command": "shipbar.slot2.list",
+          "group": "1_row@2",
+          "when": "(!shipbar.page || shipbar.page == main) && config.shipbar.buttons.slot2.enabled && config.shipbar.buttons.slot2.icon == list"
+        },
+        {
+          "command": "shipbar.slot2.list-checks",
+          "group": "1_row@2",
+          "when": "(!shipbar.page || shipbar.page == main) && config.shipbar.buttons.slot2.enabled && config.shipbar.buttons.slot2.icon == list-checks"
+        },
+        {
+          "command": "shipbar.slot2.message-circle",
+          "group": "1_row@2",
+          "when": "(!shipbar.page || shipbar.page == main) && config.shipbar.buttons.slot2.enabled && config.shipbar.buttons.slot2.icon == message-circle"
+        },
+        {
+          "command": "shipbar.slot2.message-square",
+          "group": "1_row@2",
+          "when": "(!shipbar.page || shipbar.page == main) && config.shipbar.buttons.slot2.enabled && config.shipbar.buttons.slot2.icon == message-square"
+        },
+        {
+          "command": "shipbar.slot2.message-square-plus",
+          "group": "1_row@2",
+          "when": "(!shipbar.page || shipbar.page == main) && config.shipbar.buttons.slot2.enabled && config.shipbar.buttons.slot2.icon == message-square-plus"
+        },
+        {
+          "command": "shipbar.slot2.mic",
+          "group": "1_row@2",
+          "when": "(!shipbar.page || shipbar.page == main) && config.shipbar.buttons.slot2.enabled && config.shipbar.buttons.slot2.icon == mic"
+        },
+        {
+          "command": "shipbar.slot2.panel-bottom",
+          "group": "1_row@2",
+          "when": "(!shipbar.page || shipbar.page == main) && config.shipbar.buttons.slot2.enabled && config.shipbar.buttons.slot2.icon == panel-bottom"
+        },
+        {
+          "command": "shipbar.slot2.panel-left",
+          "group": "1_row@2",
+          "when": "(!shipbar.page || shipbar.page == main) && config.shipbar.buttons.slot2.enabled && config.shipbar.buttons.slot2.icon == panel-left"
+        },
+        {
+          "command": "shipbar.slot2.panel-right",
+          "group": "1_row@2",
+          "when": "(!shipbar.page || shipbar.page == main) && config.shipbar.buttons.slot2.enabled && config.shipbar.buttons.slot2.icon == panel-right"
+        },
+        {
+          "command": "shipbar.slot2.pencil",
+          "group": "1_row@2",
+          "when": "(!shipbar.page || shipbar.page == main) && config.shipbar.buttons.slot2.enabled && config.shipbar.buttons.slot2.icon == pencil"
+        },
+        {
+          "command": "shipbar.slot2.pin",
+          "group": "1_row@2",
+          "when": "(!shipbar.page || shipbar.page == main) && config.shipbar.buttons.slot2.enabled && config.shipbar.buttons.slot2.icon == pin"
+        },
+        {
+          "command": "shipbar.slot2.play",
+          "group": "1_row@2",
+          "when": "(!shipbar.page || shipbar.page == main) && config.shipbar.buttons.slot2.enabled && config.shipbar.buttons.slot2.icon == play"
+        },
+        {
+          "command": "shipbar.slot2.plus",
+          "group": "1_row@2",
+          "when": "(!shipbar.page || shipbar.page == main) && config.shipbar.buttons.slot2.enabled && config.shipbar.buttons.slot2.icon == plus"
+        },
+        {
+          "command": "shipbar.slot2.save",
+          "group": "1_row@2",
+          "when": "(!shipbar.page || shipbar.page == main) && config.shipbar.buttons.slot2.enabled && config.shipbar.buttons.slot2.icon == save"
+        },
+        {
+          "command": "shipbar.slot2.search",
+          "group": "1_row@2",
+          "when": "(!shipbar.page || shipbar.page == main) && config.shipbar.buttons.slot2.enabled && config.shipbar.buttons.slot2.icon == search"
+        },
+        {
+          "command": "shipbar.slot2.sparkles",
+          "group": "1_row@2",
+          "when": "(!shipbar.page || shipbar.page == main) && config.shipbar.buttons.slot2.enabled && config.shipbar.buttons.slot2.icon == sparkles"
+        },
+        {
+          "command": "shipbar.slot2.split",
+          "group": "1_row@2",
+          "when": "(!shipbar.page || shipbar.page == main) && config.shipbar.buttons.slot2.enabled && config.shipbar.buttons.slot2.icon == split"
+        },
+        {
+          "command": "shipbar.slot2.terminal",
+          "group": "1_row@2",
+          "when": "(!shipbar.page || shipbar.page == main) && config.shipbar.buttons.slot2.enabled && config.shipbar.buttons.slot2.icon == terminal"
+        },
+        {
+          "command": "shipbar.slot2.undo-2",
+          "group": "1_row@2",
+          "when": "(!shipbar.page || shipbar.page == main) && config.shipbar.buttons.slot2.enabled && config.shipbar.buttons.slot2.icon == undo-2"
+        },
+        {
+          "command": "shipbar.slot2.wrench",
+          "group": "1_row@2",
+          "when": "(!shipbar.page || shipbar.page == main) && config.shipbar.buttons.slot2.enabled && config.shipbar.buttons.slot2.icon == wrench"
+        },
+        {
+          "command": "shipbar.slot2.zap",
+          "group": "1_row@2",
+          "when": "(!shipbar.page || shipbar.page == main) && config.shipbar.buttons.slot2.enabled && config.shipbar.buttons.slot2.icon == zap"
+        },
+        {
+          "command": "shipbar.slot3.bot",
+          "group": "1_row@3",
+          "when": "(!shipbar.page || shipbar.page == main) && config.shipbar.buttons.slot3.enabled && config.shipbar.buttons.slot3.icon == bot"
+        },
+        {
+          "command": "shipbar.slot3.bug",
+          "group": "1_row@3",
+          "when": "(!shipbar.page || shipbar.page == main) && config.shipbar.buttons.slot3.enabled && config.shipbar.buttons.slot3.icon == bug"
+        },
+        {
+          "command": "shipbar.slot3.chevron-left",
+          "group": "1_row@3",
+          "when": "(!shipbar.page || shipbar.page == main) && config.shipbar.buttons.slot3.enabled && config.shipbar.buttons.slot3.icon == chevron-left"
+        },
+        {
+          "command": "shipbar.slot3.chevron-right",
+          "group": "1_row@3",
+          "when": "(!shipbar.page || shipbar.page == main) && config.shipbar.buttons.slot3.enabled && config.shipbar.buttons.slot3.icon == chevron-right"
+        },
+        {
+          "command": "shipbar.slot3.circle-check",
+          "group": "1_row@3",
+          "when": "(!shipbar.page || shipbar.page == main) && config.shipbar.buttons.slot3.enabled && config.shipbar.buttons.slot3.icon == circle-check"
+        },
+        {
+          "command": "shipbar.slot3.circle-x",
+          "group": "1_row@3",
+          "when": "(!shipbar.page || shipbar.page == main) && config.shipbar.buttons.slot3.enabled && config.shipbar.buttons.slot3.icon == circle-x"
+        },
+        {
+          "command": "shipbar.slot3.code",
+          "group": "1_row@3",
+          "when": "(!shipbar.page || shipbar.page == main) && config.shipbar.buttons.slot3.enabled && config.shipbar.buttons.slot3.icon == code"
+        },
+        {
+          "command": "shipbar.slot3.eye",
+          "group": "1_row@3",
+          "when": "(!shipbar.page || shipbar.page == main) && config.shipbar.buttons.slot3.enabled && config.shipbar.buttons.slot3.icon == eye"
+        },
+        {
+          "command": "shipbar.slot3.file",
+          "group": "1_row@3",
+          "when": "(!shipbar.page || shipbar.page == main) && config.shipbar.buttons.slot3.enabled && config.shipbar.buttons.slot3.icon == file"
+        },
+        {
+          "command": "shipbar.slot3.folder",
+          "group": "1_row@3",
+          "when": "(!shipbar.page || shipbar.page == main) && config.shipbar.buttons.slot3.enabled && config.shipbar.buttons.slot3.icon == folder"
+        },
+        {
+          "command": "shipbar.slot3.git-branch",
+          "group": "1_row@3",
+          "when": "(!shipbar.page || shipbar.page == main) && config.shipbar.buttons.slot3.enabled && config.shipbar.buttons.slot3.icon == git-branch"
+        },
+        {
+          "command": "shipbar.slot3.layers",
+          "group": "1_row@3",
+          "when": "(!shipbar.page || shipbar.page == main) && config.shipbar.buttons.slot3.enabled && config.shipbar.buttons.slot3.icon == layers"
+        },
+        {
+          "command": "shipbar.slot3.list",
+          "group": "1_row@3",
+          "when": "(!shipbar.page || shipbar.page == main) && config.shipbar.buttons.slot3.enabled && config.shipbar.buttons.slot3.icon == list"
+        },
+        {
+          "command": "shipbar.slot3.list-checks",
+          "group": "1_row@3",
+          "when": "(!shipbar.page || shipbar.page == main) && config.shipbar.buttons.slot3.enabled && config.shipbar.buttons.slot3.icon == list-checks"
+        },
+        {
+          "command": "shipbar.slot3.message-circle",
+          "group": "1_row@3",
+          "when": "(!shipbar.page || shipbar.page == main) && config.shipbar.buttons.slot3.enabled && config.shipbar.buttons.slot3.icon == message-circle"
+        },
+        {
+          "command": "shipbar.slot3.message-square",
+          "group": "1_row@3",
+          "when": "(!shipbar.page || shipbar.page == main) && config.shipbar.buttons.slot3.enabled && config.shipbar.buttons.slot3.icon == message-square"
+        },
+        {
+          "command": "shipbar.slot3.message-square-plus",
+          "group": "1_row@3",
+          "when": "(!shipbar.page || shipbar.page == main) && config.shipbar.buttons.slot3.enabled && config.shipbar.buttons.slot3.icon == message-square-plus"
+        },
+        {
+          "command": "shipbar.slot3.mic",
+          "group": "1_row@3",
+          "when": "(!shipbar.page || shipbar.page == main) && config.shipbar.buttons.slot3.enabled && config.shipbar.buttons.slot3.icon == mic"
+        },
+        {
+          "command": "shipbar.slot3.panel-bottom",
+          "group": "1_row@3",
+          "when": "(!shipbar.page || shipbar.page == main) && config.shipbar.buttons.slot3.enabled && config.shipbar.buttons.slot3.icon == panel-bottom"
+        },
+        {
+          "command": "shipbar.slot3.panel-left",
+          "group": "1_row@3",
+          "when": "(!shipbar.page || shipbar.page == main) && config.shipbar.buttons.slot3.enabled && config.shipbar.buttons.slot3.icon == panel-left"
+        },
+        {
+          "command": "shipbar.slot3.panel-right",
+          "group": "1_row@3",
+          "when": "(!shipbar.page || shipbar.page == main) && config.shipbar.buttons.slot3.enabled && config.shipbar.buttons.slot3.icon == panel-right"
+        },
+        {
+          "command": "shipbar.slot3.pencil",
+          "group": "1_row@3",
+          "when": "(!shipbar.page || shipbar.page == main) && config.shipbar.buttons.slot3.enabled && config.shipbar.buttons.slot3.icon == pencil"
+        },
+        {
+          "command": "shipbar.slot3.pin",
+          "group": "1_row@3",
+          "when": "(!shipbar.page || shipbar.page == main) && config.shipbar.buttons.slot3.enabled && config.shipbar.buttons.slot3.icon == pin"
+        },
+        {
+          "command": "shipbar.slot3.play",
+          "group": "1_row@3",
+          "when": "(!shipbar.page || shipbar.page == main) && config.shipbar.buttons.slot3.enabled && config.shipbar.buttons.slot3.icon == play"
+        },
+        {
+          "command": "shipbar.slot3.plus",
+          "group": "1_row@3",
+          "when": "(!shipbar.page || shipbar.page == main) && config.shipbar.buttons.slot3.enabled && config.shipbar.buttons.slot3.icon == plus"
+        },
+        {
+          "command": "shipbar.slot3.save",
+          "group": "1_row@3",
+          "when": "(!shipbar.page || shipbar.page == main) && config.shipbar.buttons.slot3.enabled && config.shipbar.buttons.slot3.icon == save"
+        },
+        {
+          "command": "shipbar.slot3.search",
+          "group": "1_row@3",
+          "when": "(!shipbar.page || shipbar.page == main) && config.shipbar.buttons.slot3.enabled && config.shipbar.buttons.slot3.icon == search"
+        },
+        {
+          "command": "shipbar.slot3.sparkles",
+          "group": "1_row@3",
+          "when": "(!shipbar.page || shipbar.page == main) && config.shipbar.buttons.slot3.enabled && config.shipbar.buttons.slot3.icon == sparkles"
+        },
+        {
+          "command": "shipbar.slot3.split",
+          "group": "1_row@3",
+          "when": "(!shipbar.page || shipbar.page == main) && config.shipbar.buttons.slot3.enabled && config.shipbar.buttons.slot3.icon == split"
+        },
+        {
+          "command": "shipbar.slot3.terminal",
+          "group": "1_row@3",
+          "when": "(!shipbar.page || shipbar.page == main) && config.shipbar.buttons.slot3.enabled && config.shipbar.buttons.slot3.icon == terminal"
+        },
+        {
+          "command": "shipbar.slot3.undo-2",
+          "group": "1_row@3",
+          "when": "(!shipbar.page || shipbar.page == main) && config.shipbar.buttons.slot3.enabled && config.shipbar.buttons.slot3.icon == undo-2"
+        },
+        {
+          "command": "shipbar.slot3.wrench",
+          "group": "1_row@3",
+          "when": "(!shipbar.page || shipbar.page == main) && config.shipbar.buttons.slot3.enabled && config.shipbar.buttons.slot3.icon == wrench"
+        },
+        {
+          "command": "shipbar.slot3.zap",
+          "group": "1_row@3",
+          "when": "(!shipbar.page || shipbar.page == main) && config.shipbar.buttons.slot3.enabled && config.shipbar.buttons.slot3.icon == zap"
+        },
+        {
+          "command": "shipbar.slot4.bot",
+          "group": "1_row@4",
+          "when": "(!shipbar.page || shipbar.page == main) && config.shipbar.buttons.slot4.enabled && config.shipbar.buttons.slot4.icon == bot"
+        },
+        {
+          "command": "shipbar.slot4.bug",
+          "group": "1_row@4",
+          "when": "(!shipbar.page || shipbar.page == main) && config.shipbar.buttons.slot4.enabled && config.shipbar.buttons.slot4.icon == bug"
+        },
+        {
+          "command": "shipbar.slot4.chevron-left",
+          "group": "1_row@4",
+          "when": "(!shipbar.page || shipbar.page == main) && config.shipbar.buttons.slot4.enabled && config.shipbar.buttons.slot4.icon == chevron-left"
+        },
+        {
+          "command": "shipbar.slot4.chevron-right",
+          "group": "1_row@4",
+          "when": "(!shipbar.page || shipbar.page == main) && config.shipbar.buttons.slot4.enabled && config.shipbar.buttons.slot4.icon == chevron-right"
+        },
+        {
+          "command": "shipbar.slot4.circle-check",
+          "group": "1_row@4",
+          "when": "(!shipbar.page || shipbar.page == main) && config.shipbar.buttons.slot4.enabled && config.shipbar.buttons.slot4.icon == circle-check"
+        },
+        {
+          "command": "shipbar.slot4.circle-x",
+          "group": "1_row@4",
+          "when": "(!shipbar.page || shipbar.page == main) && config.shipbar.buttons.slot4.enabled && config.shipbar.buttons.slot4.icon == circle-x"
+        },
+        {
+          "command": "shipbar.slot4.code",
+          "group": "1_row@4",
+          "when": "(!shipbar.page || shipbar.page == main) && config.shipbar.buttons.slot4.enabled && config.shipbar.buttons.slot4.icon == code"
+        },
+        {
+          "command": "shipbar.slot4.eye",
+          "group": "1_row@4",
+          "when": "(!shipbar.page || shipbar.page == main) && config.shipbar.buttons.slot4.enabled && config.shipbar.buttons.slot4.icon == eye"
+        },
+        {
+          "command": "shipbar.slot4.file",
+          "group": "1_row@4",
+          "when": "(!shipbar.page || shipbar.page == main) && config.shipbar.buttons.slot4.enabled && config.shipbar.buttons.slot4.icon == file"
+        },
+        {
+          "command": "shipbar.slot4.folder",
+          "group": "1_row@4",
+          "when": "(!shipbar.page || shipbar.page == main) && config.shipbar.buttons.slot4.enabled && config.shipbar.buttons.slot4.icon == folder"
+        },
+        {
+          "command": "shipbar.slot4.git-branch",
+          "group": "1_row@4",
+          "when": "(!shipbar.page || shipbar.page == main) && config.shipbar.buttons.slot4.enabled && config.shipbar.buttons.slot4.icon == git-branch"
+        },
+        {
+          "command": "shipbar.slot4.layers",
+          "group": "1_row@4",
+          "when": "(!shipbar.page || shipbar.page == main) && config.shipbar.buttons.slot4.enabled && config.shipbar.buttons.slot4.icon == layers"
+        },
+        {
+          "command": "shipbar.slot4.list",
+          "group": "1_row@4",
+          "when": "(!shipbar.page || shipbar.page == main) && config.shipbar.buttons.slot4.enabled && config.shipbar.buttons.slot4.icon == list"
+        },
+        {
+          "command": "shipbar.slot4.list-checks",
+          "group": "1_row@4",
+          "when": "(!shipbar.page || shipbar.page == main) && config.shipbar.buttons.slot4.enabled && config.shipbar.buttons.slot4.icon == list-checks"
+        },
+        {
+          "command": "shipbar.slot4.message-circle",
+          "group": "1_row@4",
+          "when": "(!shipbar.page || shipbar.page == main) && config.shipbar.buttons.slot4.enabled && config.shipbar.buttons.slot4.icon == message-circle"
+        },
+        {
+          "command": "shipbar.slot4.message-square",
+          "group": "1_row@4",
+          "when": "(!shipbar.page || shipbar.page == main) && config.shipbar.buttons.slot4.enabled && config.shipbar.buttons.slot4.icon == message-square"
+        },
+        {
+          "command": "shipbar.slot4.message-square-plus",
+          "group": "1_row@4",
+          "when": "(!shipbar.page || shipbar.page == main) && config.shipbar.buttons.slot4.enabled && config.shipbar.buttons.slot4.icon == message-square-plus"
+        },
+        {
+          "command": "shipbar.slot4.mic",
+          "group": "1_row@4",
+          "when": "(!shipbar.page || shipbar.page == main) && config.shipbar.buttons.slot4.enabled && config.shipbar.buttons.slot4.icon == mic"
+        },
+        {
+          "command": "shipbar.slot4.panel-bottom",
+          "group": "1_row@4",
+          "when": "(!shipbar.page || shipbar.page == main) && config.shipbar.buttons.slot4.enabled && config.shipbar.buttons.slot4.icon == panel-bottom"
+        },
+        {
+          "command": "shipbar.slot4.panel-left",
+          "group": "1_row@4",
+          "when": "(!shipbar.page || shipbar.page == main) && config.shipbar.buttons.slot4.enabled && config.shipbar.buttons.slot4.icon == panel-left"
+        },
+        {
+          "command": "shipbar.slot4.panel-right",
+          "group": "1_row@4",
+          "when": "(!shipbar.page || shipbar.page == main) && config.shipbar.buttons.slot4.enabled && config.shipbar.buttons.slot4.icon == panel-right"
+        },
+        {
+          "command": "shipbar.slot4.pencil",
+          "group": "1_row@4",
+          "when": "(!shipbar.page || shipbar.page == main) && config.shipbar.buttons.slot4.enabled && config.shipbar.buttons.slot4.icon == pencil"
+        },
+        {
+          "command": "shipbar.slot4.pin",
+          "group": "1_row@4",
+          "when": "(!shipbar.page || shipbar.page == main) && config.shipbar.buttons.slot4.enabled && config.shipbar.buttons.slot4.icon == pin"
+        },
+        {
+          "command": "shipbar.slot4.play",
+          "group": "1_row@4",
+          "when": "(!shipbar.page || shipbar.page == main) && config.shipbar.buttons.slot4.enabled && config.shipbar.buttons.slot4.icon == play"
+        },
+        {
+          "command": "shipbar.slot4.plus",
+          "group": "1_row@4",
+          "when": "(!shipbar.page || shipbar.page == main) && config.shipbar.buttons.slot4.enabled && config.shipbar.buttons.slot4.icon == plus"
+        },
+        {
+          "command": "shipbar.slot4.save",
+          "group": "1_row@4",
+          "when": "(!shipbar.page || shipbar.page == main) && config.shipbar.buttons.slot4.enabled && config.shipbar.buttons.slot4.icon == save"
+        },
+        {
+          "command": "shipbar.slot4.search",
+          "group": "1_row@4",
+          "when": "(!shipbar.page || shipbar.page == main) && config.shipbar.buttons.slot4.enabled && config.shipbar.buttons.slot4.icon == search"
+        },
+        {
+          "command": "shipbar.slot4.sparkles",
+          "group": "1_row@4",
+          "when": "(!shipbar.page || shipbar.page == main) && config.shipbar.buttons.slot4.enabled && config.shipbar.buttons.slot4.icon == sparkles"
+        },
+        {
+          "command": "shipbar.slot4.split",
+          "group": "1_row@4",
+          "when": "(!shipbar.page || shipbar.page == main) && config.shipbar.buttons.slot4.enabled && config.shipbar.buttons.slot4.icon == split"
+        },
+        {
+          "command": "shipbar.slot4.terminal",
+          "group": "1_row@4",
+          "when": "(!shipbar.page || shipbar.page == main) && config.shipbar.buttons.slot4.enabled && config.shipbar.buttons.slot4.icon == terminal"
+        },
+        {
+          "command": "shipbar.slot4.undo-2",
+          "group": "1_row@4",
+          "when": "(!shipbar.page || shipbar.page == main) && config.shipbar.buttons.slot4.enabled && config.shipbar.buttons.slot4.icon == undo-2"
+        },
+        {
+          "command": "shipbar.slot4.wrench",
+          "group": "1_row@4",
+          "when": "(!shipbar.page || shipbar.page == main) && config.shipbar.buttons.slot4.enabled && config.shipbar.buttons.slot4.icon == wrench"
+        },
+        {
+          "command": "shipbar.slot4.zap",
+          "group": "1_row@4",
+          "when": "(!shipbar.page || shipbar.page == main) && config.shipbar.buttons.slot4.enabled && config.shipbar.buttons.slot4.icon == zap"
+        },
+        {
+          "command": "shipbar.slot5.bot",
+          "group": "1_row@5",
+          "when": "(!shipbar.page || shipbar.page == main) && config.shipbar.buttons.slot5.enabled && config.shipbar.buttons.slot5.icon == bot"
+        },
+        {
+          "command": "shipbar.slot5.bug",
+          "group": "1_row@5",
+          "when": "(!shipbar.page || shipbar.page == main) && config.shipbar.buttons.slot5.enabled && config.shipbar.buttons.slot5.icon == bug"
+        },
+        {
+          "command": "shipbar.slot5.chevron-left",
+          "group": "1_row@5",
+          "when": "(!shipbar.page || shipbar.page == main) && config.shipbar.buttons.slot5.enabled && config.shipbar.buttons.slot5.icon == chevron-left"
+        },
+        {
+          "command": "shipbar.slot5.chevron-right",
+          "group": "1_row@5",
+          "when": "(!shipbar.page || shipbar.page == main) && config.shipbar.buttons.slot5.enabled && config.shipbar.buttons.slot5.icon == chevron-right"
+        },
+        {
+          "command": "shipbar.slot5.circle-check",
+          "group": "1_row@5",
+          "when": "(!shipbar.page || shipbar.page == main) && config.shipbar.buttons.slot5.enabled && config.shipbar.buttons.slot5.icon == circle-check"
+        },
+        {
+          "command": "shipbar.slot5.circle-x",
+          "group": "1_row@5",
+          "when": "(!shipbar.page || shipbar.page == main) && config.shipbar.buttons.slot5.enabled && config.shipbar.buttons.slot5.icon == circle-x"
+        },
+        {
+          "command": "shipbar.slot5.code",
+          "group": "1_row@5",
+          "when": "(!shipbar.page || shipbar.page == main) && config.shipbar.buttons.slot5.enabled && config.shipbar.buttons.slot5.icon == code"
+        },
+        {
+          "command": "shipbar.slot5.eye",
+          "group": "1_row@5",
+          "when": "(!shipbar.page || shipbar.page == main) && config.shipbar.buttons.slot5.enabled && config.shipbar.buttons.slot5.icon == eye"
+        },
+        {
+          "command": "shipbar.slot5.file",
+          "group": "1_row@5",
+          "when": "(!shipbar.page || shipbar.page == main) && config.shipbar.buttons.slot5.enabled && config.shipbar.buttons.slot5.icon == file"
+        },
+        {
+          "command": "shipbar.slot5.folder",
+          "group": "1_row@5",
+          "when": "(!shipbar.page || shipbar.page == main) && config.shipbar.buttons.slot5.enabled && config.shipbar.buttons.slot5.icon == folder"
+        },
+        {
+          "command": "shipbar.slot5.git-branch",
+          "group": "1_row@5",
+          "when": "(!shipbar.page || shipbar.page == main) && config.shipbar.buttons.slot5.enabled && config.shipbar.buttons.slot5.icon == git-branch"
+        },
+        {
+          "command": "shipbar.slot5.layers",
+          "group": "1_row@5",
+          "when": "(!shipbar.page || shipbar.page == main) && config.shipbar.buttons.slot5.enabled && config.shipbar.buttons.slot5.icon == layers"
+        },
+        {
+          "command": "shipbar.slot5.list",
+          "group": "1_row@5",
+          "when": "(!shipbar.page || shipbar.page == main) && config.shipbar.buttons.slot5.enabled && config.shipbar.buttons.slot5.icon == list"
+        },
+        {
+          "command": "shipbar.slot5.list-checks",
+          "group": "1_row@5",
+          "when": "(!shipbar.page || shipbar.page == main) && config.shipbar.buttons.slot5.enabled && config.shipbar.buttons.slot5.icon == list-checks"
+        },
+        {
+          "command": "shipbar.slot5.message-circle",
+          "group": "1_row@5",
+          "when": "(!shipbar.page || shipbar.page == main) && config.shipbar.buttons.slot5.enabled && config.shipbar.buttons.slot5.icon == message-circle"
+        },
+        {
+          "command": "shipbar.slot5.message-square",
+          "group": "1_row@5",
+          "when": "(!shipbar.page || shipbar.page == main) && config.shipbar.buttons.slot5.enabled && config.shipbar.buttons.slot5.icon == message-square"
+        },
+        {
+          "command": "shipbar.slot5.message-square-plus",
+          "group": "1_row@5",
+          "when": "(!shipbar.page || shipbar.page == main) && config.shipbar.buttons.slot5.enabled && config.shipbar.buttons.slot5.icon == message-square-plus"
+        },
+        {
+          "command": "shipbar.slot5.mic",
+          "group": "1_row@5",
+          "when": "(!shipbar.page || shipbar.page == main) && config.shipbar.buttons.slot5.enabled && config.shipbar.buttons.slot5.icon == mic"
+        },
+        {
+          "command": "shipbar.slot5.panel-bottom",
+          "group": "1_row@5",
+          "when": "(!shipbar.page || shipbar.page == main) && config.shipbar.buttons.slot5.enabled && config.shipbar.buttons.slot5.icon == panel-bottom"
+        },
+        {
+          "command": "shipbar.slot5.panel-left",
+          "group": "1_row@5",
+          "when": "(!shipbar.page || shipbar.page == main) && config.shipbar.buttons.slot5.enabled && config.shipbar.buttons.slot5.icon == panel-left"
+        },
+        {
+          "command": "shipbar.slot5.panel-right",
+          "group": "1_row@5",
+          "when": "(!shipbar.page || shipbar.page == main) && config.shipbar.buttons.slot5.enabled && config.shipbar.buttons.slot5.icon == panel-right"
+        },
+        {
+          "command": "shipbar.slot5.pencil",
+          "group": "1_row@5",
+          "when": "(!shipbar.page || shipbar.page == main) && config.shipbar.buttons.slot5.enabled && config.shipbar.buttons.slot5.icon == pencil"
+        },
+        {
+          "command": "shipbar.slot5.pin",
+          "group": "1_row@5",
+          "when": "(!shipbar.page || shipbar.page == main) && config.shipbar.buttons.slot5.enabled && config.shipbar.buttons.slot5.icon == pin"
+        },
+        {
+          "command": "shipbar.slot5.play",
+          "group": "1_row@5",
+          "when": "(!shipbar.page || shipbar.page == main) && config.shipbar.buttons.slot5.enabled && config.shipbar.buttons.slot5.icon == play"
+        },
+        {
+          "command": "shipbar.slot5.plus",
+          "group": "1_row@5",
+          "when": "(!shipbar.page || shipbar.page == main) && config.shipbar.buttons.slot5.enabled && config.shipbar.buttons.slot5.icon == plus"
+        },
+        {
+          "command": "shipbar.slot5.save",
+          "group": "1_row@5",
+          "when": "(!shipbar.page || shipbar.page == main) && config.shipbar.buttons.slot5.enabled && config.shipbar.buttons.slot5.icon == save"
+        },
+        {
+          "command": "shipbar.slot5.search",
+          "group": "1_row@5",
+          "when": "(!shipbar.page || shipbar.page == main) && config.shipbar.buttons.slot5.enabled && config.shipbar.buttons.slot5.icon == search"
+        },
+        {
+          "command": "shipbar.slot5.sparkles",
+          "group": "1_row@5",
+          "when": "(!shipbar.page || shipbar.page == main) && config.shipbar.buttons.slot5.enabled && config.shipbar.buttons.slot5.icon == sparkles"
+        },
+        {
+          "command": "shipbar.slot5.split",
+          "group": "1_row@5",
+          "when": "(!shipbar.page || shipbar.page == main) && config.shipbar.buttons.slot5.enabled && config.shipbar.buttons.slot5.icon == split"
+        },
+        {
+          "command": "shipbar.slot5.terminal",
+          "group": "1_row@5",
+          "when": "(!shipbar.page || shipbar.page == main) && config.shipbar.buttons.slot5.enabled && config.shipbar.buttons.slot5.icon == terminal"
+        },
+        {
+          "command": "shipbar.slot5.undo-2",
+          "group": "1_row@5",
+          "when": "(!shipbar.page || shipbar.page == main) && config.shipbar.buttons.slot5.enabled && config.shipbar.buttons.slot5.icon == undo-2"
+        },
+        {
+          "command": "shipbar.slot5.wrench",
+          "group": "1_row@5",
+          "when": "(!shipbar.page || shipbar.page == main) && config.shipbar.buttons.slot5.enabled && config.shipbar.buttons.slot5.icon == wrench"
+        },
+        {
+          "command": "shipbar.slot5.zap",
+          "group": "1_row@5",
+          "when": "(!shipbar.page || shipbar.page == main) && config.shipbar.buttons.slot5.enabled && config.shipbar.buttons.slot5.icon == zap"
+        },
+        {
+          "command": "shipbar.slot6.bot",
+          "group": "1_row@6",
+          "when": "(!shipbar.page || shipbar.page == main) && config.shipbar.buttons.slot6.enabled && config.shipbar.buttons.slot6.icon == bot"
+        },
+        {
+          "command": "shipbar.slot6.bug",
+          "group": "1_row@6",
+          "when": "(!shipbar.page || shipbar.page == main) && config.shipbar.buttons.slot6.enabled && config.shipbar.buttons.slot6.icon == bug"
+        },
+        {
+          "command": "shipbar.slot6.chevron-left",
+          "group": "1_row@6",
+          "when": "(!shipbar.page || shipbar.page == main) && config.shipbar.buttons.slot6.enabled && config.shipbar.buttons.slot6.icon == chevron-left"
+        },
+        {
+          "command": "shipbar.slot6.chevron-right",
+          "group": "1_row@6",
+          "when": "(!shipbar.page || shipbar.page == main) && config.shipbar.buttons.slot6.enabled && config.shipbar.buttons.slot6.icon == chevron-right"
+        },
+        {
+          "command": "shipbar.slot6.circle-check",
+          "group": "1_row@6",
+          "when": "(!shipbar.page || shipbar.page == main) && config.shipbar.buttons.slot6.enabled && config.shipbar.buttons.slot6.icon == circle-check"
+        },
+        {
+          "command": "shipbar.slot6.circle-x",
+          "group": "1_row@6",
+          "when": "(!shipbar.page || shipbar.page == main) && config.shipbar.buttons.slot6.enabled && config.shipbar.buttons.slot6.icon == circle-x"
+        },
+        {
+          "command": "shipbar.slot6.code",
+          "group": "1_row@6",
+          "when": "(!shipbar.page || shipbar.page == main) && config.shipbar.buttons.slot6.enabled && config.shipbar.buttons.slot6.icon == code"
+        },
+        {
+          "command": "shipbar.slot6.eye",
+          "group": "1_row@6",
+          "when": "(!shipbar.page || shipbar.page == main) && config.shipbar.buttons.slot6.enabled && config.shipbar.buttons.slot6.icon == eye"
+        },
+        {
+          "command": "shipbar.slot6.file",
+          "group": "1_row@6",
+          "when": "(!shipbar.page || shipbar.page == main) && config.shipbar.buttons.slot6.enabled && config.shipbar.buttons.slot6.icon == file"
+        },
+        {
+          "command": "shipbar.slot6.folder",
+          "group": "1_row@6",
+          "when": "(!shipbar.page || shipbar.page == main) && config.shipbar.buttons.slot6.enabled && config.shipbar.buttons.slot6.icon == folder"
+        },
+        {
+          "command": "shipbar.slot6.git-branch",
+          "group": "1_row@6",
+          "when": "(!shipbar.page || shipbar.page == main) && config.shipbar.buttons.slot6.enabled && config.shipbar.buttons.slot6.icon == git-branch"
+        },
+        {
+          "command": "shipbar.slot6.layers",
+          "group": "1_row@6",
+          "when": "(!shipbar.page || shipbar.page == main) && config.shipbar.buttons.slot6.enabled && config.shipbar.buttons.slot6.icon == layers"
+        },
+        {
+          "command": "shipbar.slot6.list",
+          "group": "1_row@6",
+          "when": "(!shipbar.page || shipbar.page == main) && config.shipbar.buttons.slot6.enabled && config.shipbar.buttons.slot6.icon == list"
+        },
+        {
+          "command": "shipbar.slot6.list-checks",
+          "group": "1_row@6",
+          "when": "(!shipbar.page || shipbar.page == main) && config.shipbar.buttons.slot6.enabled && config.shipbar.buttons.slot6.icon == list-checks"
+        },
+        {
+          "command": "shipbar.slot6.message-circle",
+          "group": "1_row@6",
+          "when": "(!shipbar.page || shipbar.page == main) && config.shipbar.buttons.slot6.enabled && config.shipbar.buttons.slot6.icon == message-circle"
+        },
+        {
+          "command": "shipbar.slot6.message-square",
+          "group": "1_row@6",
+          "when": "(!shipbar.page || shipbar.page == main) && config.shipbar.buttons.slot6.enabled && config.shipbar.buttons.slot6.icon == message-square"
+        },
+        {
+          "command": "shipbar.slot6.message-square-plus",
+          "group": "1_row@6",
+          "when": "(!shipbar.page || shipbar.page == main) && config.shipbar.buttons.slot6.enabled && config.shipbar.buttons.slot6.icon == message-square-plus"
+        },
+        {
+          "command": "shipbar.slot6.mic",
+          "group": "1_row@6",
+          "when": "(!shipbar.page || shipbar.page == main) && config.shipbar.buttons.slot6.enabled && config.shipbar.buttons.slot6.icon == mic"
+        },
+        {
+          "command": "shipbar.slot6.panel-bottom",
+          "group": "1_row@6",
+          "when": "(!shipbar.page || shipbar.page == main) && config.shipbar.buttons.slot6.enabled && config.shipbar.buttons.slot6.icon == panel-bottom"
+        },
+        {
+          "command": "shipbar.slot6.panel-left",
+          "group": "1_row@6",
+          "when": "(!shipbar.page || shipbar.page == main) && config.shipbar.buttons.slot6.enabled && config.shipbar.buttons.slot6.icon == panel-left"
+        },
+        {
+          "command": "shipbar.slot6.panel-right",
+          "group": "1_row@6",
+          "when": "(!shipbar.page || shipbar.page == main) && config.shipbar.buttons.slot6.enabled && config.shipbar.buttons.slot6.icon == panel-right"
+        },
+        {
+          "command": "shipbar.slot6.pencil",
+          "group": "1_row@6",
+          "when": "(!shipbar.page || shipbar.page == main) && config.shipbar.buttons.slot6.enabled && config.shipbar.buttons.slot6.icon == pencil"
+        },
+        {
+          "command": "shipbar.slot6.pin",
+          "group": "1_row@6",
+          "when": "(!shipbar.page || shipbar.page == main) && config.shipbar.buttons.slot6.enabled && config.shipbar.buttons.slot6.icon == pin"
+        },
+        {
+          "command": "shipbar.slot6.play",
+          "group": "1_row@6",
+          "when": "(!shipbar.page || shipbar.page == main) && config.shipbar.buttons.slot6.enabled && config.shipbar.buttons.slot6.icon == play"
+        },
+        {
+          "command": "shipbar.slot6.plus",
+          "group": "1_row@6",
+          "when": "(!shipbar.page || shipbar.page == main) && config.shipbar.buttons.slot6.enabled && config.shipbar.buttons.slot6.icon == plus"
+        },
+        {
+          "command": "shipbar.slot6.save",
+          "group": "1_row@6",
+          "when": "(!shipbar.page || shipbar.page == main) && config.shipbar.buttons.slot6.enabled && config.shipbar.buttons.slot6.icon == save"
+        },
+        {
+          "command": "shipbar.slot6.search",
+          "group": "1_row@6",
+          "when": "(!shipbar.page || shipbar.page == main) && config.shipbar.buttons.slot6.enabled && config.shipbar.buttons.slot6.icon == search"
+        },
+        {
+          "command": "shipbar.slot6.sparkles",
+          "group": "1_row@6",
+          "when": "(!shipbar.page || shipbar.page == main) && config.shipbar.buttons.slot6.enabled && config.shipbar.buttons.slot6.icon == sparkles"
+        },
+        {
+          "command": "shipbar.slot6.split",
+          "group": "1_row@6",
+          "when": "(!shipbar.page || shipbar.page == main) && config.shipbar.buttons.slot6.enabled && config.shipbar.buttons.slot6.icon == split"
+        },
+        {
+          "command": "shipbar.slot6.terminal",
+          "group": "1_row@6",
+          "when": "(!shipbar.page || shipbar.page == main) && config.shipbar.buttons.slot6.enabled && config.shipbar.buttons.slot6.icon == terminal"
+        },
+        {
+          "command": "shipbar.slot6.undo-2",
+          "group": "1_row@6",
+          "when": "(!shipbar.page || shipbar.page == main) && config.shipbar.buttons.slot6.enabled && config.shipbar.buttons.slot6.icon == undo-2"
+        },
+        {
+          "command": "shipbar.slot6.wrench",
+          "group": "1_row@6",
+          "when": "(!shipbar.page || shipbar.page == main) && config.shipbar.buttons.slot6.enabled && config.shipbar.buttons.slot6.icon == wrench"
+        },
+        {
+          "command": "shipbar.slot6.zap",
+          "group": "1_row@6",
+          "when": "(!shipbar.page || shipbar.page == main) && config.shipbar.buttons.slot6.enabled && config.shipbar.buttons.slot6.icon == zap"
+        },
+        {
+          "command": "shipbar.item1.bot",
+          "group": "1_row@2",
+          "when": "(shipbar.page == skills || shipbar.page == group) && shipbar.item1 == bot"
+        },
+        {
+          "command": "shipbar.item1.bug",
+          "group": "1_row@2",
+          "when": "(shipbar.page == skills || shipbar.page == group) && shipbar.item1 == bug"
+        },
+        {
+          "command": "shipbar.item1.chevron-left",
+          "group": "1_row@2",
+          "when": "(shipbar.page == skills || shipbar.page == group) && shipbar.item1 == chevron-left"
+        },
+        {
+          "command": "shipbar.item1.chevron-right",
+          "group": "1_row@2",
+          "when": "(shipbar.page == skills || shipbar.page == group) && shipbar.item1 == chevron-right"
+        },
+        {
+          "command": "shipbar.item1.circle-check",
+          "group": "1_row@2",
+          "when": "(shipbar.page == skills || shipbar.page == group) && shipbar.item1 == circle-check"
+        },
+        {
+          "command": "shipbar.item1.circle-x",
+          "group": "1_row@2",
+          "when": "(shipbar.page == skills || shipbar.page == group) && shipbar.item1 == circle-x"
+        },
+        {
+          "command": "shipbar.item1.code",
+          "group": "1_row@2",
+          "when": "(shipbar.page == skills || shipbar.page == group) && shipbar.item1 == code"
+        },
+        {
+          "command": "shipbar.item1.eye",
+          "group": "1_row@2",
+          "when": "(shipbar.page == skills || shipbar.page == group) && shipbar.item1 == eye"
+        },
+        {
+          "command": "shipbar.item1.file",
+          "group": "1_row@2",
+          "when": "(shipbar.page == skills || shipbar.page == group) && shipbar.item1 == file"
+        },
+        {
+          "command": "shipbar.item1.folder",
+          "group": "1_row@2",
+          "when": "(shipbar.page == skills || shipbar.page == group) && shipbar.item1 == folder"
+        },
+        {
+          "command": "shipbar.item1.git-branch",
+          "group": "1_row@2",
+          "when": "(shipbar.page == skills || shipbar.page == group) && shipbar.item1 == git-branch"
+        },
+        {
+          "command": "shipbar.item1.layers",
+          "group": "1_row@2",
+          "when": "(shipbar.page == skills || shipbar.page == group) && shipbar.item1 == layers"
+        },
+        {
+          "command": "shipbar.item1.list",
+          "group": "1_row@2",
+          "when": "(shipbar.page == skills || shipbar.page == group) && shipbar.item1 == list"
+        },
+        {
+          "command": "shipbar.item1.list-checks",
+          "group": "1_row@2",
+          "when": "(shipbar.page == skills || shipbar.page == group) && shipbar.item1 == list-checks"
+        },
+        {
+          "command": "shipbar.item1.message-circle",
+          "group": "1_row@2",
+          "when": "(shipbar.page == skills || shipbar.page == group) && shipbar.item1 == message-circle"
+        },
+        {
+          "command": "shipbar.item1.message-square",
+          "group": "1_row@2",
+          "when": "(shipbar.page == skills || shipbar.page == group) && shipbar.item1 == message-square"
+        },
+        {
+          "command": "shipbar.item1.message-square-plus",
+          "group": "1_row@2",
+          "when": "(shipbar.page == skills || shipbar.page == group) && shipbar.item1 == message-square-plus"
+        },
+        {
+          "command": "shipbar.item1.mic",
+          "group": "1_row@2",
+          "when": "(shipbar.page == skills || shipbar.page == group) && shipbar.item1 == mic"
+        },
+        {
+          "command": "shipbar.item1.panel-bottom",
+          "group": "1_row@2",
+          "when": "(shipbar.page == skills || shipbar.page == group) && shipbar.item1 == panel-bottom"
+        },
+        {
+          "command": "shipbar.item1.panel-left",
+          "group": "1_row@2",
+          "when": "(shipbar.page == skills || shipbar.page == group) && shipbar.item1 == panel-left"
+        },
+        {
+          "command": "shipbar.item1.panel-right",
+          "group": "1_row@2",
+          "when": "(shipbar.page == skills || shipbar.page == group) && shipbar.item1 == panel-right"
+        },
+        {
+          "command": "shipbar.item1.pencil",
+          "group": "1_row@2",
+          "when": "(shipbar.page == skills || shipbar.page == group) && shipbar.item1 == pencil"
+        },
+        {
+          "command": "shipbar.item1.pin",
+          "group": "1_row@2",
+          "when": "(shipbar.page == skills || shipbar.page == group) && shipbar.item1 == pin"
+        },
+        {
+          "command": "shipbar.item1.play",
+          "group": "1_row@2",
+          "when": "(shipbar.page == skills || shipbar.page == group) && shipbar.item1 == play"
+        },
+        {
+          "command": "shipbar.item1.plus",
+          "group": "1_row@2",
+          "when": "(shipbar.page == skills || shipbar.page == group) && shipbar.item1 == plus"
+        },
+        {
+          "command": "shipbar.item1.save",
+          "group": "1_row@2",
+          "when": "(shipbar.page == skills || shipbar.page == group) && shipbar.item1 == save"
+        },
+        {
+          "command": "shipbar.item1.search",
+          "group": "1_row@2",
+          "when": "(shipbar.page == skills || shipbar.page == group) && shipbar.item1 == search"
+        },
+        {
+          "command": "shipbar.item1.sparkles",
+          "group": "1_row@2",
+          "when": "(shipbar.page == skills || shipbar.page == group) && shipbar.item1 == sparkles"
+        },
+        {
+          "command": "shipbar.item1.split",
+          "group": "1_row@2",
+          "when": "(shipbar.page == skills || shipbar.page == group) && shipbar.item1 == split"
+        },
+        {
+          "command": "shipbar.item1.terminal",
+          "group": "1_row@2",
+          "when": "(shipbar.page == skills || shipbar.page == group) && shipbar.item1 == terminal"
+        },
+        {
+          "command": "shipbar.item1.undo-2",
+          "group": "1_row@2",
+          "when": "(shipbar.page == skills || shipbar.page == group) && shipbar.item1 == undo-2"
+        },
+        {
+          "command": "shipbar.item1.wrench",
+          "group": "1_row@2",
+          "when": "(shipbar.page == skills || shipbar.page == group) && shipbar.item1 == wrench"
+        },
+        {
+          "command": "shipbar.item1.zap",
+          "group": "1_row@2",
+          "when": "(shipbar.page == skills || shipbar.page == group) && shipbar.item1 == zap"
+        },
+        {
+          "command": "shipbar.item2.bot",
+          "group": "1_row@3",
+          "when": "(shipbar.page == skills || shipbar.page == group) && shipbar.item2 == bot"
+        },
+        {
+          "command": "shipbar.item2.bug",
+          "group": "1_row@3",
+          "when": "(shipbar.page == skills || shipbar.page == group) && shipbar.item2 == bug"
+        },
+        {
+          "command": "shipbar.item2.chevron-left",
+          "group": "1_row@3",
+          "when": "(shipbar.page == skills || shipbar.page == group) && shipbar.item2 == chevron-left"
+        },
+        {
+          "command": "shipbar.item2.chevron-right",
+          "group": "1_row@3",
+          "when": "(shipbar.page == skills || shipbar.page == group) && shipbar.item2 == chevron-right"
+        },
+        {
+          "command": "shipbar.item2.circle-check",
+          "group": "1_row@3",
+          "when": "(shipbar.page == skills || shipbar.page == group) && shipbar.item2 == circle-check"
+        },
+        {
+          "command": "shipbar.item2.circle-x",
+          "group": "1_row@3",
+          "when": "(shipbar.page == skills || shipbar.page == group) && shipbar.item2 == circle-x"
+        },
+        {
+          "command": "shipbar.item2.code",
+          "group": "1_row@3",
+          "when": "(shipbar.page == skills || shipbar.page == group) && shipbar.item2 == code"
+        },
+        {
+          "command": "shipbar.item2.eye",
+          "group": "1_row@3",
+          "when": "(shipbar.page == skills || shipbar.page == group) && shipbar.item2 == eye"
+        },
+        {
+          "command": "shipbar.item2.file",
+          "group": "1_row@3",
+          "when": "(shipbar.page == skills || shipbar.page == group) && shipbar.item2 == file"
+        },
+        {
+          "command": "shipbar.item2.folder",
+          "group": "1_row@3",
+          "when": "(shipbar.page == skills || shipbar.page == group) && shipbar.item2 == folder"
+        },
+        {
+          "command": "shipbar.item2.git-branch",
+          "group": "1_row@3",
+          "when": "(shipbar.page == skills || shipbar.page == group) && shipbar.item2 == git-branch"
+        },
+        {
+          "command": "shipbar.item2.layers",
+          "group": "1_row@3",
+          "when": "(shipbar.page == skills || shipbar.page == group) && shipbar.item2 == layers"
+        },
+        {
+          "command": "shipbar.item2.list",
+          "group": "1_row@3",
+          "when": "(shipbar.page == skills || shipbar.page == group) && shipbar.item2 == list"
+        },
+        {
+          "command": "shipbar.item2.list-checks",
+          "group": "1_row@3",
+          "when": "(shipbar.page == skills || shipbar.page == group) && shipbar.item2 == list-checks"
+        },
+        {
+          "command": "shipbar.item2.message-circle",
+          "group": "1_row@3",
+          "when": "(shipbar.page == skills || shipbar.page == group) && shipbar.item2 == message-circle"
+        },
+        {
+          "command": "shipbar.item2.message-square",
+          "group": "1_row@3",
+          "when": "(shipbar.page == skills || shipbar.page == group) && shipbar.item2 == message-square"
+        },
+        {
+          "command": "shipbar.item2.message-square-plus",
+          "group": "1_row@3",
+          "when": "(shipbar.page == skills || shipbar.page == group) && shipbar.item2 == message-square-plus"
+        },
+        {
+          "command": "shipbar.item2.mic",
+          "group": "1_row@3",
+          "when": "(shipbar.page == skills || shipbar.page == group) && shipbar.item2 == mic"
+        },
+        {
+          "command": "shipbar.item2.panel-bottom",
+          "group": "1_row@3",
+          "when": "(shipbar.page == skills || shipbar.page == group) && shipbar.item2 == panel-bottom"
+        },
+        {
+          "command": "shipbar.item2.panel-left",
+          "group": "1_row@3",
+          "when": "(shipbar.page == skills || shipbar.page == group) && shipbar.item2 == panel-left"
+        },
+        {
+          "command": "shipbar.item2.panel-right",
+          "group": "1_row@3",
+          "when": "(shipbar.page == skills || shipbar.page == group) && shipbar.item2 == panel-right"
+        },
+        {
+          "command": "shipbar.item2.pencil",
+          "group": "1_row@3",
+          "when": "(shipbar.page == skills || shipbar.page == group) && shipbar.item2 == pencil"
+        },
+        {
+          "command": "shipbar.item2.pin",
+          "group": "1_row@3",
+          "when": "(shipbar.page == skills || shipbar.page == group) && shipbar.item2 == pin"
+        },
+        {
+          "command": "shipbar.item2.play",
+          "group": "1_row@3",
+          "when": "(shipbar.page == skills || shipbar.page == group) && shipbar.item2 == play"
+        },
+        {
+          "command": "shipbar.item2.plus",
+          "group": "1_row@3",
+          "when": "(shipbar.page == skills || shipbar.page == group) && shipbar.item2 == plus"
+        },
+        {
+          "command": "shipbar.item2.save",
+          "group": "1_row@3",
+          "when": "(shipbar.page == skills || shipbar.page == group) && shipbar.item2 == save"
+        },
+        {
+          "command": "shipbar.item2.search",
+          "group": "1_row@3",
+          "when": "(shipbar.page == skills || shipbar.page == group) && shipbar.item2 == search"
+        },
+        {
+          "command": "shipbar.item2.sparkles",
+          "group": "1_row@3",
+          "when": "(shipbar.page == skills || shipbar.page == group) && shipbar.item2 == sparkles"
+        },
+        {
+          "command": "shipbar.item2.split",
+          "group": "1_row@3",
+          "when": "(shipbar.page == skills || shipbar.page == group) && shipbar.item2 == split"
+        },
+        {
+          "command": "shipbar.item2.terminal",
+          "group": "1_row@3",
+          "when": "(shipbar.page == skills || shipbar.page == group) && shipbar.item2 == terminal"
+        },
+        {
+          "command": "shipbar.item2.undo-2",
+          "group": "1_row@3",
+          "when": "(shipbar.page == skills || shipbar.page == group) && shipbar.item2 == undo-2"
+        },
+        {
+          "command": "shipbar.item2.wrench",
+          "group": "1_row@3",
+          "when": "(shipbar.page == skills || shipbar.page == group) && shipbar.item2 == wrench"
+        },
+        {
+          "command": "shipbar.item2.zap",
+          "group": "1_row@3",
+          "when": "(shipbar.page == skills || shipbar.page == group) && shipbar.item2 == zap"
+        },
+        {
+          "command": "shipbar.item3.bot",
+          "group": "1_row@4",
+          "when": "(shipbar.page == skills || shipbar.page == group) && shipbar.item3 == bot"
+        },
+        {
+          "command": "shipbar.item3.bug",
+          "group": "1_row@4",
+          "when": "(shipbar.page == skills || shipbar.page == group) && shipbar.item3 == bug"
+        },
+        {
+          "command": "shipbar.item3.chevron-left",
+          "group": "1_row@4",
+          "when": "(shipbar.page == skills || shipbar.page == group) && shipbar.item3 == chevron-left"
+        },
+        {
+          "command": "shipbar.item3.chevron-right",
+          "group": "1_row@4",
+          "when": "(shipbar.page == skills || shipbar.page == group) && shipbar.item3 == chevron-right"
+        },
+        {
+          "command": "shipbar.item3.circle-check",
+          "group": "1_row@4",
+          "when": "(shipbar.page == skills || shipbar.page == group) && shipbar.item3 == circle-check"
+        },
+        {
+          "command": "shipbar.item3.circle-x",
+          "group": "1_row@4",
+          "when": "(shipbar.page == skills || shipbar.page == group) && shipbar.item3 == circle-x"
+        },
+        {
+          "command": "shipbar.item3.code",
+          "group": "1_row@4",
+          "when": "(shipbar.page == skills || shipbar.page == group) && shipbar.item3 == code"
+        },
+        {
+          "command": "shipbar.item3.eye",
+          "group": "1_row@4",
+          "when": "(shipbar.page == skills || shipbar.page == group) && shipbar.item3 == eye"
+        },
+        {
+          "command": "shipbar.item3.file",
+          "group": "1_row@4",
+          "when": "(shipbar.page == skills || shipbar.page == group) && shipbar.item3 == file"
+        },
+        {
+          "command": "shipbar.item3.folder",
+          "group": "1_row@4",
+          "when": "(shipbar.page == skills || shipbar.page == group) && shipbar.item3 == folder"
+        },
+        {
+          "command": "shipbar.item3.git-branch",
+          "group": "1_row@4",
+          "when": "(shipbar.page == skills || shipbar.page == group) && shipbar.item3 == git-branch"
+        },
+        {
+          "command": "shipbar.item3.layers",
+          "group": "1_row@4",
+          "when": "(shipbar.page == skills || shipbar.page == group) && shipbar.item3 == layers"
+        },
+        {
+          "command": "shipbar.item3.list",
+          "group": "1_row@4",
+          "when": "(shipbar.page == skills || shipbar.page == group) && shipbar.item3 == list"
+        },
+        {
+          "command": "shipbar.item3.list-checks",
+          "group": "1_row@4",
+          "when": "(shipbar.page == skills || shipbar.page == group) && shipbar.item3 == list-checks"
+        },
+        {
+          "command": "shipbar.item3.message-circle",
+          "group": "1_row@4",
+          "when": "(shipbar.page == skills || shipbar.page == group) && shipbar.item3 == message-circle"
+        },
+        {
+          "command": "shipbar.item3.message-square",
+          "group": "1_row@4",
+          "when": "(shipbar.page == skills || shipbar.page == group) && shipbar.item3 == message-square"
+        },
+        {
+          "command": "shipbar.item3.message-square-plus",
+          "group": "1_row@4",
+          "when": "(shipbar.page == skills || shipbar.page == group) && shipbar.item3 == message-square-plus"
+        },
+        {
+          "command": "shipbar.item3.mic",
+          "group": "1_row@4",
+          "when": "(shipbar.page == skills || shipbar.page == group) && shipbar.item3 == mic"
+        },
+        {
+          "command": "shipbar.item3.panel-bottom",
+          "group": "1_row@4",
+          "when": "(shipbar.page == skills || shipbar.page == group) && shipbar.item3 == panel-bottom"
+        },
+        {
+          "command": "shipbar.item3.panel-left",
+          "group": "1_row@4",
+          "when": "(shipbar.page == skills || shipbar.page == group) && shipbar.item3 == panel-left"
+        },
+        {
+          "command": "shipbar.item3.panel-right",
+          "group": "1_row@4",
+          "when": "(shipbar.page == skills || shipbar.page == group) && shipbar.item3 == panel-right"
+        },
+        {
+          "command": "shipbar.item3.pencil",
+          "group": "1_row@4",
+          "when": "(shipbar.page == skills || shipbar.page == group) && shipbar.item3 == pencil"
+        },
+        {
+          "command": "shipbar.item3.pin",
+          "group": "1_row@4",
+          "when": "(shipbar.page == skills || shipbar.page == group) && shipbar.item3 == pin"
+        },
+        {
+          "command": "shipbar.item3.play",
+          "group": "1_row@4",
+          "when": "(shipbar.page == skills || shipbar.page == group) && shipbar.item3 == play"
+        },
+        {
+          "command": "shipbar.item3.plus",
+          "group": "1_row@4",
+          "when": "(shipbar.page == skills || shipbar.page == group) && shipbar.item3 == plus"
+        },
+        {
+          "command": "shipbar.item3.save",
+          "group": "1_row@4",
+          "when": "(shipbar.page == skills || shipbar.page == group) && shipbar.item3 == save"
+        },
+        {
+          "command": "shipbar.item3.search",
+          "group": "1_row@4",
+          "when": "(shipbar.page == skills || shipbar.page == group) && shipbar.item3 == search"
+        },
+        {
+          "command": "shipbar.item3.sparkles",
+          "group": "1_row@4",
+          "when": "(shipbar.page == skills || shipbar.page == group) && shipbar.item3 == sparkles"
+        },
+        {
+          "command": "shipbar.item3.split",
+          "group": "1_row@4",
+          "when": "(shipbar.page == skills || shipbar.page == group) && shipbar.item3 == split"
+        },
+        {
+          "command": "shipbar.item3.terminal",
+          "group": "1_row@4",
+          "when": "(shipbar.page == skills || shipbar.page == group) && shipbar.item3 == terminal"
+        },
+        {
+          "command": "shipbar.item3.undo-2",
+          "group": "1_row@4",
+          "when": "(shipbar.page == skills || shipbar.page == group) && shipbar.item3 == undo-2"
+        },
+        {
+          "command": "shipbar.item3.wrench",
+          "group": "1_row@4",
+          "when": "(shipbar.page == skills || shipbar.page == group) && shipbar.item3 == wrench"
+        },
+        {
+          "command": "shipbar.item3.zap",
+          "group": "1_row@4",
+          "when": "(shipbar.page == skills || shipbar.page == group) && shipbar.item3 == zap"
+        },
+        {
+          "command": "shipbar.item4.bot",
+          "group": "1_row@5",
+          "when": "(shipbar.page == skills || shipbar.page == group) && shipbar.item4 == bot"
+        },
+        {
+          "command": "shipbar.item4.bug",
+          "group": "1_row@5",
+          "when": "(shipbar.page == skills || shipbar.page == group) && shipbar.item4 == bug"
+        },
+        {
+          "command": "shipbar.item4.chevron-left",
+          "group": "1_row@5",
+          "when": "(shipbar.page == skills || shipbar.page == group) && shipbar.item4 == chevron-left"
+        },
+        {
+          "command": "shipbar.item4.chevron-right",
+          "group": "1_row@5",
+          "when": "(shipbar.page == skills || shipbar.page == group) && shipbar.item4 == chevron-right"
+        },
+        {
+          "command": "shipbar.item4.circle-check",
+          "group": "1_row@5",
+          "when": "(shipbar.page == skills || shipbar.page == group) && shipbar.item4 == circle-check"
+        },
+        {
+          "command": "shipbar.item4.circle-x",
+          "group": "1_row@5",
+          "when": "(shipbar.page == skills || shipbar.page == group) && shipbar.item4 == circle-x"
+        },
+        {
+          "command": "shipbar.item4.code",
+          "group": "1_row@5",
+          "when": "(shipbar.page == skills || shipbar.page == group) && shipbar.item4 == code"
+        },
+        {
+          "command": "shipbar.item4.eye",
+          "group": "1_row@5",
+          "when": "(shipbar.page == skills || shipbar.page == group) && shipbar.item4 == eye"
+        },
+        {
+          "command": "shipbar.item4.file",
+          "group": "1_row@5",
+          "when": "(shipbar.page == skills || shipbar.page == group) && shipbar.item4 == file"
+        },
+        {
+          "command": "shipbar.item4.folder",
+          "group": "1_row@5",
+          "when": "(shipbar.page == skills || shipbar.page == group) && shipbar.item4 == folder"
+        },
+        {
+          "command": "shipbar.item4.git-branch",
+          "group": "1_row@5",
+          "when": "(shipbar.page == skills || shipbar.page == group) && shipbar.item4 == git-branch"
+        },
+        {
+          "command": "shipbar.item4.layers",
+          "group": "1_row@5",
+          "when": "(shipbar.page == skills || shipbar.page == group) && shipbar.item4 == layers"
+        },
+        {
+          "command": "shipbar.item4.list",
+          "group": "1_row@5",
+          "when": "(shipbar.page == skills || shipbar.page == group) && shipbar.item4 == list"
+        },
+        {
+          "command": "shipbar.item4.list-checks",
+          "group": "1_row@5",
+          "when": "(shipbar.page == skills || shipbar.page == group) && shipbar.item4 == list-checks"
+        },
+        {
+          "command": "shipbar.item4.message-circle",
+          "group": "1_row@5",
+          "when": "(shipbar.page == skills || shipbar.page == group) && shipbar.item4 == message-circle"
+        },
+        {
+          "command": "shipbar.item4.message-square",
+          "group": "1_row@5",
+          "when": "(shipbar.page == skills || shipbar.page == group) && shipbar.item4 == message-square"
+        },
+        {
+          "command": "shipbar.item4.message-square-plus",
+          "group": "1_row@5",
+          "when": "(shipbar.page == skills || shipbar.page == group) && shipbar.item4 == message-square-plus"
+        },
+        {
+          "command": "shipbar.item4.mic",
+          "group": "1_row@5",
+          "when": "(shipbar.page == skills || shipbar.page == group) && shipbar.item4 == mic"
+        },
+        {
+          "command": "shipbar.item4.panel-bottom",
+          "group": "1_row@5",
+          "when": "(shipbar.page == skills || shipbar.page == group) && shipbar.item4 == panel-bottom"
+        },
+        {
+          "command": "shipbar.item4.panel-left",
+          "group": "1_row@5",
+          "when": "(shipbar.page == skills || shipbar.page == group) && shipbar.item4 == panel-left"
+        },
+        {
+          "command": "shipbar.item4.panel-right",
+          "group": "1_row@5",
+          "when": "(shipbar.page == skills || shipbar.page == group) && shipbar.item4 == panel-right"
+        },
+        {
+          "command": "shipbar.item4.pencil",
+          "group": "1_row@5",
+          "when": "(shipbar.page == skills || shipbar.page == group) && shipbar.item4 == pencil"
+        },
+        {
+          "command": "shipbar.item4.pin",
+          "group": "1_row@5",
+          "when": "(shipbar.page == skills || shipbar.page == group) && shipbar.item4 == pin"
+        },
+        {
+          "command": "shipbar.item4.play",
+          "group": "1_row@5",
+          "when": "(shipbar.page == skills || shipbar.page == group) && shipbar.item4 == play"
+        },
+        {
+          "command": "shipbar.item4.plus",
+          "group": "1_row@5",
+          "when": "(shipbar.page == skills || shipbar.page == group) && shipbar.item4 == plus"
+        },
+        {
+          "command": "shipbar.item4.save",
+          "group": "1_row@5",
+          "when": "(shipbar.page == skills || shipbar.page == group) && shipbar.item4 == save"
+        },
+        {
+          "command": "shipbar.item4.search",
+          "group": "1_row@5",
+          "when": "(shipbar.page == skills || shipbar.page == group) && shipbar.item4 == search"
+        },
+        {
+          "command": "shipbar.item4.sparkles",
+          "group": "1_row@5",
+          "when": "(shipbar.page == skills || shipbar.page == group) && shipbar.item4 == sparkles"
+        },
+        {
+          "command": "shipbar.item4.split",
+          "group": "1_row@5",
+          "when": "(shipbar.page == skills || shipbar.page == group) && shipbar.item4 == split"
+        },
+        {
+          "command": "shipbar.item4.terminal",
+          "group": "1_row@5",
+          "when": "(shipbar.page == skills || shipbar.page == group) && shipbar.item4 == terminal"
+        },
+        {
+          "command": "shipbar.item4.undo-2",
+          "group": "1_row@5",
+          "when": "(shipbar.page == skills || shipbar.page == group) && shipbar.item4 == undo-2"
+        },
+        {
+          "command": "shipbar.item4.wrench",
+          "group": "1_row@5",
+          "when": "(shipbar.page == skills || shipbar.page == group) && shipbar.item4 == wrench"
+        },
+        {
+          "command": "shipbar.item4.zap",
+          "group": "1_row@5",
+          "when": "(shipbar.page == skills || shipbar.page == group) && shipbar.item4 == zap"
+        },
+        {
+          "command": "shipbar.item5.bot",
+          "group": "1_row@6",
+          "when": "(shipbar.page == skills || shipbar.page == group) && shipbar.item5 == bot"
+        },
+        {
+          "command": "shipbar.item5.bug",
+          "group": "1_row@6",
+          "when": "(shipbar.page == skills || shipbar.page == group) && shipbar.item5 == bug"
+        },
+        {
+          "command": "shipbar.item5.chevron-left",
+          "group": "1_row@6",
+          "when": "(shipbar.page == skills || shipbar.page == group) && shipbar.item5 == chevron-left"
+        },
+        {
+          "command": "shipbar.item5.chevron-right",
+          "group": "1_row@6",
+          "when": "(shipbar.page == skills || shipbar.page == group) && shipbar.item5 == chevron-right"
+        },
+        {
+          "command": "shipbar.item5.circle-check",
+          "group": "1_row@6",
+          "when": "(shipbar.page == skills || shipbar.page == group) && shipbar.item5 == circle-check"
+        },
+        {
+          "command": "shipbar.item5.circle-x",
+          "group": "1_row@6",
+          "when": "(shipbar.page == skills || shipbar.page == group) && shipbar.item5 == circle-x"
+        },
+        {
+          "command": "shipbar.item5.code",
+          "group": "1_row@6",
+          "when": "(shipbar.page == skills || shipbar.page == group) && shipbar.item5 == code"
+        },
+        {
+          "command": "shipbar.item5.eye",
+          "group": "1_row@6",
+          "when": "(shipbar.page == skills || shipbar.page == group) && shipbar.item5 == eye"
+        },
+        {
+          "command": "shipbar.item5.file",
+          "group": "1_row@6",
+          "when": "(shipbar.page == skills || shipbar.page == group) && shipbar.item5 == file"
+        },
+        {
+          "command": "shipbar.item5.folder",
+          "group": "1_row@6",
+          "when": "(shipbar.page == skills || shipbar.page == group) && shipbar.item5 == folder"
+        },
+        {
+          "command": "shipbar.item5.git-branch",
+          "group": "1_row@6",
+          "when": "(shipbar.page == skills || shipbar.page == group) && shipbar.item5 == git-branch"
+        },
+        {
+          "command": "shipbar.item5.layers",
+          "group": "1_row@6",
+          "when": "(shipbar.page == skills || shipbar.page == group) && shipbar.item5 == layers"
+        },
+        {
+          "command": "shipbar.item5.list",
+          "group": "1_row@6",
+          "when": "(shipbar.page == skills || shipbar.page == group) && shipbar.item5 == list"
+        },
+        {
+          "command": "shipbar.item5.list-checks",
+          "group": "1_row@6",
+          "when": "(shipbar.page == skills || shipbar.page == group) && shipbar.item5 == list-checks"
+        },
+        {
+          "command": "shipbar.item5.message-circle",
+          "group": "1_row@6",
+          "when": "(shipbar.page == skills || shipbar.page == group) && shipbar.item5 == message-circle"
+        },
+        {
+          "command": "shipbar.item5.message-square",
+          "group": "1_row@6",
+          "when": "(shipbar.page == skills || shipbar.page == group) && shipbar.item5 == message-square"
+        },
+        {
+          "command": "shipbar.item5.message-square-plus",
+          "group": "1_row@6",
+          "when": "(shipbar.page == skills || shipbar.page == group) && shipbar.item5 == message-square-plus"
+        },
+        {
+          "command": "shipbar.item5.mic",
+          "group": "1_row@6",
+          "when": "(shipbar.page == skills || shipbar.page == group) && shipbar.item5 == mic"
+        },
+        {
+          "command": "shipbar.item5.panel-bottom",
+          "group": "1_row@6",
+          "when": "(shipbar.page == skills || shipbar.page == group) && shipbar.item5 == panel-bottom"
+        },
+        {
+          "command": "shipbar.item5.panel-left",
+          "group": "1_row@6",
+          "when": "(shipbar.page == skills || shipbar.page == group) && shipbar.item5 == panel-left"
+        },
+        {
+          "command": "shipbar.item5.panel-right",
+          "group": "1_row@6",
+          "when": "(shipbar.page == skills || shipbar.page == group) && shipbar.item5 == panel-right"
+        },
+        {
+          "command": "shipbar.item5.pencil",
+          "group": "1_row@6",
+          "when": "(shipbar.page == skills || shipbar.page == group) && shipbar.item5 == pencil"
+        },
+        {
+          "command": "shipbar.item5.pin",
+          "group": "1_row@6",
+          "when": "(shipbar.page == skills || shipbar.page == group) && shipbar.item5 == pin"
+        },
+        {
+          "command": "shipbar.item5.play",
+          "group": "1_row@6",
+          "when": "(shipbar.page == skills || shipbar.page == group) && shipbar.item5 == play"
+        },
+        {
+          "command": "shipbar.item5.plus",
+          "group": "1_row@6",
+          "when": "(shipbar.page == skills || shipbar.page == group) && shipbar.item5 == plus"
+        },
+        {
+          "command": "shipbar.item5.save",
+          "group": "1_row@6",
+          "when": "(shipbar.page == skills || shipbar.page == group) && shipbar.item5 == save"
+        },
+        {
+          "command": "shipbar.item5.search",
+          "group": "1_row@6",
+          "when": "(shipbar.page == skills || shipbar.page == group) && shipbar.item5 == search"
+        },
+        {
+          "command": "shipbar.item5.sparkles",
+          "group": "1_row@6",
+          "when": "(shipbar.page == skills || shipbar.page == group) && shipbar.item5 == sparkles"
+        },
+        {
+          "command": "shipbar.item5.split",
+          "group": "1_row@6",
+          "when": "(shipbar.page == skills || shipbar.page == group) && shipbar.item5 == split"
+        },
+        {
+          "command": "shipbar.item5.terminal",
+          "group": "1_row@6",
+          "when": "(shipbar.page == skills || shipbar.page == group) && shipbar.item5 == terminal"
+        },
+        {
+          "command": "shipbar.item5.undo-2",
+          "group": "1_row@6",
+          "when": "(shipbar.page == skills || shipbar.page == group) && shipbar.item5 == undo-2"
+        },
+        {
+          "command": "shipbar.item5.wrench",
+          "group": "1_row@6",
+          "when": "(shipbar.page == skills || shipbar.page == group) && shipbar.item5 == wrench"
+        },
+        {
+          "command": "shipbar.item5.zap",
+          "group": "1_row@6",
+          "when": "(shipbar.page == skills || shipbar.page == group) && shipbar.item5 == zap"
         }
       ]
     },
@@ -123,29 +4122,325 @@
         "shipbar.showConfigButton": {
           "type": "boolean",
           "default": true,
-          "description": "Show a 7th Touch Bar button (⚙) that opens the ShipBar configuration panel."
+          "description": "Show the gear button that opens ShipBar settings. It stays visible on every row."
         },
         "shipbar.buttons": {
           "type": "object",
-          "description": "Configure each Touch Bar slot: which command it runs and whether it's shown. Icons stay fixed per slot (Touch Bar icons can't be swapped live), but the command each slot fires — and whether it appears at all — is fully user-defined.",
+          "description": "The six main Touch Bar buttons. Each one runs a command or opens Modes or Skills.",
           "default": {
-            "slot1": { "enabled": true, "command": "aipopup.action.modal.generate" },
-            "slot2": { "enabled": true, "command": "editor.action.inlineDiffs.acceptAll" },
-            "slot3": { "enabled": true, "command": "editor.action.inlineDiffs.rejectAll" },
-            "slot4": { "enabled": true, "command": "composer.duplicateChat" },
-            "slot5": { "enabled": true, "command": "composer.toggleVoiceDictation" },
-            "slot6": { "enabled": true, "command": "aichat.newchataction" }
+            "slot1": {
+              "enabled": true,
+              "icon": "panel-left",
+              "type": "command",
+              "command": "workbench.action.toggleSidebarVisibility",
+              "page": ""
+            },
+            "slot2": {
+              "enabled": true,
+              "icon": "panel-bottom",
+              "type": "command",
+              "command": "workbench.action.togglePanel",
+              "page": ""
+            },
+            "slot3": {
+              "enabled": true,
+              "icon": "panel-right",
+              "type": "command",
+              "command": "workbench.action.toggleAuxiliaryBar",
+              "page": ""
+            },
+            "slot4": {
+              "enabled": true,
+              "icon": "message-square-plus",
+              "type": "command",
+              "command": "aichat.newchataction",
+              "page": ""
+            },
+            "slot5": {
+              "enabled": true,
+              "icon": "layers",
+              "type": "page",
+              "command": "",
+              "page": "modes"
+            },
+            "slot6": {
+              "enabled": true,
+              "icon": "folder",
+              "type": "page",
+              "command": "",
+              "page": "skills"
+            }
           },
           "properties": {
-            "slot1": { "type": "object", "properties": { "enabled": { "type": "boolean" }, "command": { "type": "string" } } },
-            "slot2": { "type": "object", "properties": { "enabled": { "type": "boolean" }, "command": { "type": "string" } } },
-            "slot3": { "type": "object", "properties": { "enabled": { "type": "boolean" }, "command": { "type": "string" } } },
-            "slot4": { "type": "object", "properties": { "enabled": { "type": "boolean" }, "command": { "type": "string" } } },
-            "slot5": { "type": "object", "properties": { "enabled": { "type": "boolean" }, "command": { "type": "string" } } },
-            "slot6": { "type": "object", "properties": { "enabled": { "type": "boolean" }, "command": { "type": "string" } } }
+            "slot1": {
+              "type": "object",
+              "description": "Left panel. Show or hide the left sidebar.",
+              "properties": {
+                "enabled": {
+                  "type": "boolean",
+                  "default": true,
+                  "description": "Show this button on the main row."
+                },
+                "icon": {
+                  "type": "string",
+                  "default": "panel-left",
+                  "description": "Icon file name from the bundled set."
+                },
+                "type": {
+                  "type": "string",
+                  "enum": [
+                    "command",
+                    "page"
+                  ],
+                  "default": "command"
+                },
+                "command": {
+                  "type": "string",
+                  "default": "workbench.action.toggleSidebarVisibility",
+                  "description": "Command id to run when type is command."
+                },
+                "page": {
+                  "type": "string",
+                  "enum": [
+                    "",
+                    "modes",
+                    "skills"
+                  ],
+                  "default": "",
+                  "description": "Row to open when type is page."
+                }
+              }
+            },
+            "slot2": {
+              "type": "object",
+              "description": "Bottom panel. Show or hide the bottom panel.",
+              "properties": {
+                "enabled": {
+                  "type": "boolean",
+                  "default": true,
+                  "description": "Show this button on the main row."
+                },
+                "icon": {
+                  "type": "string",
+                  "default": "panel-bottom",
+                  "description": "Icon file name from the bundled set."
+                },
+                "type": {
+                  "type": "string",
+                  "enum": [
+                    "command",
+                    "page"
+                  ],
+                  "default": "command"
+                },
+                "command": {
+                  "type": "string",
+                  "default": "workbench.action.togglePanel",
+                  "description": "Command id to run when type is command."
+                },
+                "page": {
+                  "type": "string",
+                  "enum": [
+                    "",
+                    "modes",
+                    "skills"
+                  ],
+                  "default": "",
+                  "description": "Row to open when type is page."
+                }
+              }
+            },
+            "slot3": {
+              "type": "object",
+              "description": "Right panel. Show or hide the right sidebar.",
+              "properties": {
+                "enabled": {
+                  "type": "boolean",
+                  "default": true,
+                  "description": "Show this button on the main row."
+                },
+                "icon": {
+                  "type": "string",
+                  "default": "panel-right",
+                  "description": "Icon file name from the bundled set."
+                },
+                "type": {
+                  "type": "string",
+                  "enum": [
+                    "command",
+                    "page"
+                  ],
+                  "default": "command"
+                },
+                "command": {
+                  "type": "string",
+                  "default": "workbench.action.toggleAuxiliaryBar",
+                  "description": "Command id to run when type is command."
+                },
+                "page": {
+                  "type": "string",
+                  "enum": [
+                    "",
+                    "modes",
+                    "skills"
+                  ],
+                  "default": "",
+                  "description": "Row to open when type is page."
+                }
+              }
+            },
+            "slot4": {
+              "type": "object",
+              "description": "New chat. Start a new chat.",
+              "properties": {
+                "enabled": {
+                  "type": "boolean",
+                  "default": true,
+                  "description": "Show this button on the main row."
+                },
+                "icon": {
+                  "type": "string",
+                  "default": "message-square-plus",
+                  "description": "Icon file name from the bundled set."
+                },
+                "type": {
+                  "type": "string",
+                  "enum": [
+                    "command",
+                    "page"
+                  ],
+                  "default": "command"
+                },
+                "command": {
+                  "type": "string",
+                  "default": "aichat.newchataction",
+                  "description": "Command id to run when type is command."
+                },
+                "page": {
+                  "type": "string",
+                  "enum": [
+                    "",
+                    "modes",
+                    "skills"
+                  ],
+                  "default": "",
+                  "description": "Row to open when type is page."
+                }
+              }
+            },
+            "slot5": {
+              "type": "object",
+              "description": "Modes. Open Ask, Plan, and Agent on the bar.",
+              "properties": {
+                "enabled": {
+                  "type": "boolean",
+                  "default": true,
+                  "description": "Show this button on the main row."
+                },
+                "icon": {
+                  "type": "string",
+                  "default": "layers",
+                  "description": "Icon file name from the bundled set."
+                },
+                "type": {
+                  "type": "string",
+                  "enum": [
+                    "command",
+                    "page"
+                  ],
+                  "default": "page"
+                },
+                "command": {
+                  "type": "string",
+                  "default": "",
+                  "description": "Command id to run when type is command."
+                },
+                "page": {
+                  "type": "string",
+                  "enum": [
+                    "",
+                    "modes",
+                    "skills"
+                  ],
+                  "default": "modes",
+                  "description": "Row to open when type is page."
+                }
+              }
+            },
+            "slot6": {
+              "type": "object",
+              "description": "Skills. Open your skills on the bar.",
+              "properties": {
+                "enabled": {
+                  "type": "boolean",
+                  "default": true,
+                  "description": "Show this button on the main row."
+                },
+                "icon": {
+                  "type": "string",
+                  "default": "folder",
+                  "description": "Icon file name from the bundled set."
+                },
+                "type": {
+                  "type": "string",
+                  "enum": [
+                    "command",
+                    "page"
+                  ],
+                  "default": "page"
+                },
+                "command": {
+                  "type": "string",
+                  "default": "",
+                  "description": "Command id to run when type is command."
+                },
+                "page": {
+                  "type": "string",
+                  "enum": [
+                    "",
+                    "modes",
+                    "skills"
+                  ],
+                  "default": "skills",
+                  "description": "Row to open when type is page."
+                }
+              }
+            }
+          }
+        },
+        "shipbar.skills": {
+          "type": "array",
+          "description": "Skills you added. Tapping one opens a new chat with the text filled in. Press Enter to send.",
+          "default": [],
+          "items": {
+            "type": "object",
+            "properties": {
+              "id": {
+                "type": "string"
+              },
+              "label": {
+                "type": "string",
+                "description": "Name shown in ShipBar settings."
+              },
+              "prompt": {
+                "type": "string",
+                "description": "Text placed in a new chat."
+              },
+              "icon": {
+                "type": "string",
+                "description": "Icon shown on the Touch Bar."
+              },
+              "group": {
+                "type": "string",
+                "description": "Optional group. Skills that share a group open together."
+              }
+            }
           }
         }
       }
     }
+  },
+  "scripts": {
+    "manifest": "node scripts/build-manifest.js"
   }
 }
