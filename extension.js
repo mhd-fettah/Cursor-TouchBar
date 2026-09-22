@@ -1,26 +1,32 @@
+'use strict';
+
+const crypto = require('crypto');
 const vscode = require('vscode');
 
-const SLOT_IDS = ['slot1', 'slot2', 'slot3', 'slot4', 'slot5', 'slot6'];
-
-const DEFAULTS = {
-  slot1: { enabled: true, command: 'aipopup.action.modal.generate' },
-  slot2: { enabled: true, command: 'editor.action.inlineDiffs.acceptAll' },
-  slot3: { enabled: true, command: 'editor.action.inlineDiffs.rejectAll' },
-  slot4: { enabled: true, command: 'composer.duplicateChat' },
-  slot5: { enabled: true, command: 'composer.toggleVoiceDictation' },
-  slot6: { enabled: true, command: 'aichat.newchataction' }
+// Touch Bar icons cannot be swapped at runtime. They are fixed on the
+// commands in package.json. This catalog is the runtime source of truth
+// for which icon file, label, and default command each slot uses — keep
+// it in sync with contributes.commands and contributes.menus.touchBar.
+// `settings` is the gear button, not a slot.
+const ICONS = {
+  zap: { label: 'Zap', file: 'icons/zap.png' },
+  'circle-check': { label: 'Check', file: 'icons/circle-check.png' },
+  'circle-x': { label: 'Close', file: 'icons/circle-x.png' },
+  split: { label: 'Branch', file: 'icons/split.png' },
+  mic: { label: 'Mic', file: 'icons/mic.png' },
+  sparkles: { label: 'Chat', file: 'icons/sparkles.png' },
+  settings: { label: 'Settings', file: 'icons/settings.png' }
 };
 
-const SLOT_LABELS = {
-  slot1: 'Slot 1 — Zap icon',
-  slot2: 'Slot 2 — Check icon',
-  slot3: 'Slot 3 — Close icon',
-  slot4: 'Slot 4 — Branch icon',
-  slot5: 'Slot 5 — Mic icon',
-  slot6: 'Slot 6 — Chat icon'
-};
+const SLOTS = [
+  { id: 'slot1', icon: 'zap', enabled: true, command: 'aipopup.action.modal.generate' },
+  { id: 'slot2', icon: 'circle-check', enabled: true, command: 'editor.action.inlineDiffs.acceptAll' },
+  { id: 'slot3', icon: 'circle-x', enabled: true, command: 'editor.action.inlineDiffs.rejectAll' },
+  { id: 'slot4', icon: 'split', enabled: true, command: 'composer.duplicateChat' },
+  { id: 'slot5', icon: 'mic', enabled: true, command: 'composer.toggleVoiceDictation' },
+  { id: 'slot6', icon: 'sparkles', enabled: true, command: 'aichat.newchataction' }
+];
 
-// Curated presets so most users never have to type a raw command ID.
 const PRESETS = [
   { label: 'Generate (inline AI prompt)', command: 'aipopup.action.modal.generate' },
   { label: 'Accept all edits', command: 'editor.action.inlineDiffs.acceptAll' },
@@ -32,47 +38,87 @@ const PRESETS = [
   { label: 'Open command palette', command: 'workbench.action.showCommands' }
 ];
 
-function getButtons(config) {
-  const stored = config.get('shipbar.buttons', DEFAULTS);
-  // Fill in any slot missing from the user's override with its default, so
-  // partial configs never lose the other slots.
-  const merged = {};
-  for (const slotId of SLOT_IDS) {
-    merged[slotId] = (stored && stored[slotId]) || DEFAULTS[slotId];
-  }
-  return merged;
+function shipbarConfig() {
+  return vscode.workspace.getConfiguration('shipbar');
 }
 
-function escapeHtml(str) {
-  return String(str)
+function defaultButtons() {
+  const buttons = {};
+  for (const slot of SLOTS) {
+    buttons[slot.id] = { enabled: slot.enabled, command: slot.command };
+  }
+  return buttons;
+}
+
+function readSlot(slot, raw) {
+  const item = raw && typeof raw === 'object' ? raw : {};
+  return {
+    enabled: typeof item.enabled === 'boolean' ? item.enabled : slot.enabled,
+    command: typeof item.command === 'string' ? item.command : slot.command
+  };
+}
+
+function getButtons() {
+  const stored = shipbarConfig().get('buttons');
+  const source = stored && typeof stored === 'object' ? stored : {};
+  const buttons = {};
+  for (const slot of SLOTS) {
+    buttons[slot.id] = readSlot(slot, source[slot.id]);
+  }
+  return buttons;
+}
+
+function buttonsFromMessage(input) {
+  const source = input && typeof input === 'object' ? input : {};
+  const buttons = {};
+  for (const slot of SLOTS) {
+    const raw = source[slot.id];
+    const item = raw && typeof raw === 'object' ? raw : {};
+    buttons[slot.id] = {
+      enabled: item.enabled === true,
+      command: typeof item.command === 'string' ? item.command.trim() : slot.command
+    };
+  }
+  return buttons;
+}
+
+function escapeHtml(value) {
+  return String(value)
     .replace(/&/g, '&amp;')
     .replace(/</g, '&lt;')
     .replace(/>/g, '&gt;')
     .replace(/"/g, '&quot;');
 }
 
+function slotLabel(slot, index) {
+  return `Slot ${index + 1} — ${ICONS[slot.icon].label} icon`;
+}
+
 function renderConfigHtml(buttons) {
-  const rows = SLOT_IDS.map((slotId) => {
-    const b = buttons[slotId];
-    const isPreset = PRESETS.some((p) => p.command === b.command);
-    const options = PRESETS.map(
-      (p) =>
-        `<option value="${escapeHtml(p.command)}" ${b.command === p.command ? 'selected' : ''}>${escapeHtml(p.label)}</option>`
-    ).join('');
+  const nonce = crypto.randomBytes(16).toString('hex');
+  const rows = SLOTS.map((slot, index) => {
+    const button = buttons[slot.id];
+    const isPreset = PRESETS.some((preset) => preset.command === button.command);
+    const options = PRESETS.map((preset) => {
+      const selected = button.command === preset.command ? ' selected' : '';
+      return `<option value="${escapeHtml(preset.command)}"${selected}>${escapeHtml(preset.label)}</option>`;
+    }).join('');
+    const customValue = isPreset ? '' : button.command;
+
     return `
-      <div class="row" data-slot="${slotId}">
+      <div class="row" data-slot="${slot.id}">
         <label class="enabled-toggle">
-          <input type="checkbox" class="enabled" ${b.enabled ? 'checked' : ''} />
+          <input type="checkbox" class="enabled"${button.enabled ? ' checked' : ''} />
         </label>
         <div class="slot-info">
-          <div class="slot-label">${escapeHtml(SLOT_LABELS[slotId])}</div>
+          <div class="slot-label">${escapeHtml(slotLabel(slot, index))}</div>
           <select class="preset">
             ${options}
-            <option value="__custom__" ${!isPreset ? 'selected' : ''}>Custom command ID…</option>
+            <option value="__custom__"${isPreset ? '' : ' selected'}>Custom command ID…</option>
           </select>
           <input type="text" class="custom" placeholder="e.g. workbench.action.files.save"
-                 value="${escapeHtml(!isPreset ? b.command || '' : '')}"
-                 style="display:${!isPreset ? 'block' : 'none'}" />
+                 value="${escapeHtml(customValue)}"
+                 style="display:${isPreset ? 'none' : 'block'}" />
         </div>
       </div>`;
   }).join('');
@@ -81,7 +127,8 @@ function renderConfigHtml(buttons) {
 <html>
 <head>
 <meta charset="UTF-8" />
-<style>
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; style-src 'nonce-${nonce}'; script-src 'nonce-${nonce}';" />
+<style nonce="${nonce}">
   body {
     font-family: var(--vscode-font-family);
     color: var(--vscode-foreground);
@@ -133,25 +180,20 @@ function renderConfigHtml(buttons) {
 <body>
   <h1>⚡ ShipBar — Configure Buttons</h1>
   <div class="subtitle">Toggle a button on/off, or pick what it runs. Icons are fixed per slot; only the command and visibility are configurable.</div>
-
   <div id="rows">${rows}</div>
-
   <div class="actions">
     <button id="save">Save</button>
     <button id="reset" class="secondary">Reset all to defaults</button>
     <span id="saved" class="saved">Saved ✓</span>
   </div>
-
   <div class="hint">Find more command IDs via Cmd+Shift+P → "Preferences: Open Keyboard Shortcuts (JSON)".</div>
   <div class="hint">Built by <a href="https://x.com/_Max_Blackwell" target="_blank" rel="noopener">@_Max_Blackwell</a> — follow along for updates.</div>
-
-<script>
+<script nonce="${nonce}">
   const vscode = acquireVsCodeApi();
 
   document.querySelectorAll('.preset').forEach((sel) => {
     sel.addEventListener('change', () => {
-      const row = sel.closest('.row');
-      const customInput = row.querySelector('.custom');
+      const customInput = sel.closest('.row').querySelector('.custom');
       customInput.style.display = sel.value === '__custom__' ? 'block' : 'none';
     });
   });
@@ -159,21 +201,30 @@ function renderConfigHtml(buttons) {
   function collect() {
     const buttons = {};
     document.querySelectorAll('.row').forEach((row) => {
-      const slotId = row.getAttribute('data-slot');
-      const enabled = row.querySelector('.enabled').checked;
       const preset = row.querySelector('.preset').value;
       const custom = row.querySelector('.custom').value.trim();
-      const command = preset === '__custom__' ? custom : preset;
-      buttons[slotId] = { enabled, command };
+      buttons[row.getAttribute('data-slot')] = {
+        enabled: row.querySelector('.enabled').checked,
+        command: preset === '__custom__' ? custom : preset
+      };
     });
     return buttons;
   }
 
-  document.getElementById('save').addEventListener('click', () => {
-    vscode.postMessage({ type: 'save', buttons: collect() });
+  function flashSaved() {
     const saved = document.getElementById('saved');
     saved.classList.add('show');
     setTimeout(() => saved.classList.remove('show'), 1500);
+  }
+
+  window.addEventListener('message', (event) => {
+    if (event.data && event.data.type === 'saved') {
+      flashSaved();
+    }
+  });
+
+  document.getElementById('save').addEventListener('click', () => {
+    vscode.postMessage({ type: 'save', buttons: collect() });
   });
 
   document.getElementById('reset').addEventListener('click', () => {
@@ -184,55 +235,77 @@ function renderConfigHtml(buttons) {
 </html>`;
 }
 
+let configPanel;
+
 function openConfigPanel(context) {
+  if (configPanel) {
+    configPanel.reveal(vscode.ViewColumn.Active);
+    return;
+  }
+
   const panel = vscode.window.createWebviewPanel(
     'shipbarConfig',
     'ShipBar Configuration',
     vscode.ViewColumn.Active,
     { enableScripts: true, retainContextWhenHidden: true }
   );
+  configPanel = panel;
+
+  const subscriptions = [];
+  context.subscriptions.push(panel);
+  context.subscriptions.push(panel.onDidDispose(() => {
+    configPanel = undefined;
+    subscriptions.forEach((item) => item.dispose());
+  }));
 
   const refresh = () => {
-    const config = vscode.workspace.getConfiguration();
-    panel.webview.html = renderConfigHtml(getButtons(config));
+    panel.webview.html = renderConfigHtml(getButtons());
   };
   refresh();
 
-  panel.webview.onDidReceiveMessage(
-    async (message) => {
-      const config = vscode.workspace.getConfiguration();
+  panel.webview.onDidReceiveMessage(async (message) => {
+    if (!message || (message.type !== 'save' && message.type !== 'resetAll')) {
+      return;
+    }
+
+    try {
+      const config = shipbarConfig();
       if (message.type === 'save') {
-        await config.update('shipbar.buttons', message.buttons, vscode.ConfigurationTarget.Global);
+        await config.update('buttons', buttonsFromMessage(message.buttons), vscode.ConfigurationTarget.Global);
+        panel.webview.postMessage({ type: 'saved' });
         vscode.window.setStatusBarMessage('ShipBar: configuration saved', 2000);
-      } else if (message.type === 'resetAll') {
-        await config.update('shipbar.buttons', DEFAULTS, vscode.ConfigurationTarget.Global);
-        refresh();
-        vscode.window.setStatusBarMessage('ShipBar: reset to defaults', 2000);
+        return;
       }
-    },
-    undefined,
-    context.subscriptions
-  );
+
+      await config.update('buttons', defaultButtons(), vscode.ConfigurationTarget.Global);
+      refresh();
+      vscode.window.setStatusBarMessage('ShipBar: reset to defaults', 2000);
+    } catch (err) {
+      const detail = err && err.message ? err.message : String(err);
+      vscode.window.showErrorMessage(`ShipBar: could not update configuration. ${detail}`);
+    }
+  }, undefined, subscriptions);
 }
 
 function activate(context) {
+  for (const slot of SLOTS) {
+    if (!ICONS[slot.icon]) {
+      throw new Error(`ShipBar slot ${slot.id} references unknown icon "${slot.icon}"`);
+    }
+  }
+
   context.subscriptions.push(
     vscode.commands.registerCommand('shipbar.configure', () => openConfigPanel(context))
   );
 
-  // Each slot command reads its *current* target command from settings at
-  // invocation time — no reload needed after saving in the config panel.
-  for (const slotId of SLOT_IDS) {
-    const commandId = `shipbar.${slotId}`;
+  for (const slot of SLOTS) {
+    const icon = ICONS[slot.icon];
     context.subscriptions.push(
-      vscode.commands.registerCommand(commandId, async () => {
-        const config = vscode.workspace.getConfiguration();
-        const buttons = getButtons(config);
-        const target = buttons[slotId] && buttons[slotId].command;
-
+      vscode.commands.registerCommand(`shipbar.${slot.id}`, async () => {
+        const target = getButtons()[slot.id].command.trim();
         if (!target) {
           vscode.window.showWarningMessage(
-            `ShipBar: ${slotId} has no command configured. Run "ShipBar: Configure Buttons" to set one.`
+            `ShipBar: ${icon.label} has no command configured. Run "ShipBar: Configure Buttons" to set one.`
           );
           return;
         }
@@ -240,7 +313,8 @@ function activate(context) {
         try {
           await vscode.commands.executeCommand(target);
         } catch (err) {
-          vscode.window.showErrorMessage(`ShipBar (${slotId} → ${target}) failed: ${err.message}`);
+          const detail = err && err.message ? err.message : String(err);
+          vscode.window.showErrorMessage(`ShipBar (${icon.label} → ${target}) failed: ${detail}`);
         }
       })
     );

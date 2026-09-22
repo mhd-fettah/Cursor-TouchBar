@@ -1,3 +1,7 @@
+#!/usr/bin/env bash
+set -euo pipefail
+
+# Keep this list in sync with ICONS in extension.js.
 ICONS=(circle-check circle-x mic zap split sparkles settings)
 mkdir -p icons
 for n in "${ICONS[@]}"; do
