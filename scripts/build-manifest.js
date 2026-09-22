@@ -143,7 +143,7 @@ pkg.contributes.configuration = {
     [ID + '.showConfigButton']: {
       type: 'boolean',
       default: true,
-      description: 'Show the gear button that opens Cursor Touch Bar settings on the main row.'
+      description: 'Show the gear button that opens Cursor TouchBar settings on the main row.'
     },
     [ID + '.showNextStackLogo']: {
       type: 'boolean',

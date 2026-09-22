@@ -1,8 +1,8 @@
-# Cursor Touch Bar
+# Cursor TouchBar
 
 ![Settings panel: Touch Bar preview, skills, and options](docs/settings-panel.png)
 
-Full control of the Mac Touch Bar in [Cursor](https://cursor.com) and VS Code: your buttons, your actions, ready to use out of the box.
+MacBook touchbar for [Cursor](https://cursor.com) and VS Code: dynamic buttons, chat, panels, modes, and custom skills—ready to use out of the box.
 
 ## Features
 
@@ -17,7 +17,7 @@ Full control of the Mac Touch Bar in [Cursor](https://cursor.com) and VS Code: y
 
 ## Settings
 
-Tap the gear, or run **Cursor Touch Bar: Configure Buttons**. Click a button on the preview to change its icon, action, or place. **+** adds a button or a space.
+Tap the gear, or run **Cursor TouchBar: Configure Buttons**. Click a button on the preview to change its icon, action, or place. **+** adds a button or a space.
 
 If chat lives in the unified sidebar, use **Unified sidebar** instead of Right panel. Hide the gear with `"cursorTouchBar.showConfigButton": false`.
 
@@ -71,7 +71,7 @@ git clone https://github.com/mhd-fettah/Cursor-TouchBar.git
 cd Cursor-TouchBar
 ```
 
-Open the folder in Cursor and press `F5` to launch an Extension Development Host with Cursor Touch Bar loaded.
+Open the folder in Cursor and press `F5` to launch an Extension Development Host with Cursor TouchBar loaded.
 
 ## Regenerating icons
 

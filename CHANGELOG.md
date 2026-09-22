@@ -1,5 +1,10 @@
 # Changelog
 
+## [0.2.1] - 2026-09-23
+
+### Changed
+- Marketplace description and keywords update.
+
 ## [0.2.0] - 2026-09-22
 
 Fork of ShipBar, rebuilt as **Cursor Touch Bar** (`fettah.cursor-touch-bar`). The bar is fully configurable—not a fixed six buttons. Up to ten slots on the main row, add or remove buttons and spaces, drag to reorder, and split the row into groups. Settings use the `cursorTouchBar` prefix.

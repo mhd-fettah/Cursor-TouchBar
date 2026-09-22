@@ -1,7 +1,7 @@
 'use strict';
 
 const ID = 'cursorTouchBar';
-const DISPLAY_NAME = 'Cursor Touch Bar';
+const DISPLAY_NAME = 'Cursor TouchBar';
 
 // Touch Bar icons are PNG files. This catalog is the source for the
 // manifest script and the config panel.

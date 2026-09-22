@@ -522,7 +522,7 @@ function render() {
 
   const app = document.getElementById('app');
   app.replaceChildren();
-  app.append(h('h1', { text: 'Cursor Touch Bar' }));
+  app.append(h('h1', { text: 'Cursor TouchBar' }));
   app.append(h('p', { class: 'muted', text: 'Click a button to change it. Add chooses an icon or a space.' }));
 
   const bar = h('div', { class: 'touch' });

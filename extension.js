@@ -224,7 +224,7 @@ async function hideBuiltIns() {
 async function runCommand(command, label) {
   const target = (command || '').trim();
   if (!target) {
-    vscode.window.showWarningMessage(DISPLAY_NAME + ': ' + label + ' has no command. Run "Cursor Touch Bar: Configure Buttons" to set one.');
+    vscode.window.showWarningMessage(DISPLAY_NAME + ': ' + label + ' has no command. Run "' + DISPLAY_NAME + ': Configure Buttons" to set one.');
     return;
   }
   try {
