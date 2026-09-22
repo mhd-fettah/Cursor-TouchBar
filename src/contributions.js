@@ -52,15 +52,17 @@ function buildCommands() {
 
 function buildTouchBarMenu() {
   const items = [
-    { command: BACK_COMMAND, group: '1_back', when: 'shipbar.page != main' }
+    { command: BACK_COMMAND, group: '1_back', when: "shipbar.page != 'main'" }
   ];
 
+  // Values are quoted so no icon name can ever be read as a context key
+  // keyword or a number by the expression parser.
   for (const iconId of ICON_IDS) {
     for (let position = 1; position <= MAX_BUTTONS; position++) {
       items.push({
         command: runCommandId(iconId),
         group: `${BUTTON_GROUP}@${position}`,
-        when: `${positionKey(position)} == ${iconId}`
+        when: `${positionKey(position)} == '${iconId}'`
       });
     }
   }
