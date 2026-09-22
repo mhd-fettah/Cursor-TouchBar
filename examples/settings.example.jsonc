@@ -4,75 +4,67 @@
 // (Cmd+Shift+P → "Preferences: Open User Settings (JSON)").
 // The gear button on the Touch Bar edits the same settings.
 // A slot you leave out keeps its default.
+// slot8–slot10 are off until you add them.
+// "spaceBefore": true leaves a gap before that button. Leave it out to group it with the button on the left.
 
 {
+  "cursorTouchBar.showNextStackLogo": true,
+
   "cursorTouchBar.buttons": {
-    // Left sidebar
     "slot1": {
       "enabled": true,
       "icon": "panel-left",
       "type": "command",
       "command": "workbench.action.toggleSidebarVisibility"
     },
-
-    // Bottom panel
     "slot2": {
       "enabled": true,
       "icon": "panel-bottom",
       "type": "command",
       "command": "workbench.action.togglePanel"
     },
-
-    // Right sidebar. Use workbench.action.toggleUnifiedSidebar instead
-    // if that is where your chat sits.
     "slot3": {
       "enabled": true,
       "icon": "panel-right",
       "type": "command",
       "command": "workbench.action.toggleAuxiliaryBar"
     },
-
-    // New chat
     "slot4": {
       "enabled": true,
       "icon": "message-square-plus",
       "type": "command",
-      "command": "aichat.newchataction"
+      "command": "aichat.newchataction",
+      "spaceBefore": true
     },
-
-    // Opens Ask, Plan, and Agent on the bar
     "slot5": {
+      "enabled": true,
+      "icon": "mic",
+      "type": "command",
+      "command": "composer.toggleVoiceDictation"
+    },
+    "slot6": {
       "enabled": true,
       "icon": "layers",
       "type": "page",
-      "page": "modes"
+      "page": "modes",
+      "spaceBefore": true
     },
-
-    // Opens your skills
-    "slot6": {
+    "slot7": {
       "enabled": true,
       "icon": "folder",
       "type": "page",
-      "page": "skills"
+      "page": "skills",
+      "spaceBefore": true
     }
   },
 
-  // A tap opens a new chat with this text filled in. Press Enter to send.
-  // Skills that share a group open together. The bar shows the icon.
+  "cursorTouchBar.skillGroups": ["Review", "Workflow", "Customize", "Build"],
+
+  // Preset shortcuts to Cursor built-in /skills (see skill-presets.js).
   "cursorTouchBar.skills": [
-    {
-      "id": "review",
-      "label": "Review",
-      "prompt": "Review the current changes and list the risks.",
-      "icon": "search",
-      "group": "Git"
-    },
-    {
-      "id": "commit",
-      "label": "Commit",
-      "prompt": "Write a commit message for the current changes.",
-      "icon": "circle-check",
-      "group": "Git"
-    }
+    { "id": "review", "label": "review", "group": "Review", "prompt": "/review" },
+    { "id": "review-bugbot", "label": "review-bugbot", "group": "Review", "prompt": "/review-bugbot" },
+    { "id": "automate", "label": "automate", "group": "Workflow", "prompt": "/automate" },
+    { "id": "create-skill", "label": "create-skill", "group": "Customize", "prompt": "/create-skill" }
   ]
 }

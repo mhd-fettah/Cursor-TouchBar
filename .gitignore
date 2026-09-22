@@ -1,4 +1,6 @@
 node_modules/
+icons/labels/skill-*.png
+icons/labels/f*/skill-*.png
 *.vsix
 .DS_Store
 .vscode-test/

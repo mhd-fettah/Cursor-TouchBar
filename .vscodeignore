@@ -6,3 +6,5 @@ package-lock.json
 !README.md
 .github/**
 scripts/**
+icons/labels/skill-*.png
+icons/labels/f*/skill-*.png

@@ -39,10 +39,90 @@ const ICONS = {
   code: { label: 'Code', file: 'icons/code.png' },
   'chevron-left': { label: 'Back', file: 'icons/chevron-left.png' },
   'chevron-right': { label: 'Next', file: 'icons/chevron-right.png' },
-  settings: { label: 'Settings', file: 'icons/settings.png' }
+  settings: { label: 'Settings', file: 'icons/settings.png' },
+  'logo-brand': { label: 'N3XTTECH', file: 'icons/logo-brand.png' },
+  home: { label: 'Home', file: 'icons/home.png' },
+  copy: { label: 'Copy', file: 'icons/copy.png' },
+  'refresh-cw': { label: 'Refresh', file: 'icons/refresh-cw.png' },
+  link: { label: 'Link', file: 'icons/link.png' },
+  bookmark: { label: 'Bookmark', file: 'icons/bookmark.png' },
+  'layout-grid': { label: 'Grid', file: 'icons/layout-grid.png' },
+  keyboard: { label: 'Keyboard', file: 'icons/keyboard.png' },
+  'trash-2': { label: 'Trash', file: 'icons/trash-2.png' },
+  download: { label: 'Download', file: 'icons/download.png' },
+  upload: { label: 'Upload', file: 'icons/upload.png' },
+  filter: { label: 'Filter', file: 'icons/filter.png' },
+  moon: { label: 'Moon', file: 'icons/moon.png' },
+  sun: { label: 'Sun', file: 'icons/sun.png' },
+  'redo-2': { label: 'Redo', file: 'icons/redo-2.png' },
+  'clipboard-copy': { label: 'Clipboard', file: 'icons/clipboard-copy.png' },
+  scissors: { label: 'Cut', file: 'icons/scissors.png' },
+  'git-commit-vertical': { label: 'Commit', file: 'icons/git-commit-vertical.png' },
+  'git-merge': { label: 'Merge', file: 'icons/git-merge.png' },
+  'git-pull-request': { label: 'Pull request', file: 'icons/git-pull-request.png' },
+  rocket: { label: 'Deploy', file: 'icons/rocket.png' },
+  'flask-conical': { label: 'Test', file: 'icons/flask-conical.png' },
+  package: { label: 'Package', file: 'icons/package.png' },
+  database: { label: 'Database', file: 'icons/database.png' },
+  cloud: { label: 'Cloud', file: 'icons/cloud.png' },
+  server: { label: 'Server', file: 'icons/server.png' },
+  bell: { label: 'Bell', file: 'icons/bell.png' },
+  clock: { label: 'History', file: 'icons/clock.png' },
+  'file-code': { label: 'Code file', file: 'icons/file-code.png' },
+  'file-plus': { label: 'New file', file: 'icons/file-plus.png' },
+  'folder-open': { label: 'Open folder', file: 'icons/folder-open.png' },
+  send: { label: 'Send', file: 'icons/send.png' },
+  'share-2': { label: 'Share', file: 'icons/share-2.png' },
+  'external-link': { label: 'External link', file: 'icons/external-link.png' },
+  palette: { label: 'Palette', file: 'icons/palette.png' },
+  'circle-alert': { label: 'Alert', file: 'icons/circle-alert.png' },
+  lightbulb: { label: 'Idea', file: 'icons/lightbulb.png' },
+  'book-open': { label: 'Docs', file: 'icons/book-open.png' },
+  archive: { label: 'Archive', file: 'icons/archive.png' },
+  mail: { label: 'Mail', file: 'icons/mail.png' },
+  'messages-square': { label: 'Messages', file: 'icons/messages-square.png' },
+  replace: { label: 'Replace', file: 'icons/replace.png' },
+  diff: { label: 'Diff', file: 'icons/diff.png' },
+  'panel-top': { label: 'Top panel', file: 'icons/panel-top.png' },
+  'layout-dashboard': { label: 'Dashboard', file: 'icons/layout-dashboard.png' },
+  'app-window': { label: 'Window', file: 'icons/app-window.png' },
+  monitor: { label: 'Monitor', file: 'icons/monitor.png' },
+  pause: { label: 'Pause', file: 'icons/pause.png' },
+  square: { label: 'Square', file: 'icons/square.png' },
+  brackets: { label: 'Brackets', file: 'icons/brackets.png' },
+  'square-code': { label: 'Snippet', file: 'icons/square-code.png' },
+  lock: { label: 'Lock', file: 'icons/lock.png' },
+  star: { label: 'Star', file: 'icons/star.png' },
+  heart: { label: 'Heart', file: 'icons/heart.png' },
+  user: { label: 'User', file: 'icons/user.png' },
+  plug: { label: 'Plug', file: 'icons/plug.png' },
+  cpu: { label: 'CPU', file: 'icons/cpu.png' },
+  'hard-drive': { label: 'Storage', file: 'icons/hard-drive.png' },
+  wifi: { label: 'Wi‑Fi', file: 'icons/wifi.png' },
+  'volume-2': { label: 'Volume', file: 'icons/volume-2.png' },
+  'log-out': { label: 'Log out', file: 'icons/log-out.png' },
+  'circle-question-mark': { label: 'Help', file: 'icons/circle-question-mark.png' },
+  target: { label: 'Target', file: 'icons/target.png' },
+  workflow: { label: 'Workflow', file: 'icons/workflow.png' },
+  blocks: { label: 'Blocks', file: 'icons/blocks.png' },
+  puzzle: { label: 'Puzzle', file: 'icons/puzzle.png' },
+  'rotate-ccw': { label: 'Rotate', file: 'icons/rotate-ccw.png' },
+  repeat: { label: 'Repeat', file: 'icons/repeat.png' },
+  inbox: { label: 'Inbox', file: 'icons/inbox.png' },
+  'file-text': { label: 'Text file', file: 'icons/file-text.png' },
+  contrast: { label: 'Contrast', file: 'icons/contrast.png' },
+  'grip-vertical': { label: 'Grip', file: 'icons/grip-vertical.png' }
 };
 
 const ACTIONS = [
+  {
+    group: 'Layout',
+    label: 'Layout',
+    description: 'Open panel and terminal shortcuts on the bar.',
+    icon: 'panel-left',
+    type: 'page',
+    page: 'layout'
+  },
   {
     group: 'Layout',
     label: 'Left panel',
@@ -85,6 +165,14 @@ const ACTIONS = [
   },
   {
     group: 'Chat',
+    label: 'Chat',
+    description: 'Open chat shortcuts on the bar.',
+    icon: 'message-square-plus',
+    type: 'page',
+    page: 'chat'
+  },
+  {
+    group: 'Chat',
     label: 'New chat',
     description: 'Start a new chat.',
     icon: 'message-square-plus',
@@ -106,6 +194,14 @@ const ACTIONS = [
     icon: 'mic',
     type: 'command',
     command: 'composer.toggleVoiceDictation'
+  },
+  {
+    group: 'Modes',
+    label: 'Modes',
+    description: 'Open Ask, Plan, and Agent on the bar.',
+    icon: 'layers',
+    type: 'page',
+    page: 'modes'
   },
   {
     group: 'Modes',
@@ -140,20 +236,20 @@ const ACTIONS = [
     command: 'composer.cycleMode'
   },
   {
-    group: 'Pages',
-    label: 'Modes',
-    description: 'Open Ask, Plan, and Agent on the bar.',
-    icon: 'layers',
-    type: 'page',
-    page: 'modes'
-  },
-  {
-    group: 'Pages',
+    group: 'Skills',
     label: 'Skills',
     description: 'Open your skills on the bar.',
     icon: 'folder',
     type: 'page',
     page: 'skills'
+  },
+  {
+    group: 'Review',
+    label: 'Review',
+    description: 'Open generate and accept or reject on the bar.',
+    icon: 'circle-check',
+    type: 'page',
+    page: 'review'
   },
   {
     group: 'Review',
@@ -181,6 +277,14 @@ const ACTIONS = [
   },
   {
     group: 'General',
+    label: 'General',
+    description: 'Open palette and save on the bar.',
+    icon: 'search',
+    type: 'page',
+    page: 'general'
+  },
+  {
+    group: 'General',
     label: 'Command palette',
     description: 'Open the command palette.',
     icon: 'search',
@@ -197,28 +301,47 @@ const ACTIONS = [
   }
 ];
 
-const SLOTS = [
+const MAX_SLOTS = 10;
+const MAX_ICON_BUTTONS = 10;
+
+const DEFAULT_SLOTS = [
   { id: 'slot1', enabled: true, icon: 'panel-left', type: 'command', command: 'workbench.action.toggleSidebarVisibility' },
   { id: 'slot2', enabled: true, icon: 'panel-bottom', type: 'command', command: 'workbench.action.togglePanel' },
   { id: 'slot3', enabled: true, icon: 'panel-right', type: 'command', command: 'workbench.action.toggleAuxiliaryBar' },
-  { id: 'slot4', enabled: true, icon: 'message-square-plus', type: 'command', command: 'aichat.newchataction' },
-  { id: 'slot5', enabled: true, icon: 'layers', type: 'page', page: 'modes' },
-  { id: 'slot6', enabled: true, icon: 'folder', type: 'page', page: 'skills' }
+  {
+    id: 'slot4',
+    enabled: true,
+    icon: 'message-square-plus',
+    type: 'command',
+    command: 'aichat.newchataction',
+    spaceBefore: true
+  },
+  { id: 'slot5', enabled: true, icon: 'mic', type: 'command', command: 'composer.toggleVoiceDictation' },
+  { id: 'slot6', enabled: true, icon: 'layers', type: 'page', page: 'modes', spaceBefore: true },
+  { id: 'slot7', enabled: true, icon: 'folder', type: 'page', page: 'skills', spaceBefore: true }
 ];
+
+const SLOTS = [];
+for (let index = 1; index <= MAX_SLOTS; index++) {
+  const id = 'slot' + index;
+  const preset = DEFAULT_SLOTS.find((slot) => slot.id === id);
+  SLOTS.push(preset || { id, enabled: false, icon: 'plus', type: 'command', command: '', page: '' });
+}
 
 const FIXED_BUTTONS = [
   {
     command: ID + '.back',
     title: 'Back',
     icon: 'chevron-left',
-    order: 1,
-    when: ID + '.page == modes || ' + ID + '.page == skills || ' + ID + '.page == group'
+    group: '2_back@1',
+    when: ID + '.page == modes || ' + ID + '.page == skills || ' +
+      ID + '.page == layout || ' + ID + '.page == chat || ' + ID + '.page == review || ' + ID + '.page == general'
   },
   {
     command: ID + '.mode.ask',
     title: 'Ask',
     icon: 'message-circle',
-    order: 2,
+    group: '3_modes@2',
     when: ID + '.page == modes',
     run: 'composerMode.chat'
   },
@@ -226,7 +349,7 @@ const FIXED_BUTTONS = [
     command: ID + '.mode.plan',
     title: 'Plan',
     icon: 'list-checks',
-    order: 3,
+    group: '3_modes@3',
     when: ID + '.page == modes',
     run: 'composerMode.plan'
   },
@@ -234,31 +357,80 @@ const FIXED_BUTTONS = [
     command: ID + '.mode.agent',
     title: 'Agent',
     icon: 'bot',
-    order: 4,
+    group: '3_modes@4',
     when: ID + '.page == modes',
     run: 'composerMode.agent'
+  },
+  {
+    command: ID + '.skillPrev',
+    title: 'Previous skills',
+    icon: 'chevron-left',
+    group: '2_skillprev@1',
+    when: ID + '.page == skills && ' + ID + '.hasPrev'
   },
   {
     command: ID + '.next',
     title: 'Next',
     icon: 'chevron-right',
-    order: 7,
+    group: '4_next@1',
     when: ID + '.hasNext'
   },
   {
     command: ID + '.addSkill',
-    title: 'Add skill',
+    title: 'Add',
     icon: 'plus',
-    order: 2,
+    group: '3_skills@1',
     when: ID + '.showAdd'
   }
 ];
 
-const PAGE_SIZE = 5;
-const PAGES = ['modes', 'skills'];
+const PAGE_SIZE = 8;
+const SKILL_PAGE = 4;
+const ACTION_ROW = 8;
+const LABEL_FACES = 32;
+
+function skillFaceToken(face) {
+  return 'f' + face;
+}
+
+function skillSlotCommand(face, index) {
+  return ID + '.skill.' + skillFaceToken(face) + '.' + index;
+}
+
+const ACTION_PAGE_GROUPS = {
+  layout: 'Layout',
+  chat: 'Chat',
+  review: 'Review',
+  general: 'General'
+};
+
+function actionsForPage(page) {
+  const group = ACTION_PAGE_GROUPS[page];
+  if (!group) {
+    return [];
+  }
+  return ACTIONS.filter((item) => item.group === group && item.type === 'command');
+}
+
+// Built-in Touch Bar commands. We hide them so only this extension's buttons show.
+const HIDDEN_TOUCHBAR = [
+  'workbench.action.navigateBack',
+  'workbench.action.navigateForward',
+  'workbench.action.debug.start',
+  'workbench.action.debug.run',
+  'workbench.action.debug.continue',
+  'workbench.action.debug.pause',
+  'workbench.action.debug.stepInto',
+  'workbench.action.debug.stepOut',
+  'workbench.action.debug.stepOver',
+  'workbench.action.debug.restart',
+  'workbench.action.debug.stop',
+  'workbench.action.debug.disconnect'
+];
+const PAGES = ['modes', 'skills', 'layout', 'chat', 'review', 'general'];
 
 function pickableIconIds() {
-  return Object.keys(ICONS).filter((id) => id !== 'settings').sort();
+  return Object.keys(ICONS).filter((id) => id !== 'settings' && id !== 'logo-brand').sort();
 }
 
 function describeButton(button) {
@@ -286,8 +458,18 @@ module.exports = {
   ICONS,
   ACTIONS,
   SLOTS,
+  MAX_SLOTS,
+  MAX_ICON_BUTTONS,
   FIXED_BUTTONS,
   PAGE_SIZE,
+  SKILL_PAGE,
+  ACTION_ROW,
+  LABEL_FACES,
+  skillFaceToken,
+  skillSlotCommand,
+  ACTION_PAGE_GROUPS,
+  actionsForPage,
+  HIDDEN_TOUCHBAR,
   PAGES,
   pickableIconIds,
   describeButton

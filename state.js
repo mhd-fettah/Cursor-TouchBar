@@ -1,6 +1,11 @@
 'use strict';
 
-const { ICONS, SLOTS, PAGE_SIZE, PAGES } = require('./catalog');
+const { ICONS, SLOTS, PAGE_SIZE, SKILL_PAGE, PAGES, ACTION_PAGE_GROUPS, actionsForPage } = require('./catalog');
+const { PRESETS: SKILL_PRESETS, GROUPS: SKILL_PRESET_GROUPS } = require('./skill-presets');
+
+function isActionPage(name) {
+  return Boolean(ACTION_PAGE_GROUPS[name]);
+}
 
 function defaultSlot(slot) {
   return {
@@ -8,7 +13,8 @@ function defaultSlot(slot) {
     icon: slot.icon,
     type: slot.type === 'page' ? 'page' : 'command',
     command: slot.command || '',
-    page: slot.page || ''
+    page: slot.page || '',
+    spaceBefore: slot.spaceBefore === true
   };
 }
 
@@ -24,6 +30,29 @@ function knownIcon(icon) {
   return typeof icon === 'string' && ICONS[icon] && icon !== 'settings';
 }
 
+function orderedSlotIds(source) {
+  const ids = new Set(SLOTS.map((slot) => slot.id));
+  if (source && typeof source === 'object' && !Array.isArray(source)) {
+    Object.keys(source).forEach((key) => {
+      if (/^slot\d+$/.test(key)) {
+        ids.add(key);
+      }
+    });
+  }
+  return [...ids].sort((a, b) => Number(a.slice(4)) - Number(b.slice(4)));
+}
+
+function slotTemplate(id) {
+  return SLOTS.find((slot) => slot.id === id) || {
+    id,
+    enabled: false,
+    icon: 'plus',
+    type: 'command',
+    command: '',
+    page: ''
+  };
+}
+
 function normalizeButtons(stored) {
   const source = stored && typeof stored === 'object' && !Array.isArray(stored) ? stored : null;
   if (!source) {
@@ -31,7 +60,8 @@ function normalizeButtons(stored) {
   }
 
   const buttons = {};
-  for (const slot of SLOTS) {
+  for (const id of orderedSlotIds(source)) {
+    const slot = slotTemplate(id);
     const raw = source[slot.id];
     const item = raw && typeof raw === 'object' ? raw : null;
     if (!item) {
@@ -50,9 +80,11 @@ function normalizeButtons(stored) {
       icon: knownIcon(item.icon) ? item.icon : slot.icon,
       type,
       command: typeof item.command === 'string' ? item.command.trim() : (slot.command || ''),
-      page: type === 'page' ? page : ''
+      page: type === 'page' ? page : '',
+      spaceBefore: item.spaceBefore === true
     };
   }
+  buttons.slot1.spaceBefore = false;
   return buttons;
 }
 
@@ -65,13 +97,21 @@ function readUserButtons(inspected) {
       continue;
     }
     found = true;
-    for (const slot of SLOTS) {
-      if (layer[slot.id] && typeof layer[slot.id] === 'object') {
-        merged[slot.id] = Object.assign({}, merged[slot.id], layer[slot.id]);
+    for (const key of Object.keys(layer)) {
+      if (/^slot\d+$/.test(key) && layer[key] && typeof layer[key] === 'object') {
+        merged[key] = Object.assign({}, merged[key], layer[key]);
       }
     }
   }
   return found ? normalizeButtons(merged) : defaultButtons();
+}
+
+function defaultSkills() {
+  return SKILL_PRESETS.map((skill) => Object.assign({}, skill));
+}
+
+function defaultSkillGroups() {
+  return SKILL_PRESET_GROUPS.slice();
 }
 
 function normalizeSkills(input) {
@@ -87,7 +127,7 @@ function normalizeSkills(input) {
     }
     const label = typeof raw.label === 'string' ? raw.label.trim() : '';
     const prompt = typeof raw.prompt === 'string' ? raw.prompt.trim() : '';
-    if (!label || !prompt || !knownIcon(raw.icon)) {
+    if (!label || !prompt) {
       continue;
     }
     let id = typeof raw.id === 'string' ? raw.id.trim() : '';
@@ -102,18 +142,30 @@ function normalizeSkills(input) {
       id,
       label,
       prompt,
-      icon: raw.icon,
       group: typeof raw.group === 'string' ? raw.group.trim() : ''
     });
   }
   return skills;
 }
 
+function normalizeSkillGroups(input, skills) {
+  const groups = ['Main'];
+  const add = (name) => {
+    const clean = typeof name === 'string' ? name.trim() : '';
+    if (!clean || clean.toLowerCase() === 'main') return;
+    if (groups.some((item) => item.toLowerCase() === clean.toLowerCase())) return;
+    groups.push(clean);
+  };
+  if (Array.isArray(input)) input.forEach(add);
+  if (Array.isArray(skills)) skills.forEach((skill) => add(skill && skill.group));
+  return groups;
+}
+
 function groupSkills(skills) {
   const order = [];
   const map = new Map();
   for (const skill of skills) {
-    const name = skill.group || 'Skills';
+    const name = (skill.group || '').trim() || 'Main';
     if (!map.has(name)) {
       map.set(name, []);
       order.push(name);
@@ -121,6 +173,27 @@ function groupSkills(skills) {
     map.get(name).push(skill);
   }
   return order.map((name) => ({ name, skills: map.get(name) }));
+}
+
+function findSkillGroup(groups, name) {
+  const want = (name || '').trim();
+  if (!want) {
+    return null;
+  }
+  const exact = groups.find((group) => group.name === want);
+  if (exact) {
+    return exact;
+  }
+  const lower = want.toLowerCase();
+  return groups.find((group) => group.name.toLowerCase() === lower) || null;
+}
+
+function onSkillsPage(view) {
+  return view && view.name === 'skills';
+}
+
+function pageStep(view) {
+  return onSkillsPage(view) ? SKILL_PAGE : PAGE_SIZE;
 }
 
 function mainView() {
@@ -133,75 +206,88 @@ function normalizeView(view, skills) {
     group: view && typeof view.group === 'string' ? view.group : '',
     offset: view && view.offset > 0 ? view.offset : 0
   };
-  if (['main', 'modes', 'skills', 'group'].indexOf(next.name) === -1) {
+  if (next.name === 'group') {
+    next.name = 'skills';
+  }
+  if (['main', 'modes', 'skills'].indexOf(next.name) === -1 && !isActionPage(next.name)) {
     return mainView();
   }
-  if (next.name !== 'group') {
+  if (next.name !== 'skills' || !next.group) {
     return next;
   }
   const groups = groupSkills(skills);
-  if (groups.length < 2 || !groups.some((group) => group.name === next.group)) {
+  const picked = findSkillGroup(groups, next.group);
+  if (!picked) {
     return { name: 'skills', group: '', offset: 0 };
   }
+  next.group = picked.name;
   return next;
 }
 
 function pageSource(view, skills) {
+  if (isActionPage(view.name)) {
+    return actionsForPage(view.name).map((action) => ({ kind: 'action', action }));
+  }
   const groups = groupSkills(skills);
-  if (view.name === 'group') {
-    const group = groups.find((item) => item.name === view.group);
-    return (group ? group.skills : []).map((skill) => ({ kind: 'skill', icon: skill.icon, skill }));
+  if (view.name === 'skills' && view.group) {
+    const group = findSkillGroup(groups, view.group);
+    return (group ? group.skills : []).map((skill) => ({ kind: 'skill', skill }));
   }
-  if (groups.length > 1) {
-    return groups.map((group) => ({
-      kind: 'group',
-      icon: group.skills[0].icon,
-      name: group.name
-    }));
+  if (view.name === 'skills' && groups.length > 1) {
+    return groups.map((group) => ({ kind: 'group', name: group.name }));
   }
-  return skills.map((skill) => ({ kind: 'skill', icon: skill.icon, skill }));
+  return skills.map((skill) => ({ kind: 'skill', skill }));
 }
 
 function pageItems(view, skills) {
   const current = normalizeView(view, skills);
-  if (current.name !== 'skills' && current.name !== 'group') {
-    return { add: false, hasNext: false, items: [] };
+  if (onSkillsPage(current) || isActionPage(current.name)) {
+    if (onSkillsPage(current) && skills.length === 0 && !current.group) {
+      return { add: true, hasNext: false, items: [] };
+    }
+    const source = pageSource(current, skills);
+    return {
+      add: false,
+      hasNext: current.offset + pageStep(current) < source.length,
+      items: source.slice(current.offset, current.offset + pageStep(current))
+    };
   }
-  if (current.name === 'skills' && skills.length === 0) {
-    return { add: true, hasNext: false, items: [] };
-  }
-  const source = pageSource(current, skills);
-  return {
-    add: false,
-    hasNext: current.offset + PAGE_SIZE < source.length,
-    items: source.slice(current.offset, current.offset + PAGE_SIZE)
-  };
+  return { add: false, hasNext: false, items: [] };
 }
 
 function backView(view, skills) {
   const current = normalizeView(view, skills);
-  if ((current.name === 'skills' || current.name === 'group') && current.offset > 0) {
-    return Object.assign({}, current, { offset: Math.max(0, current.offset - PAGE_SIZE) });
+  if (isActionPage(current.name) && current.offset > 0) {
+    return Object.assign({}, current, { offset: Math.max(0, current.offset - pageStep(current)) });
   }
-  if (current.name === 'group') {
+  if (onSkillsPage(current) && current.group) {
     return { name: 'skills', group: '', offset: 0 };
+  }
+  if (onSkillsPage(current)) {
+    return mainView();
   }
   return mainView();
 }
 
 function nextView(view) {
-  return Object.assign({}, view, { offset: (view.offset || 0) + PAGE_SIZE });
+  return Object.assign({}, view, { offset: (view.offset || 0) + pageStep(view) });
 }
 
 module.exports = {
   defaultButtons,
+  defaultSkills,
+  defaultSkillGroups,
   normalizeButtons,
+  orderedSlotIds,
   readUserButtons,
   normalizeSkills,
+  normalizeSkillGroups,
   groupSkills,
+  isActionPage,
   mainView,
   normalizeView,
   pageItems,
   backView,
-  nextView
+  nextView,
+  pageStep
 };
