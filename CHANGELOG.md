@@ -2,6 +2,19 @@
 
 All notable changes to ShipBar are documented here.
 
+## [0.2.0] - 2026-09-22
+
+### Added
+- **Default bar** — Left, Bottom, Right, New chat, Modes, and Skills are ready on install.
+- **Icons** — each slot can use any bundled icon. The choice shows up on the bar immediately.
+- **Modes row** — Ask, Plan, and Agent, with Back to return.
+- **Skills** — a name, an icon, and text that opens in a new chat. Optional groups. Five per page.
+- **Config panel** — each button shows its name and what it does. Search actions, pick an icon, add skills.
+
+### Changed
+- Generate, Accept, Reject, Duplicate chat, and Voice stay in the action list.
+- A slot saved before this version keeps its command. Its icon falls back to the new default until you save once.
+
 ## [0.1.0] - 2026-07-24
 
 ### Added

@@ -1,8 +1,8 @@
 {
   "name": "shipbar",
   "displayName": "ShipBar",
-  "description": "Cursor AI actions on your MacBook Touch Bar — generate, accept, reject, branch, chat, and voice dictation. Fully configurable.",
-  "version": "0.1.0",
+  "description": "Touch Bar buttons for Cursor: panels, chat, modes, and your own skills.",
+  "version": "0.2.0",
   "publisher": "max-blackwell",
   "author": {
     "name": "Max Blackwell",
