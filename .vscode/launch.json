@@ -1,0 +1,15 @@
+{
+  // Press F5 to open a second window with this extension loaded. The Touch Bar
+  // follows whichever window has focus, so keep the new window focused while
+  // testing. Cmd+R in that window reloads after a code change.
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "Run Cursor Touch Bar",
+      "type": "extensionHost",
+      "request": "launch",
+      "args": ["--extensionDevelopmentPath=${workspaceFolder}"],
+      "outFiles": ["${workspaceFolder}/*.js", "${workspaceFolder}/src/**/*.js"]
+    }
+  ]
+}

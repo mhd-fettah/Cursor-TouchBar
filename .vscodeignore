@@ -1,5 +1,6 @@
 .gitignore
 .vscodeignore
+.vscode/**
 icons-download.sh
 scripts/**
 package-lock.json
