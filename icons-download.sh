@@ -1,8 +1,13 @@
 #!/usr/bin/env bash
 set -euo pipefail
 
-# Keep this list in sync with ICONS in extension.js.
-ICONS=(circle-check circle-x mic zap split sparkles settings)
+# Keep this list in sync with ICONS in catalog.js.
+ICONS=(
+  panel-left panel-bottom panel-right message-square-plus message-circle
+  list-checks bot folder layers zap circle-check circle-x split mic sparkles
+  terminal git-branch search plus play file save undo-2 eye pin list pencil
+  bug wrench message-square code chevron-left chevron-right settings
+)
 mkdir -p icons
 for n in "${ICONS[@]}"; do
   curl -sSL "https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/${n}.svg" | \
