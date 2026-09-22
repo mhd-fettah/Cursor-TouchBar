@@ -151,7 +151,7 @@ function skillsSummary() {
 function render() {
   const app = document.getElementById('app');
   app.replaceChildren();
-  app.append(h('h1', { text: 'ShipBar' }));
+  app.append(h('h1', { text: 'Cursor Touch Bar' }));
   app.append(h('p', { text: 'These buttons are already on your Touch Bar.' }));
   app.append(h('p', { class: 'muted', text: 'Pick an action and an icon for each one. Modes and Skills open another row. The gear button stays on the bar and opens this page.' }));
 
@@ -214,7 +214,7 @@ function render() {
   });
   app.append(h('div', { class: 'bar' }, h('button', { class: 'secondary', 'data-act': 'add-skill', text: 'Add skill' })));
   app.append(h('div', { class: 'bar' }, h('button', { 'data-act': 'save', text: 'Save' }), h('button', { class: 'secondary', 'data-act': 'reset-all', text: 'Reset everything' })));
-  app.append(h('p', { class: 'muted' }, document.createTextNode('Built by '), h('a', { href: 'https://x.com/_Max_Blackwell', target: '_blank', text: '@_Max_Blackwell' })));
+  app.append(h('p', { class: 'muted' }, document.createTextNode('Fork of '), h('a', { href: 'https://github.com/max-blackwell/ShipBar', target: '_blank', text: 'ShipBar' }), document.createTextNode(' by Max Blackwell.')));
 
   if (model.focus === 'skills') {
     const heading = document.getElementById('skills');

@@ -2,7 +2,7 @@
 
 const fs = require('fs');
 const path = require('path');
-const { ICONS, SLOTS, FIXED_BUTTONS, PAGE_SIZE, pickableIconIds, describeButton } = require('../catalog');
+const { ID, DISPLAY_NAME, ICONS, SLOTS, FIXED_BUTTONS, PAGE_SIZE, pickableIconIds, describeButton } = require('../catalog');
 const { defaultButtons } = require('../state');
 
 const root = path.join(__dirname, '..');
@@ -29,15 +29,15 @@ function addMenu(id, order, when) {
   });
 }
 
-addCommand('shipbar.configure', 'Configure Buttons', 'settings', 'ShipBar');
+addCommand(ID + '.configure', 'Configure Buttons', 'settings', DISPLAY_NAME);
 touchBar.push({
-  command: 'shipbar.configure',
+  command: ID + '.configure',
   group: '9_gear@1',
-  when: 'config.shipbar.showConfigButton'
+  when: 'config.' + ID + '.showConfigButton'
 });
 
 for (const button of FIXED_BUTTONS) {
-  addCommand(button.command, button.title, button.icon, 'ShipBar');
+  addCommand(button.command, button.title, button.icon, DISPLAY_NAME);
   addMenu(button.command, button.order, button.when);
 }
 
@@ -45,24 +45,24 @@ const buttons = defaultButtons();
 for (const slot of SLOTS) {
   const position = Number(slot.id.slice(4));
   for (const iconId of icons) {
-    const id = 'shipbar.' + slot.id + '.' + iconId;
-    addCommand(id, 'Slot ' + position + ' · ' + ICONS[iconId].label, iconId, 'ShipBar Icons');
+    const id = ID + '.' + slot.id + '.' + iconId;
+    addCommand(id, 'Slot ' + position + ' · ' + ICONS[iconId].label, iconId, DISPLAY_NAME + ' Icons');
     addMenu(
       id,
       position,
-      '(!shipbar.page || shipbar.page == main) && config.shipbar.buttons.' + slot.id + '.enabled && config.shipbar.buttons.' + slot.id + '.icon == ' + iconId
+      '(!' + ID + '.page || ' + ID + '.page == main) && config.' + ID + '.buttons.' + slot.id + '.enabled && config.' + ID + '.buttons.' + slot.id + '.icon == ' + iconId
     );
   }
 }
 
 for (let index = 1; index <= PAGE_SIZE; index++) {
   for (const iconId of icons) {
-    const id = 'shipbar.item' + index + '.' + iconId;
-    addCommand(id, 'Skill ' + index + ' · ' + ICONS[iconId].label, iconId, 'ShipBar Icons');
+    const id = ID + '.item' + index + '.' + iconId;
+    addCommand(id, 'Skill ' + index + ' · ' + ICONS[iconId].label, iconId, DISPLAY_NAME + ' Icons');
     addMenu(
       id,
       index + 1,
-      '(shipbar.page == skills || shipbar.page == group) && shipbar.item' + index + ' == ' + iconId
+      '(' + ID + '.page == skills || ' + ID + '.page == group) && ' + ID + '.item' + index + ' == ' + iconId
     );
   }
 }
@@ -90,20 +90,20 @@ pkg.scripts = Object.assign({}, pkg.scripts, {
 pkg.contributes.commands = commands;
 pkg.contributes.menus = { touchBar };
 pkg.contributes.configuration = {
-  title: 'ShipBar',
+  title: DISPLAY_NAME,
   properties: {
-    'shipbar.showConfigButton': {
+    [ID + '.showConfigButton']: {
       type: 'boolean',
       default: true,
-      description: 'Show the gear button that opens ShipBar settings. It stays visible on every row.'
+      description: 'Show the gear button that opens Cursor Touch Bar settings. It stays visible on every row.'
     },
-    'shipbar.buttons': {
+    [ID + '.buttons']: {
       type: 'object',
       description: 'The six main Touch Bar buttons. Each one runs a command or opens Modes or Skills.',
       default: buttons,
       properties: slotProperties
     },
-    'shipbar.skills': {
+    [ID + '.skills']: {
       type: 'array',
       description: 'Skills you added. Tapping one opens a new chat with the text filled in. Press Enter to send.',
       default: [],
@@ -111,7 +111,7 @@ pkg.contributes.configuration = {
         type: 'object',
         properties: {
           id: { type: 'string' },
-          label: { type: 'string', description: 'Name shown in ShipBar settings.' },
+          label: { type: 'string', description: 'Name shown in Cursor Touch Bar settings.' },
           prompt: { type: 'string', description: 'Text placed in a new chat.' },
           icon: { type: 'string', description: 'Icon shown on the Touch Bar.' },
           group: { type: 'string', description: 'Optional group. Skills that share a group open together.' }

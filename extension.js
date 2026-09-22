@@ -1,7 +1,7 @@
 'use strict';
 
 const vscode = require('vscode');
-const { ICONS, SLOTS, ACTIONS, FIXED_BUTTONS, pickableIconIds } = require('./catalog');
+const { ID, DISPLAY_NAME, ICONS, SLOTS, ACTIONS, FIXED_BUTTONS, pickableIconIds } = require('./catalog');
 const {
   defaultButtons,
   readUserButtons,
@@ -18,16 +18,16 @@ const { renderPanel } = require('./panel');
 let configPanel;
 let view = mainView();
 
-function shipbarConfig() {
-  return vscode.workspace.getConfiguration('shipbar');
+function extensionConfig() {
+  return vscode.workspace.getConfiguration(ID);
 }
 
 function getButtons() {
-  return readUserButtons(shipbarConfig().inspect('buttons'));
+  return readUserButtons(extensionConfig().inspect('buttons'));
 }
 
 function getSkills() {
-  return normalizeSkills(shipbarConfig().get('skills'));
+  return normalizeSkills(extensionConfig().get('skills'));
 }
 
 function detail(err) {
@@ -41,25 +41,25 @@ async function setBarContext(key, value) {
 async function syncBar() {
   view = normalizeView(view, getSkills());
   const visible = pageItems(view, getSkills());
-  await setBarContext('shipbar.page', view.name);
-  await setBarContext('shipbar.hasNext', visible.hasNext);
-  await setBarContext('shipbar.showAdd', visible.add);
+  await setBarContext(ID + '.page', view.name);
+  await setBarContext(ID + '.hasNext', visible.hasNext);
+  await setBarContext(ID + '.showAdd', visible.add);
   for (let index = 1; index <= 5; index++) {
     const item = visible.items[index - 1];
-    await setBarContext('shipbar.item' + index, item ? item.icon : '');
+    await setBarContext(ID + '.item' + index, item ? item.icon : '');
   }
 }
 
 async function runCommand(command, label) {
   const target = (command || '').trim();
   if (!target) {
-    vscode.window.showWarningMessage('ShipBar: ' + label + ' has no command. Run "ShipBar: Configure Buttons" to set one.');
+    vscode.window.showWarningMessage(DISPLAY_NAME + ': ' + label + ' has no command. Run "Cursor Touch Bar: Configure Buttons" to set one.');
     return;
   }
   try {
     await vscode.commands.executeCommand(target);
   } catch (err) {
-    vscode.window.showErrorMessage('ShipBar (' + label + ') failed: ' + detail(err));
+    vscode.window.showErrorMessage(DISPLAY_NAME + ' (' + label + ') failed: ' + detail(err));
   }
 }
 
@@ -90,7 +90,7 @@ async function runItem(index) {
   try {
     await vscode.commands.executeCommand('workbench.action.chat.open', { query: item.skill.prompt });
   } catch (err) {
-    vscode.window.showErrorMessage('ShipBar (' + item.skill.label + ') failed: ' + detail(err));
+    vscode.window.showErrorMessage(DISPLAY_NAME + ' (' + item.skill.label + ') failed: ' + detail(err));
   }
 }
 
@@ -102,8 +102,8 @@ function openConfigPanel(context, focus) {
   }
 
   const panel = vscode.window.createWebviewPanel(
-    'shipbarConfig',
-    'ShipBar',
+    ID + 'Config',
+    DISPLAY_NAME,
     vscode.ViewColumn.Active,
     {
       enableScripts: true,
@@ -136,12 +136,12 @@ function openConfigPanel(context, focus) {
     }
 
     try {
-      const config = shipbarConfig();
+      const config = extensionConfig();
       if (message.type === 'resetAll') {
         await config.update('buttons', defaultButtons(), vscode.ConfigurationTarget.Global);
         await config.update('skills', [], vscode.ConfigurationTarget.Global);
         refresh();
-        vscode.window.setStatusBarMessage('ShipBar: reset to defaults', 2000);
+        vscode.window.setStatusBarMessage(DISPLAY_NAME + ': reset to defaults', 2000);
         return;
       }
 
@@ -165,9 +165,9 @@ function openConfigPanel(context, focus) {
       await config.update('buttons', normalizeButtons(message.buttons), vscode.ConfigurationTarget.Global);
       await config.update('skills', normalizeSkills(message.skills), vscode.ConfigurationTarget.Global);
       panel.webview.postMessage({ type: 'saved' });
-      vscode.window.setStatusBarMessage('ShipBar: configuration saved', 2000);
+      vscode.window.setStatusBarMessage(DISPLAY_NAME + ': configuration saved', 2000);
     } catch (err) {
-      const text = 'ShipBar: could not update configuration. ' + detail(err);
+      const text = DISPLAY_NAME + ': could not update configuration. ' + detail(err);
       panel.webview.postMessage({ type: 'error', text });
       vscode.window.showErrorMessage(text);
     }
@@ -177,28 +177,28 @@ function openConfigPanel(context, focus) {
 function activate(context) {
   for (const slot of SLOTS) {
     if (!ICONS[slot.icon] || slot.icon === 'settings') {
-      throw new Error('ShipBar slot ' + slot.id + ' references unknown icon "' + slot.icon + '"');
+      throw new Error(DISPLAY_NAME + ' slot ' + slot.id + ' references unknown icon "' + slot.icon + '"');
     }
   }
   for (const action of ACTIONS) {
     if (!ICONS[action.icon]) {
-      throw new Error('ShipBar action "' + action.label + '" references unknown icon "' + action.icon + '"');
+      throw new Error(DISPLAY_NAME + ' action "' + action.label + '" references unknown icon "' + action.icon + '"');
     }
   }
 
   context.subscriptions.push(
-    vscode.commands.registerCommand('shipbar.configure', () => openConfigPanel(context)),
-    vscode.commands.registerCommand('shipbar.back', async () => {
+    vscode.commands.registerCommand(ID + '.configure', () => openConfigPanel(context)),
+    vscode.commands.registerCommand(ID + '.back', async () => {
       view = backView(view, getSkills());
       await syncBar();
     }),
-    vscode.commands.registerCommand('shipbar.next', async () => {
+    vscode.commands.registerCommand(ID + '.next', async () => {
       view = nextView(view);
       await syncBar();
     }),
-    vscode.commands.registerCommand('shipbar.addSkill', () => openConfigPanel(context, 'skills')),
+    vscode.commands.registerCommand(ID + '.addSkill', () => openConfigPanel(context, 'skills')),
     vscode.workspace.onDidChangeConfiguration((event) => {
-      if (event.affectsConfiguration('shipbar')) {
+      if (event.affectsConfiguration(ID)) {
         syncBar();
       }
     })
@@ -216,7 +216,7 @@ function activate(context) {
   for (const slot of SLOTS) {
     for (const iconId of pickableIconIds()) {
       context.subscriptions.push(
-        vscode.commands.registerCommand('shipbar.' + slot.id + '.' + iconId, () => runSlot(slot.id))
+        vscode.commands.registerCommand(ID + '.' + slot.id + '.' + iconId, () => runSlot(slot.id))
       );
     }
   }
@@ -225,7 +225,7 @@ function activate(context) {
     for (const iconId of pickableIconIds()) {
       const position = index;
       context.subscriptions.push(
-        vscode.commands.registerCommand('shipbar.item' + position + '.' + iconId, () => runItem(position - 1))
+        vscode.commands.registerCommand(ID + '.item' + position + '.' + iconId, () => runItem(position - 1))
       );
     }
   }

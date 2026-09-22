@@ -1,10 +1,10 @@
-# ShipBar
-
-[![Follow on X](https://img.shields.io/badge/Follow-@_Max__Blackwell-black?logo=x)](https://x.com/_Max_Blackwell)
+# Cursor Touch Bar
 
 **Six Touch Bar buttons for Cursor, ready when you install it.**
 
-ShipBar puts a row of buttons above the keyboard. Each one has a name, a short description, an icon, and an action. The gear button opens the page where you change them.
+Cursor Touch Bar puts a row of buttons above the keyboard. Each one has a name, a short description, an icon, and an action. The gear button opens the page where you change them.
+
+Fork of [ShipBar](https://github.com/max-blackwell/ShipBar) by [Max Blackwell](https://x.com/_Max_Blackwell).
 
 ## Default buttons
 
@@ -35,7 +35,7 @@ Tap it and a new chat opens with that text filled in. Press Enter to send. The b
 
 ## Changing a button
 
-Tap the gear, or run **ShipBar: Configure Buttons**.
+Tap the gear, or run **Cursor Touch Bar: Configure Buttons**.
 
 - Turn a button on or off
 - **Change action.** Layout, Chat, Modes, Pages, Review, and General. Each action has a one-line description. A custom command id is at the bottom of the list.
@@ -46,7 +46,7 @@ Generate, Accept all, Reject all, Duplicate chat, and Voice are still in the lis
 
 Right panel is the right sidebar. If your chat lives in the unified sidebar, pick **Unified sidebar** instead.
 
-You can hide the gear with `"shipbar.showConfigButton": false`.
+You can hide the gear with `"cursorTouchBar.showConfigButton": false`.
 
 ## Settings
 
@@ -54,7 +54,7 @@ The same options live in settings.json (`Cmd+Shift+P` → **Preferences: Open Us
 
 ```jsonc
 {
-  "shipbar.buttons": {
+  "cursorTouchBar.buttons": {
     "slot3": {
       "enabled": true,
       "icon": "panel-right",
@@ -62,7 +62,7 @@ The same options live in settings.json (`Cmd+Shift+P` → **Preferences: Open Us
       "command": "workbench.action.toggleUnifiedSidebar"
     }
   },
-  "shipbar.skills": [
+  "cursorTouchBar.skills": [
     {
       "id": "review",
       "label": "Review",
@@ -90,18 +90,18 @@ npm install -g @vscode/vsce
 vsce package --no-dependencies
 ```
 
-*(`--no-dependencies` is required — ShipBar has no runtime dependencies, and `vsce`'s dependency-resolution step fails on projects without one.)*
+*(`--no-dependencies` is required — Cursor Touch Bar has no runtime dependencies, and `vsce`'s dependency-resolution step fails on projects without one.)*
 
-Then in Cursor: `Extensions` → `...` menu → **Install from VSIX...** and pick the generated `shipbar-0.2.0.vsix`.
+Then in Cursor: `Extensions` → `...` menu → **Install from VSIX...** and pick the generated `cursor-touch-bar-0.2.1.vsix`.
 
 ### From source
 
 ```bash
-git clone https://github.com/max-blackwell/ShipBar.git
-cd ShipBar
+git clone https://github.com/mhd-fettah/Cursor-TouchBar.git
+cd Cursor-TouchBar
 ```
 
-Open the folder in Cursor and press `F5` to launch an Extension Development Host with ShipBar loaded.
+Open the folder in Cursor and press `F5` to launch an Extension Development Host with Cursor Touch Bar loaded.
 
 ## Regenerating icons
 

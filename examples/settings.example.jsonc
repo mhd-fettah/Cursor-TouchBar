@@ -1,4 +1,4 @@
-// ShipBar example configuration
+// Cursor Touch Bar example configuration
 //
 // Copy what you need into user settings
 // (Cmd+Shift+P → "Preferences: Open User Settings (JSON)").
@@ -6,7 +6,7 @@
 // A slot you leave out keeps its default.
 
 {
-  "shipbar.buttons": {
+  "cursorTouchBar.buttons": {
     // Left sidebar
     "slot1": {
       "enabled": true,
@@ -59,7 +59,7 @@
 
   // A tap opens a new chat with this text filled in. Press Enter to send.
   // Skills that share a group open together. The bar shows the icon.
-  "shipbar.skills": [
+  "cursorTouchBar.skills": [
     {
       "id": "review",
       "label": "Review",

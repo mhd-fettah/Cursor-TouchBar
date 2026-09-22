@@ -1,6 +1,14 @@
 # Changelog
 
-All notable changes to ShipBar are documented here.
+All notable changes to Cursor Touch Bar are documented here.
+
+This extension is a fork of ShipBar by Max Blackwell. Entries before 0.2.1 describe that project.
+
+## [0.2.1] - 2026-09-22
+
+### Changed
+- **Name** — the extension is Cursor Touch Bar, published as `fettah.cursor-touch-bar`.
+- Settings and commands use the `cursorTouchBar` prefix.
 
 ## [0.2.0] - 2026-09-22
 

@@ -1,5 +1,8 @@
 'use strict';
 
+const ID = 'cursorTouchBar';
+const DISPLAY_NAME = 'Cursor Touch Bar';
+
 // Touch Bar icons are PNG files. This catalog is the source for the
 // manifest script and the config panel.
 const ICONS = {
@@ -205,49 +208,49 @@ const SLOTS = [
 
 const FIXED_BUTTONS = [
   {
-    command: 'shipbar.back',
+    command: ID + '.back',
     title: 'Back',
     icon: 'chevron-left',
     order: 1,
-    when: 'shipbar.page == modes || shipbar.page == skills || shipbar.page == group'
+    when: ID + '.page == modes || ' + ID + '.page == skills || ' + ID + '.page == group'
   },
   {
-    command: 'shipbar.mode.ask',
+    command: ID + '.mode.ask',
     title: 'Ask',
     icon: 'message-circle',
     order: 2,
-    when: 'shipbar.page == modes',
+    when: ID + '.page == modes',
     run: 'composerMode.chat'
   },
   {
-    command: 'shipbar.mode.plan',
+    command: ID + '.mode.plan',
     title: 'Plan',
     icon: 'list-checks',
     order: 3,
-    when: 'shipbar.page == modes',
+    when: ID + '.page == modes',
     run: 'composerMode.plan'
   },
   {
-    command: 'shipbar.mode.agent',
+    command: ID + '.mode.agent',
     title: 'Agent',
     icon: 'bot',
     order: 4,
-    when: 'shipbar.page == modes',
+    when: ID + '.page == modes',
     run: 'composerMode.agent'
   },
   {
-    command: 'shipbar.next',
+    command: ID + '.next',
     title: 'Next',
     icon: 'chevron-right',
     order: 7,
-    when: 'shipbar.hasNext'
+    when: ID + '.hasNext'
   },
   {
-    command: 'shipbar.addSkill',
+    command: ID + '.addSkill',
     title: 'Add skill',
     icon: 'plus',
     order: 2,
-    when: 'shipbar.showAdd'
+    when: ID + '.showAdd'
   }
 ];
 
@@ -278,6 +281,8 @@ function describeButton(button) {
 }
 
 module.exports = {
+  ID,
+  DISPLAY_NAME,
   ICONS,
   ACTIONS,
   SLOTS,
