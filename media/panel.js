@@ -2,7 +2,7 @@
 
 const vscode = acquireVsCodeApi();
 const { icons: ICON_GROUPS, commands: COMMANDS, maxButtons: MAX_BUTTONS, mainPage: MAIN_PAGE } =
-  window.shipbar;
+  window.cursorTouchBar;
 
 const ICON_URLS = new Map();
 const ICON_LABELS = new Map();

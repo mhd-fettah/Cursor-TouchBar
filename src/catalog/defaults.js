@@ -97,7 +97,7 @@ const DEFAULT_LAYOUT = {
   }
 };
 
-// Maps the pre-0.2.0 `shipbar.buttons` slots onto the icons they were locked to.
+// Maps ShipBar's `shipbar.buttons` slots onto the icons they were locked to.
 const LEGACY_SLOT_ICONS = {
   slot1: 'zap',
   slot2: 'circle-check',

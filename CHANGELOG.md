@@ -1,6 +1,21 @@
 # Changelog
 
-All notable changes to ShipBar are documented here.
+All notable changes are documented here.
+
+Cursor Touch Bar is a fork of [ShipBar](https://github.com/max-blackwell/ShipBar).
+Releases up to and including 0.2.0 were made under the ShipBar name.
+
+## [0.3.0] - 2026-09-22
+
+### Changed
+- **Renamed to Cursor Touch Bar.** New extension ID `fettah.cursor-touchbar`,
+  now maintained by Fettah and published on Open VSX.
+- Commands, settings, and context keys moved from the `shipbar.` prefix to
+  `cursorTouchBar.`. A `shipbar.layout` or `shipbar.buttons` setting is adopted
+  automatically on first start, so an existing setup carries over.
+- New logo. The original ShipBar bolt belonged to its author.
+- Credit for the original work is in the README and LICENSE; both copyright
+  notices are retained per the MIT License.
 
 ## [0.2.0] - 2026-09-22
 

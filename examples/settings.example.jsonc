@@ -1,12 +1,12 @@
-// ShipBar example configuration
+// Cursor Touch Bar example configuration
 //
-// Copy the "shipbar.layout" block below into your user settings.json
+// Copy the "cursorTouchBar.layout" block below into your user settings.json
 // (Cmd+Shift+P -> "Preferences: Open User Settings (JSON)"). Changes apply
 // immediately, no reload needed.
 //
 // Easier still: tap the gear on the Touch Bar, or run
-// "ShipBar: Configure Buttons", and edit the same thing with a live preview,
-// an icon grid, and a searchable command list.
+// "Cursor Touch Bar: Configure Buttons", and edit the same thing with a live
+// preview, an icon grid, and a searchable command list.
 //
 // Rules worth knowing:
 //   - "icon" must be one of the bundled icon names (see src/catalog/icons.js)
@@ -17,7 +17,7 @@
 //   - "enabled": false keeps a button configured but off the bar.
 
 {
-  "shipbar.layout": {
+  "cursorTouchBar.layout": {
     // The row you see by default.
     "main": [
       {
@@ -122,5 +122,5 @@
   },
 
   // Hide the gear button if you would rather keep the slot.
-  "shipbar.showConfigButton": true
+  "cursorTouchBar.showConfigButton": true
 }

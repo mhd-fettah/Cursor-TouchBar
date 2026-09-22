@@ -4,6 +4,7 @@ const vscode = require('vscode');
 
 const { ICON_IDS } = require('./src/catalog/icons.js');
 const { BACK_COMMAND, CONFIGURE_COMMAND, runCommandId } = require('./src/contributions.js');
+const { NAMESPACE, DISPLAY_NAME, LEGACY_NAMESPACE } = require('./src/identity.js');
 const { Bar } = require('./src/bar.js');
 const { openConfigPanel } = require('./src/panel.js');
 const {
@@ -14,35 +15,49 @@ const {
 } = require('./src/layout.js');
 
 const LAYOUT_KEY = 'layout';
-const LEGACY_KEY = 'buttons';
-const WELCOME_KEY = 'shipbar.welcomeShown';
+const WELCOME_KEY = `${NAMESPACE}.welcomeShown`;
 
-function shipbarConfig() {
-  return vscode.workspace.getConfiguration('shipbar');
+function config() {
+  return vscode.workspace.getConfiguration(NAMESPACE);
 }
 
 function getLayout() {
-  return readLayout(shipbarConfig().get(LAYOUT_KEY));
+  return readLayout(config().get(LAYOUT_KEY));
 }
 
 async function saveLayout(layout) {
-  await shipbarConfig().update(LAYOUT_KEY, layout, vscode.ConfigurationTarget.Global);
+  await config().update(LAYOUT_KEY, layout, vscode.ConfigurationTarget.Global);
 }
 
-// Gives a fresh install a working bar, and carries a pre-0.2.0 `shipbar.buttons`
-// config over to the new schema so nobody's setup breaks on update.
+// Carries a setup over from ShipBar, which this extension is a fork of: either
+// its 0.2.x `shipbar.layout` (same schema) or its 0.1.x `shipbar.buttons`
+// (six slots with fixed icons).
+function adoptLegacyLayout() {
+  const legacy = vscode.workspace.getConfiguration(LEGACY_NAMESPACE);
+
+  const sameSchema = legacy.inspect(LAYOUT_KEY)?.globalValue;
+  if (sameSchema) {
+    const layout = readLayout(sameSchema);
+    if (layout.main.length || Object.keys(layout.pages).length) {
+      return layout;
+    }
+  }
+
+  return migrateLegacyButtons(legacy.inspect('buttons')?.globalValue);
+}
+
+// Gives a fresh install a working bar without anyone having to configure one.
 async function ensureLayout() {
-  const config = shipbarConfig();
-  if (config.inspect(LAYOUT_KEY)?.globalValue) {
+  if (config().inspect(LAYOUT_KEY)?.globalValue) {
     return { seeded: false };
   }
 
-  const migrated = migrateLegacyButtons(config.inspect(LEGACY_KEY)?.globalValue);
-  await saveLayout(migrated || defaultLayout());
-  if (migrated) {
-    await config.update(LEGACY_KEY, undefined, vscode.ConfigurationTarget.Global);
+  const adopted = adoptLegacyLayout();
+  await saveLayout(adopted || defaultLayout());
+
+  if (adopted) {
     vscode.window.showInformationMessage(
-      'ShipBar moved your buttons to the new layout setting. Icons are now yours to pick.'
+      `${DISPLAY_NAME} brought your ShipBar buttons across. Every icon is now yours to pick.`
     );
     return { seeded: false };
   }
@@ -56,7 +71,7 @@ function showWelcome(context) {
   context.globalState.update(WELCOME_KEY, true);
   vscode.window
     .showInformationMessage(
-      'ShipBar is on your Touch Bar: panels, chat, modes, and a skills page.',
+      `${DISPLAY_NAME} is ready: panels, chat, modes, and a skills page.`,
       'Configure buttons'
     )
     .then((choice) => {
@@ -70,7 +85,7 @@ async function runAction(button, bar) {
   const problem = buttonProblem(button, bar.getLayout());
   if (problem) {
     const choice = await vscode.window.showWarningMessage(
-      `ShipBar: "${button.label}" is not set up. ${problem}`,
+      `${DISPLAY_NAME}: "${button.label}" is not set up. ${problem}`,
       'Configure buttons'
     );
     if (choice) {
@@ -114,7 +129,7 @@ function activate(context) {
           await runAction(button, bar);
         } catch (err) {
           const detail = err && err.message ? err.message : String(err);
-          vscode.window.showErrorMessage(`ShipBar: "${button.label}" failed. ${detail}`);
+          vscode.window.showErrorMessage(`${DISPLAY_NAME}: "${button.label}" failed. ${detail}`);
         }
       })
     );
@@ -122,7 +137,7 @@ function activate(context) {
 
   context.subscriptions.push(
     vscode.workspace.onDidChangeConfiguration((event) => {
-      if (event.affectsConfiguration('shipbar.layout')) {
+      if (event.affectsConfiguration(`${NAMESPACE}.layout`)) {
         bar.refresh();
       }
     })
@@ -137,7 +152,7 @@ function activate(context) {
     })
     .catch((err) => {
       const detail = err && err.message ? err.message : String(err);
-      vscode.window.showErrorMessage(`ShipBar failed to start. ${detail}`);
+      vscode.window.showErrorMessage(`${DISPLAY_NAME} failed to start. ${detail}`);
     });
 }
 

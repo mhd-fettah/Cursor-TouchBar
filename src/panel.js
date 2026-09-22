@@ -7,6 +7,7 @@ const { ICON_GROUPS } = require('./catalog/icons.js');
 const { COMMAND_GROUPS } = require('./catalog/commands.js');
 const { MAX_BUTTONS } = require('./catalog/defaults.js');
 const { COMMAND_PREFIX } = require('./contributions.js');
+const { NAMESPACE, DISPLAY_NAME } = require('./identity.js');
 const {
   MAIN_PAGE,
   defaultLayout,
@@ -108,11 +109,11 @@ function renderHtml(webview, extensionUri, commands) {
 <meta charset="UTF-8" />
 <meta http-equiv="Content-Security-Policy" content="default-src 'none'; img-src ${webview.cspSource}; style-src ${webview.cspSource}; script-src 'nonce-${nonce}';" />
 <link rel="stylesheet" href="${asset('media', 'panel.css')}" />
-<title>ShipBar</title>
+<title>${DISPLAY_NAME}</title>
 </head>
 <body>
 <header>
-  <h1>ShipBar</h1>
+  <h1>${DISPLAY_NAME}</h1>
   <p class="subtitle">Pick what each Touch Bar button does and which icon it wears. Up to ${MAX_BUTTONS} buttons per row.</p>
 </header>
 
@@ -151,7 +152,7 @@ function renderHtml(webview, extensionUri, commands) {
   </div>
 </div>
 
-<script nonce="${nonce}">window.shipbar = ${bootstrap};</script>
+<script nonce="${nonce}">window.${NAMESPACE} = ${bootstrap};</script>
 <script nonce="${nonce}" src="${asset('media', 'panel.js')}"></script>
 </body>
 </html>`;
@@ -164,8 +165,8 @@ function openConfigPanel(context, bar, saveLayout) {
   }
 
   const panel = vscode.window.createWebviewPanel(
-    'shipbarConfig',
-    'ShipBar',
+    `${NAMESPACE}Config`,
+    DISPLAY_NAME,
     vscode.ViewColumn.Active,
     {
       enableScripts: true,
@@ -194,7 +195,7 @@ function openConfigPanel(context, bar, saveLayout) {
         await handleMessage(message, { bar, saveLayout, sendState, push });
       } catch (err) {
         const detail = err && err.message ? err.message : String(err);
-        vscode.window.showErrorMessage(`ShipBar: ${detail}`);
+        vscode.window.showErrorMessage(`${DISPLAY_NAME}: ${detail}`);
       }
     },
     undefined,
@@ -205,7 +206,7 @@ function openConfigPanel(context, bar, saveLayout) {
   // the row under your fingers always agree.
   listeners.push(
     vscode.workspace.onDidChangeConfiguration((event) => {
-      if (event.affectsConfiguration('shipbar.layout')) {
+      if (event.affectsConfiguration(`${NAMESPACE}.layout`)) {
         sendState();
       }
     })
@@ -244,22 +245,22 @@ async function handleMessage(message, { bar, saveLayout, sendState, push }) {
 
     case 'export': {
       const target = await vscode.window.showSaveDialog({
-        title: 'Export ShipBar layout',
+        title: `Export ${DISPLAY_NAME} layout`,
         filters: { JSON: ['json'] },
-        defaultUri: vscode.Uri.file('shipbar-layout.json')
+        defaultUri: vscode.Uri.file('cursor-touchbar-layout.json')
       });
       if (!target) {
         return;
       }
       const body = `${JSON.stringify(readLayout(message.layout), null, 2)}\n`;
       await vscode.workspace.fs.writeFile(target, Buffer.from(body, 'utf8'));
-      vscode.window.showInformationMessage('ShipBar layout exported.');
+      vscode.window.showInformationMessage(`${DISPLAY_NAME} layout exported.`);
       return;
     }
 
     case 'import': {
       const picked = await vscode.window.showOpenDialog({
-        title: 'Import ShipBar layout',
+        title: `Import ${DISPLAY_NAME} layout`,
         canSelectMany: false,
         filters: { JSON: ['json'] }
       });
@@ -269,13 +270,13 @@ async function handleMessage(message, { bar, saveLayout, sendState, push }) {
       const raw = await vscode.workspace.fs.readFile(picked[0]);
       const layout = readLayout(JSON.parse(Buffer.from(raw).toString('utf8')));
       if (!layout.main.length && !Object.keys(layout.pages).length) {
-        vscode.window.showWarningMessage('ShipBar: that file has no usable buttons.');
+        vscode.window.showWarningMessage(`${DISPLAY_NAME}: that file has no usable buttons.`);
         return;
       }
       await saveLayout(layout);
       await bar.refresh();
       sendState();
-      vscode.window.showInformationMessage('ShipBar layout imported.');
+      vscode.window.showInformationMessage(`${DISPLAY_NAME} layout imported.`);
       return;
     }
 

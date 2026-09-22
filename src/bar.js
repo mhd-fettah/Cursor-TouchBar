@@ -3,10 +3,8 @@
 const vscode = require('vscode');
 
 const { MAX_BUTTONS } = require('./catalog/defaults.js');
-const { positionKey } = require('./contributions.js');
+const { positionKey, PAGE_KEY } = require('./contributions.js');
 const { MAIN_PAGE, rowOf, hasPage } = require('./layout.js');
-
-const PAGE_KEY = 'shipbar.page';
 
 // Renders a row of the layout onto the Touch Bar and dispatches presses.
 //
@@ -19,6 +17,7 @@ class Bar {
     this.getLayout = getLayout;
     this.page = MAIN_PAGE;
     this.shownIcons = new Map();
+    this.rendered = false;
   }
 
   // Buttons of the active row that are actually on the bar, in order.
@@ -35,7 +34,9 @@ class Bar {
 
     for (let position = 1; position <= MAX_BUTTONS; position++) {
       const icon = next.get(position);
-      if (this.shownIcons.get(position) === icon) {
+      // The first pass writes every position, in case a previous instance of the
+      // extension left keys set in this window. After that only changes are sent.
+      if (this.rendered && this.shownIcons.get(position) === icon) {
         continue;
       }
       // Undefined clears the key, so no menu entry for that position matches.
@@ -43,6 +44,7 @@ class Bar {
     }
 
     this.shownIcons = next;
+    this.rendered = true;
     await vscode.commands.executeCommand('setContext', PAGE_KEY, this.page);
   }
 
@@ -70,4 +72,4 @@ class Bar {
   }
 }
 
-module.exports = { Bar, PAGE_KEY };
+module.exports = { Bar };
