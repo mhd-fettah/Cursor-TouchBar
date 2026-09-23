@@ -128,7 +128,8 @@ const ACTIONS = [
   action('Layout', 'Unified sidebar', 'Show or hide the unified sidebar, if that is where your chat sits.', 'panel-right', 'command', 'workbench.action.toggleUnifiedSidebar'),
   action('Layout', 'Terminal', 'Show or hide the terminal.', 'terminal', 'command', 'workbench.action.terminal.toggleTerminal'),
   action('Chat', 'Chat', 'Open chat shortcuts on the bar.', 'message-square-plus', 'page', 'chat'),
-  action('Chat', 'New chat', 'Start a new chat.', 'message-square-plus', 'command', 'aichat.newchataction'),
+  action('Chat', 'New chat', 'Start a new chat.', 'message-square-plus', 'command', 'composer.createNew'),
+  action('Chat', 'Close tab', 'Close the current composer tab.', 'circle-x', 'command', 'composer.closeComposerTab'),
   action('Chat', 'Duplicate chat', 'Duplicate the current chat into a new thread.', 'split', 'command', 'composer.duplicateChat'),
   action('Chat', 'Voice', 'Turn voice dictation on or off.', 'mic', 'command', 'composer.toggleVoiceDictation'),
   action('Modes', 'Modes', 'Open Ask, Plan, and Agent on the bar.', 'layers', 'page', 'modes'),
@@ -158,7 +159,7 @@ const DEFAULT_SLOTS = [
     enabled: true,
     icon: 'message-square-plus',
     type: 'command',
-    command: 'aichat.newchataction',
+    command: 'composer.createNew',
     spaceBefore: true
   },
   { id: 'slot5', enabled: true, icon: 'mic', type: 'command', command: 'composer.toggleVoiceDictation' },

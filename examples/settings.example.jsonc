@@ -33,7 +33,7 @@
       "enabled": true,
       "icon": "message-square-plus",
       "type": "command",
-      "command": "aichat.newchataction",
+      "command": "composer.createNew",
       "spaceBefore": true
     },
     "slot5": {

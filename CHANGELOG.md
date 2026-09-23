@@ -2,8 +2,12 @@
 
 ## [0.2.1] - 2026-09-23
 
+### Added
+- **Close tab** — Chat action `composer.closeComposerTab` closes the current composer tab. Put it next to **New chat** on the bar: start a new chat, close the old tab, and you have a clean thread without hunting through the UI.
+
 ### Changed
 - Marketplace description and keywords update.
+- **New chat** — uses `composer.createNew` instead of `aichat.newchataction`, so the button actually starts a new chat even when one is already open.
 
 ## [0.2.0] - 2026-09-22
 
